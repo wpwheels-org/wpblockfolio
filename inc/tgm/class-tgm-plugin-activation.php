@@ -1050,7 +1050,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 					continue;
 				}
 
-				if ( ! $this->aarambha_addons_plugin_installed( $slug ) ) {
+				if ( ! $this->wpblockfolio_addons_plugin_installed( $slug ) ) {
 					if ( current_user_can( 'install_plugins' ) ) {
 						$install_link_count++;
 
@@ -1743,7 +1743,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 * @param string $slug Plugin slug.
 		 * @return bool True if installed, false otherwise.
 		 */
-		public function aarambha_addons_plugin_installed( $slug ) {
+		public function wpblockfolio_addons_plugin_installed( $slug ) {
 			$installed_plugins = $this->get_plugins(); // Retrieve a list of all installed plugins (WP cached).
 
 			return ( ! empty( $installed_plugins[ $this->plugins[ $slug ]['file_path'] ] ) );
@@ -1796,7 +1796,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 * @return bool True if OK to proceed with update, false otherwise.
 		 */
 		public function is_plugin_updatetable( $slug ) {
-			if ( ! $this->aarambha_addons_plugin_installed( $slug ) ) {
+			if ( ! $this->wpblockfolio_addons_plugin_installed( $slug ) ) {
 				return false;
 			} else {
 				return ( false !== $this->does_plugin_have_update( $slug ) && $this->can_plugin_update( $slug ) );
@@ -1945,7 +1945,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		public function force_activation() {
 			foreach ( $this->plugins as $slug => $plugin ) {
 				if ( true === $plugin['force_activation'] ) {
-					if ( ! $this->aarambha_addons_plugin_installed( $slug ) ) {
+					if ( ! $this->wpblockfolio_addons_plugin_installed( $slug ) ) {
 						// Oops, plugin isn't there so iterate to next condition.
 						continue;
 					} elseif ( $this->can_plugin_activate( $slug ) ) {
@@ -2248,7 +2248,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				} else {
 					$plugins['all'][ $slug ] = $plugin;
 
-					if ( ! $this->tgmpa->aarambha_addons_plugin_installed( $slug ) ) {
+					if ( ! $this->tgmpa->wpblockfolio_addons_plugin_installed( $slug ) ) {
 						$plugins['install'][ $slug ] = $plugin;
 					} else {
 						if ( false !== $this->tgmpa->does_plugin_have_update( $slug ) ) {
@@ -2329,7 +2329,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * @return string
 		 */
 		protected function get_plugin_status_text( $slug ) {
-			if ( ! $this->tgmpa->aarambha_addons_plugin_installed( $slug ) ) {
+			if ( ! $this->tgmpa->wpblockfolio_addons_plugin_installed( $slug ) ) {
 				return __( 'Not Installed', 'wpblockfolio' );
 			}
 
@@ -2496,7 +2496,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		public function column_version( $item ) {
 			$output = array();
 
-			if ( $this->tgmpa->aarambha_addons_plugin_installed( $item['slug'] ) ) {
+			if ( $this->tgmpa->wpblockfolio_addons_plugin_installed( $item['slug'] ) ) {
 				$installed = ! empty( $item['installed_version'] ) ? $item['installed_version'] : _x( 'unknown', 'as in: "version nr unknown"', 'wpblockfolio' );
 
 				$color = '';
@@ -2616,7 +2616,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			$action_links = array();
 
 			// Display the 'Install' action link if the plugin is not yet available.
-			if ( ! $this->tgmpa->aarambha_addons_plugin_installed( $item['slug'] ) ) {
+			if ( ! $this->tgmpa->wpblockfolio_addons_plugin_installed( $item['slug'] ) ) {
 				/* translators: %2$s: plugin name in screen reader markup */
 				$actions['install'] = __( 'Install %2$s', 'wpblockfolio' );
 			} else {
@@ -2802,7 +2802,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 					}
 
 					// For install: make sure this is a plugin we *can* install and not one already installed.
-					if ( 'install' === $install_type && true === $this->tgmpa->aarambha_addons_plugin_installed( $slug ) ) {
+					if ( 'install' === $install_type && true === $this->tgmpa->wpblockfolio_addons_plugin_installed( $slug ) ) {
 						unset( $plugins_to_install[ $key ] );
 					}
 
