@@ -1,0 +1,46 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"wide","style":{"spacing":{"margin":{"top":"3rem","bottom":"3rem"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignwide" style="margin-top:3rem;margin-bottom:3rem">
+
+	<!-- wp:query-title {"type":"archive","style":{"spacing":{"margin":{"bottom":"0.5rem"}}}} /-->
+	<!-- wp:term-description {"textColor":"body-text","style":{"spacing":{"margin":{"bottom":"2rem"}}}} /-->
+
+	<!-- wp:query {"queryId":3,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true}} -->
+	<div class="wp-block-query">
+		<!-- wp:post-template {"style":{"spacing":{"blockGap":{"top":"1.5rem","left":"1.5rem"}}},"layout":{"type":"grid","columnCount":3}} -->
+
+			<!-- wp:group {"className":"fh-card","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group fh-card">
+				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3"} /-->
+				<!-- wp:group {"style":{"spacing":{"padding":{"left":"1.5rem","right":"1.5rem","top":"1.25rem","bottom":"1.5rem"}}}} -->
+				<div class="wp-block-group" style="padding-top:1.25rem;padding-right:1.5rem;padding-bottom:1.5rem;padding-left:1.5rem">
+					<!-- wp:post-date {"textColor":"accent","style":{"typography":{"fontSize":"0.8rem","fontWeight":"600","textTransform":"uppercase"}}} /-->
+					<!-- wp:post-title {"level":3,"isLink":true,"fontSize":"medium","style":{"spacing":{"margin":{"top":"0.4rem","bottom":"0.6rem"}}}} /-->
+					<!-- wp:post-excerpt {"excerptLength":18,"textColor":"body-text","style":{"typography":{"fontSize":"0.9rem"}}} /-->
+				</div>
+				<!-- /wp:group -->
+			</div>
+			<!-- /wp:group -->
+
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-pagination {"style":{"spacing":{"margin":{"top":"2.5rem"}}}} -->
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph -->
+			<p>Nothing found here yet.</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+
+	</div>
+	<!-- /wp:query -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

@@ -1,0 +1,16 @@
+/* Keep the block editor canvas visually in sync with the front end. */
+@import url("custom.css");
+
+.editor-styles-wrapper {
+	font-family: var(--wp--preset--font-family--body);
+}
+
+.fh-portfolio-grid .fh-portfolio-item {
+	margin-block-start: 0;
+}
+
+.wp-block-html svg {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}

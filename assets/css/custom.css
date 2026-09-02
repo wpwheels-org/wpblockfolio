@@ -1,0 +1,867 @@
+/* =====================================================
+   WPBlockfolio — supplemental styles
+   (progress bars, timeline, cards, hovers: things theme.json
+   cannot express with block supports alone)
+   ===================================================== */
+
+/* ---------- Consistent, responsive section padding ---------- */
+/* All front-page sections (boxed or open) share the same horizontal
+   inset so headings/paragraphs line up on the same left edge, and it
+   scales down on smaller screens instead of staying a fixed 3rem. */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.fh-pad-x {
+	padding-left: clamp(1.25rem, 4vw, 3rem);
+	padding-right: clamp(1.25rem, 4vw, 3rem);
+}
+
+.fh-pad-y {
+	padding-top: clamp(1.75rem, 5vw, 3rem);
+	padding-bottom: clamp(1.75rem, 5vw, 3rem);
+}
+
+.fh-nav-hire {
+	display: none;
+}
+
+/* ---------- Sticky resume-style sidebar ---------- */
+/* .fh-separator-left {
+	margin-right: auto !important;
+	width: 40px;
+} */
+
+.fh-sidebar-col {
+	flex: 0 0 360px;
+	max-width: 360px;
+}
+
+.fh-content-col {
+	flex: 1 1 0%;
+	min-width: 0;
+}
+
+.fh-sidebar-card {
+	position: sticky;
+	top: 6rem;
+	/* clears the sticky header (~4.5rem) plus breathing room */
+	max-height: calc(100vh - 8rem);
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: var(--wp--preset--color--border) transparent;
+}
+
+/* Chrome / Edge / Safari */
+.fh-sidebar-card::-webkit-scrollbar {
+	width: 5px;
+}
+
+.fh-sidebar-card::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.fh-sidebar-card::-webkit-scrollbar-thumb {
+	background-color: var(--wp--preset--color--border);
+	border-radius: 999px;
+}
+
+.fh-sidebar-card:hover::-webkit-scrollbar-thumb {
+	background-color: var(--wp--preset--color--body-text);
+}
+
+.fh-sidebar-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.fh-sidebar-nav li {
+	margin: 0;
+}
+
+.fh-sidebar-nav a {
+	color: var(--wp--preset--color--ink);
+	font-weight: 600;
+	display: block;
+	padding: 0.25rem 0;
+}
+
+.fh-sidebar-nav a:hover {
+	color: var(--wp--preset--color--accent);
+}
+
+/* ---------- Contained brand strip (no longer full-bleed, sits inside content column) ---------- */
+.fh-brands-strip {
+	border-radius: var(--wp--custom--radius--large, 20px);
+}
+
+.fh-marquee {
+	overflow: hidden;
+	-webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+	mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.fh-marquee-track {
+	display: flex;
+	width: max-content;
+	gap: 3rem;
+	animation: fh-marquee 22s linear infinite;
+}
+
+.fh-marquee:hover .fh-marquee-track {
+	animation-play-state: paused;
+}
+
+.fh-marquee-item {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	flex-shrink: 0;
+	opacity: 0.55;
+	transition: opacity 0.2s ease;
+}
+
+.fh-marquee-item:hover {
+	opacity: 1;
+}
+
+.fh-marquee-item img {
+	width: 28px;
+	height: 28px;
+	object-fit: contain;
+}
+
+.fh-marquee-item span {
+	font-weight: 700;
+	font-size: 0.95rem;
+	color: var(--wp--preset--color--ink);
+	white-space: nowrap;
+}
+
+@keyframes fh-marquee {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.fh-marquee-track {
+		animation: none;
+	}
+
+	.fh-marquee {
+		overflow-x: auto;
+	}
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+.fh-tight-stack {
+	gap: 0.2rem;
+}
+
+.wp-block-site-logo h1,
+h2 {
+	margin: 0;
+}
+
+.wp-block-site-logo img {
+	display: block;
+}
+
+.fh-eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: var(--wp--preset--color--accent);
+	font-weight: 700;
+	font-size: 0.85rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.fh-eyebrow::before {
+	content: "";
+	width: 28px;
+	height: 3px;
+	background: var(--wp--preset--color--accent);
+	display: inline-block;
+	border-radius: 2px;
+}
+
+.fh-footer-muted {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------- Sticky header ---------- */
+/* .fh-header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background: rgba(255, 255, 255, 0.92);
+	backdrop-filter: saturate(180%) blur(10px);
+	border-bottom: 1px solid var(--wp--preset--color--border);
+} */
+
+.fh-header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background: #ffffffeb;
+	border-bottom: 1px solid var(--wp--preset--color--border);
+}
+
+/* ---------- Hero ---------- */
+.fh-hero-card {
+	border-radius: var(--wp--custom--radius--large, 20px);
+	overflow: hidden;
+	box-shadow: var(--wp--custom--shadow--card, 0 10px 40px rgba(24, 26, 46, 0.06));
+}
+
+.fh-hero-panel {
+	border-radius: var(--wp--custom--radius--large, 20px);
+	position: relative;
+	overflow: hidden;
+}
+
+.fh-hero-panel::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.18), transparent 55%);
+	pointer-events: none;
+}
+
+.fh-hero-eyebrow {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.fh-hero-bio {
+	color: rgba(255, 255, 255, 0.88);
+}
+
+.fh-avatar-ring {
+	border-radius: 999px;
+	padding: 6px;
+	background: linear-gradient(135deg, var(--wp--preset--color--accent), var(--wp--preset--color--primary));
+	display: inline-block;
+}
+
+.fh-avatar-ring img {
+	border-radius: 999px;
+	display: block;
+	border: 4px solid #fff;
+	width: 72px;
+	height: 72px;
+	object-fit: cover;
+}
+
+/* ---------- Reusable avatar sizing (sizing lives in CSS, not in
+   fragile hand-written block "width/height" attributes) ---------- */
+.fh-about-avatar img {
+	width: 140px;
+	height: 140px;
+	object-fit: cover;
+	border-radius: 999px;
+	display: block;
+}
+
+.fh-avatar-sm img {
+	width: 48px;
+	height: 48px;
+	object-fit: cover;
+	border-radius: 999px;
+	display: block;
+}
+
+/* ---------- Outline button variant for use on colored backgrounds ---------- */
+.fh-btn-outline-white .wp-block-button__link {
+	background: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+}
+
+.fh-btn-outline-white .wp-block-button__link:hover {
+	background: #fff;
+	color: var(--wp--preset--color--primary);
+}
+
+/* ---------- Cards shared ---------- */
+.fh-card {
+	background: #fff;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: var(--wp--custom--radius--medium, 14px);
+	box-shadow: var(--wp--custom--shadow--card, 0 10px 40px rgba(24, 26, 46, 0.06));
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fh-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--wp--custom--shadow--card-hover, 0 20px 50px rgba(24, 26, 46, 0.12));
+}
+
+/* ---------- Skills / progress bars ---------- */
+.fh-skill {
+	margin-bottom: 1.5rem;
+}
+
+.fh-skill-label {
+	display: flex;
+	justify-content: space-between;
+	font-weight: 600;
+	font-size: 0.85rem;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	margin-bottom: 0.6rem;
+	color: var(--wp--preset--color--ink);
+}
+
+.fh-skill-track {
+	width: 100%;
+	height: 8px;
+	background: var(--wp--preset--color--surface-alt);
+	border-radius: 999px;
+	overflow: hidden;
+}
+
+.fh-skill-fill {
+	height: 100%;
+	border-radius: 999px;
+	background: linear-gradient(90deg, var(--wp--preset--color--accent), var(--wp--preset--color--primary));
+}
+
+/* ---------- Stats strip ---------- */
+.fh-stats {
+	background: linear-gradient(135deg, var(--wp--preset--color--primary) 0%, #34a17f 100%);
+	border-radius: var(--wp--custom--radius--large, 20px);
+}
+
+.fh-stat-icon {
+	width: 56px;
+	height: 56px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.16);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 0.75rem;
+}
+
+.fh-stat-number {
+	font-family: var(--wp--preset--font-family--heading);
+	font-weight: 700;
+	font-size: 2.25rem;
+	color: #fff;
+	line-height: 1;
+}
+
+.fh-stat-label {
+	color: rgba(255, 255, 255, 0.85);
+	font-size: 0.9rem;
+	margin-top: 0.35rem;
+}
+
+/* ---------- Services ---------- */
+.fh-services-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+}
+
+.fh-service-icon {
+	width: 54px;
+	height: 54px;
+	border-radius: var(--wp--custom--radius--small, 8px);
+	background: var(--wp--preset--color--surface);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--wp--preset--color--accent);
+	margin-bottom: 1rem;
+}
+
+.fh-service-icon svg {
+	width: 26px;
+	height: 26px;
+}
+
+.fh-services-grid .fh-card {
+	margin-block-start: 0;
+}
+
+.fh-stat-icon {
+	color: #ffffff;
+}
+
+.fh-stat-icon svg {
+	width: 28px;
+	height: 28px;
+}
+
+/* ---------- Experience timeline ---------- */
+.fh-timeline {
+	position: relative;
+	border-left: 2px solid var(--wp--preset--color--border);
+	margin-left: 8px;
+}
+
+.fh-timeline-item {
+	position: relative;
+	padding: 0 0 2.5rem 2rem;
+}
+
+.fh-timeline-item:last-child {
+	padding-bottom: 0;
+}
+
+.fh-timeline-item::before {
+	content: "";
+	position: absolute;
+	left: -7px;
+	top: 4px;
+	width: 12px;
+	height: 12px;
+	border-radius: 999px;
+	background: var(--wp--preset--color--accent);
+	box-shadow: 0 0 0 4px rgba(224, 151, 58, 0.18);
+}
+
+.fh-timeline-date {
+	color: var(--wp--preset--color--accent);
+	font-weight: 600;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+/* ---------- Portfolio filter / grid ---------- */
+.fh-portfolio-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 1fr;
+	gap: 1.5rem;
+}
+
+.fh-portfolio-item {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	border-radius: var(--wp--custom--radius--medium, 14px);
+	overflow: hidden;
+	box-shadow: var(--wp--custom--shadow--card, 0 10px 40px rgba(24, 26, 46, 0.06));
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fh-portfolio-item:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--wp--custom--shadow--card-hover, 0 20px 50px rgba(24, 26, 46, 0.12));
+}
+
+.fh-portfolio-item img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	transition: transform 0.4s ease;
+}
+
+.fh-portfolio-item:hover img {
+	transform: scale(1.06);
+}
+
+.fh-portfolio-item figcaption {
+	margin: 0;
+	padding: 1rem 1.25rem;
+	background: #fff;
+	color: var(--wp--preset--color--ink);
+	font-size: 1rem;
+	font-weight: 600;
+	flex: 1;
+}
+
+
+/* ---------- Pricing ---------- */
+.fh-pricing-card {
+	text-align: center;
+	border-radius: var(--wp--custom--radius--large, 20px);
+}
+
+.fh-price-list {
+	list-style: none;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+}
+
+.fh-pricing-card.is-featured {
+	background: linear-gradient(160deg, var(--wp--preset--color--primary), #34a17f);
+	color: #fff;
+	transform: scale(1.04);
+}
+
+.fh-pricing-card.is-featured * {
+	color: #fff !important;
+}
+
+.fh-pricing-card.is-featured .wp-block-button__link {
+	background: #fff !important;
+	color: var(--wp--preset--color--primary) !important;
+}
+
+/* ---------- Testimonials ---------- */
+.fh-testimonial {
+	position: relative;
+}
+
+.fh-testimonial::before {
+	content: "\201C";
+	position: absolute;
+	top: -2.75rem;
+	left: -1.8rem;
+	font-family: Georgia, serif;
+	font-size: 12rem;
+	line-height: 1;
+	color: var(--wp--preset--color--ink);
+	opacity: 0.08;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.fh-testimonial>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* .fh-quote-icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 999px;
+	background: var(--wp--preset--color--surface-alt);
+	color: var(--wp--preset--color--accent);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+.fh-quote-icon svg {
+	width: 18px;
+	height: 18px;
+} */
+
+/* ---------- Social icon buttons ---------- */
+.fh-social .wp-block-social-links a {
+	background: var(--wp--preset--color--surface) !important;
+}
+
+.fh-social .wp-block-social-links a:hover {
+	background: var(--wp--preset--color--accent) !important;
+}
+
+/* ---------- Contact styling ---------- */
+.fh-contact-item {
+	align-items: center;
+	gap: 0.9rem;
+	margin-bottom: 1.5rem;
+}
+
+.fh-contact-icon {
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 999px;
+	background: var(--wp--preset--color--surface-alt);
+	color: var(--wp--preset--color--accent);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fh-contact-icon svg {
+	width: 18px;
+	height: 18px;
+}
+
+/* ---------- Contact Form 7 styling ---------- */
+.wpcf7-form label {
+	display: block;
+	font-size: 0.85rem;
+	font-weight: 600;
+	margin-bottom: 0.4rem;
+	color: var(--wp--preset--color--ink);
+}
+
+.wpcf7-form p {
+	margin-top: 0;
+	margin-bottom: 1.25rem;
+}
+
+.wpcf7-form .wpcf7-form-control {
+	width: 100%;
+	padding: 0.75rem 1rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 8px;
+	font-family: inherit;
+	font-size: 1rem;
+	background: #fff;
+	transition: border-color 0.2s ease;
+}
+
+.wpcf7-form textarea.wpcf7-form-control {
+	resize: vertical;
+	min-height: 140px;
+}
+
+.wpcf7-form .wpcf7-form-control:focus {
+	outline: none;
+	border-color: var(--wp--preset--color--primary);
+}
+
+.wpcf7-form input[type="submit"] {
+	background: var(--wp--preset--color--accent);
+	color: #fff;
+	border: 0;
+	border-radius: 999px;
+	padding: 0.9rem 1.75rem;
+	font-weight: 600;
+	font-size: 0.95rem;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
+
+.wpcf7-form input[type="submit"]:hover {
+	background: var(--wp--preset--color--accent-dark);
+}
+
+.wpcf7-form input[type="submit"]:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+/* CF7's validation/status messages */
+.wpcf7-not-valid-tip {
+	color: var(--wp--preset--color--accent-dark);
+	font-size: 0.8rem;
+	margin-top: 0.3rem;
+}
+
+.wpcf7-response-output {
+	border-radius: 8px;
+	padding: 0.9rem 1.1rem;
+	font-size: 0.9rem;
+	margin-top: 1.5rem;
+}
+
+.wpcf7-mail-sent-ok {
+	border: 1px solid var(--wp--preset--color--primary) !important;
+	color: var(--wp--preset--color--primary);
+}
+
+.wpcf7-validation-errors,
+.wpcf7-mail-sent-ng {
+	border: 1px solid var(--wp--preset--color--accent-dark) !important;
+	color: var(--wp--preset--color--accent-dark);
+}
+
+.wpcf7-spinner {
+	margin-left: 0.75rem;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+
+	.fh-card,
+	.fh-portfolio-item img {
+		transition: none;
+	}
+}
+
+/* ---------- Focus visibility ---------- */
+a:focus-visible,
+button:focus-visible,
+.wp-block-button__link:focus-visible {
+	outline: 3px solid var(--wp--preset--color--primary);
+	outline-offset: 2px
+}
+
+.fh-sidebar-nav a {
+	transition: color 0.2s ease;
+}
+.fh-sidebar-nav a.is-active {
+	color: var(--wp--preset--color--accent);
+	font-weight: 700;
+}
+
+@media (max-width: 1049px) {
+	.fh-price-card-grid {
+		flex-wrap: wrap !important;
+	}
+
+	.fh-price-card-grid>div {
+		flex-basis: 100% !important;
+	}
+
+	.fh-hero-panel,
+	.fh-hero-card {
+		text-align: center;
+	}
+
+	.fh-pricing-card.is-featured {
+		transform: none;
+	}
+
+	.fh-portfolio-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.fh-hero-panel,
+	.fh-hero-card {
+		text-align: center;
+	}
+
+	.fh-hero-panel .wp-block-buttons {
+		justify-content: center;
+	}
+
+	.fh-services-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.fh-price-list {
+		text-align: center;
+	}
+
+	.fh-stats-grid {
+		display: grid !important;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.75rem 1rem;
+	}
+
+	.fh-stats-grid>.wp-block-column {
+		flex-basis: auto !important;
+		width: auto !important;
+		margin: 0 !important;
+	}
+
+	.fh-blog-grid {
+		grid-template-columns: repeat(2, 1fr) !important;
+	}
+
+	.fh-testimonial:not(:last-child) {
+		padding-bottom: 2rem;
+		margin-bottom: 0.75rem;
+		border-bottom: 1px solid var(--wp--preset--color--border);
+	}
+
+	.fh-testimonial::before {
+		left: -1.4rem;
+	}
+}
+
+@media (max-width: 782px) {
+	.fh-sidebar-col {
+		flex: 1 1 100%;
+		max-width: 100%;
+	}
+
+	.fh-sidebar-card {
+		position: static;
+		max-height: none;
+		overflow: visible;
+	}
+
+	.fh-pad-x {
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+	}
+
+	.fh-pad-y {
+		padding-top: 1.75rem;
+		padding-bottom: 1.75rem;
+	}
+
+	.fh-services-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.fh-portfolio-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.fh-blog-grid {
+		grid-template-columns: 1fr !important;
+	}
+
+	/* Hide the standalone desktop CTA button */
+	.fh-header .wp-block-buttons {
+		display: none !important;
+	}
+
+	.wp-block-navigation__responsive-container.is-menu-open {
+		z-index: 999999 !important;
+		background: #fff !important;
+		padding: 1.5rem !important;
+	}
+
+	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
+		position: absolute !important;
+		top: 1.25rem !important;
+		right: 1.25rem !important;
+		left: auto !important;
+	}
+
+	.wp-block-navigation__responsive-container.is-menu-open ul.wp-block-navigation__container {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: flex-start !important;
+		justify-content: center !important;
+		min-height: 80vh !important;
+		gap: 1.75rem !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		list-style: none !important;
+	}
+
+	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
+		font-size: 1.5rem !important;
+		margin: 0 !important;
+		width: 100% !important;
+		text-align: left !important;
+	}
+
+	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a,
+	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content {
+		color: var(--wp--preset--color--ink) !important;
+		display: block !important;
+		text-align: left !important;
+	}
+
+	/* The Hire Me link, styled as a CTA pill, only visible inside the open overlay */
+	.wp-block-navigation__responsive-container.is-menu-open .fh-nav-hire {
+		display: block !important;
+		margin-top: 0.5rem !important;
+	}
+
+	.wp-block-navigation__responsive-container.is-menu-open .fh-nav-hire a {
+		background: var(--wp--preset--color--accent) !important;
+		color: #fff !important;
+		padding: 0.75rem 1.5rem !important;
+		border-radius: 999px !important;
+		display: inline-block !important;
+	}
+}
+
+/* Hire Me nav-link: hidden everywhere except inside the open mobile overlay */
+.fh-nav-hire {
+	display: none;
+}
