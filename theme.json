@@ -102,7 +102,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./assets/fonts/poppins/poppins-v24-latin-500.woff2"
+								"file:./assets/build/fonts/poppins/poppins-v24-latin-500.woff2"
 							]
 						},
 						{
@@ -111,7 +111,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./assets/fonts/poppins/poppins-v24-latin-600.woff2"
+								"file:./assets/build/fonts/poppins/poppins-v24-latin-600.woff2"
 							]
 						},
 						{
@@ -120,7 +120,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./assets/fonts/poppins/poppins-v24-latin-700.woff2"
+								"file:./assets/build/fonts/poppins/poppins-v24-latin-700.woff2"
 							]
 						},
 						{
@@ -129,7 +129,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./assets/fonts/poppins/poppins-v24-latin-800.woff2"
+								"file:./assets/build/fonts/poppins/poppins-v24-latin-800.woff2"
 							]
 						}
 					]
@@ -145,7 +145,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./assets/fonts/inter/inter-v20-latin-regular.woff2"
+								"file:./assets/build/fonts/inter/inter-v20-latin-regular.woff2"
 							]
 						},
 						{
@@ -154,7 +154,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./assets/fonts/inter/inter-v20-latin-500.woff2"
+								"file:./assets/build/fonts/inter/inter-v20-latin-500.woff2"
 							]
 						},
 						{
@@ -163,7 +163,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./assets/fonts/inter/inter-v20-latin-600.woff2"
+								"file:./assets/build/fonts/inter/inter-v20-latin-600.woff2"
 							]
 						},
 						{
@@ -172,7 +172,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"file:./assets/fonts/inter/inter-v20-latin-700.woff2"
+								"file:./assets/build/fonts/inter/inter-v20-latin-700.woff2"
 							]
 						}
 					]

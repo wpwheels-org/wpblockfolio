@@ -62,14 +62,14 @@ function wpblockfolio_enqueue_assets() {
 
 	wp_enqueue_style(
 		'wpblockfolio-custom',
-		get_template_directory_uri() . '/assets/css/custom.css',
+		get_template_directory_uri() . '/assets/build/css/custom.css',
 		array( 'wpblockfolio-style' ),
 		WPBLOCKFOLIO_VERSION
 	);
 
 	wp_enqueue_script(
 		'wpblockfolio-script',
-		get_template_directory_uri() . '/assets/js/main.js',
+		get_template_directory_uri() . '/assets/build/js/main.js',
 		array(),
 		WPBLOCKFOLIO_VERSION,
 		true
@@ -89,7 +89,7 @@ function wpblockfolio_editor_assets() {
 	);
 	wp_enqueue_style(
 		'wpblockfolio-editor-custom',
-		get_template_directory_uri() . '/assets/css/custom.css',
+		get_template_directory_uri() . '/assets/build/css/custom.css',
 		array(),
 		WPBLOCKFOLIO_VERSION
 	);

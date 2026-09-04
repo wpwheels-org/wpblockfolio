@@ -33,7 +33,7 @@ $wpblockfolio_projects = array(
 	<div class="wp-block-group fh-portfolio-grid">
 		<?php foreach ( $wpblockfolio_projects as $project ) : ?>
 		<!-- wp:image {"sizeSlug":"large","className":"fh-portfolio-item"} -->
-		<figure class="wp-block-image size-large fh-portfolio-item"><img src="<?php echo esc_attr( get_template_directory_uri() . '/assets/images/' . $project[0] ); ?>" alt="<?php echo esc_attr( $project[2] ); ?>"/><figcaption class="wp-element-caption"><?php echo esc_html( $project[2] ); ?></figcaption></figure>
+		<figure class="wp-block-image size-large fh-portfolio-item"><img src="<?php echo esc_attr( get_template_directory_uri() . '/assets/build/images/' . $project[0] ); ?>" alt="<?php echo esc_attr( $project[2] ); ?>"/><figcaption class="wp-element-caption"><?php echo esc_html( $project[2] ); ?></figcaption></figure>
 		<!-- /wp:image -->
 		<?php endforeach; ?>
 	</div>

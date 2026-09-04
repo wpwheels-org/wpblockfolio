@@ -32,7 +32,7 @@
 			<!-- wp:group {"style":{"spacing":{"margin":{"top":"1.25rem"}}},"layout":{"type":"flex"}} -->
 			<div class="wp-block-group" style="margin-top:1.25rem">
 				<!-- wp:image {"sizeSlug":"thumbnail","className":"fh-avatar-sm"} -->
-				<figure class="wp-block-image size-thumbnail fh-avatar-sm"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/placeholder.png'); ?>" alt="Portrait of Helen Novak"/></figure>
+				<figure class="wp-block-image size-thumbnail fh-avatar-sm"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/build/images/placeholder.png'); ?>" alt="Portrait of Helen Novak"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:group {"className":"fh-tight-stack","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
 				<div class="wp-block-group fh-tight-stack">
@@ -55,7 +55,7 @@
 			<!-- wp:group {"style":{"spacing":{"margin":{"top":"1.25rem"}}},"layout":{"type":"flex"}} -->
 			<div class="wp-block-group" style="margin-top:1.25rem">
 				<!-- wp:image {"sizeSlug":"thumbnail","className":"fh-avatar-sm"} -->
-				<figure class="wp-block-image size-thumbnail fh-avatar-sm"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/placeholder.png'); ?>" alt="Portrait of Jordan Marsh"/></figure>
+				<figure class="wp-block-image size-thumbnail fh-avatar-sm"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/build/images/placeholder.png'); ?>" alt="Portrait of Jordan Marsh"/></figure>
 				<!-- /wp:image -->
 				<!-- wp:group {"className":"fh-tight-stack","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
 				<div class="wp-block-group fh-tight-stack">

@@ -25,7 +25,7 @@
 		<!-- wp:column {"verticalAlignment":"top","width":"180px"} -->
 		<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:180px">
 			<!-- wp:image {"sizeSlug":"large","className":"fh-about-avatar"} -->
-			<figure class="wp-block-image size-large fh-about-avatar"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/placeholder.png'); ?>" alt="Portrait of Alex Rivera"/></figure>
+			<figure class="wp-block-image size-large fh-about-avatar"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/build/images/placeholder.png'); ?>" alt="Portrait of Alex Rivera"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

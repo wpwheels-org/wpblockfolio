@@ -21,7 +21,7 @@ $wpblockfolio_tools = array(
 function wpblockfolio_marquee_track( $tools ) {
 	$out = '';
 	foreach ( $tools as $tool ) {
-		$out .= '<div class="fh-marquee-item"><img src="' . get_template_directory_uri() . '/assets/images/' . $tool[0] . '" alt="' . esc_attr( $tool[1] ) . '" loading="lazy" width="28" height="28"/><span>' . esc_html( $tool[1] ) . '</span></div>';
+		$out .= '<div class="fh-marquee-item"><img src="' . get_template_directory_uri() . '/assets/build/images/' . $tool[0] . '" alt="' . esc_attr( $tool[1] ) . '" loading="lazy" width="28" height="28"/><span>' . esc_html( $tool[1] ) . '</span></div>';
 	}
 	return $out;
 }
