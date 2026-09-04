@@ -11,15 +11,21 @@
 // Get contact form.
 if ( ! function_exists( 'wpblockfolio_get_contact_form' ) ) {
 	/**
-	 * Return block markup for the site's contact section.
+	 * Return markup for the site's contact section.
 	 *
 	 * When Contact Form 7 is active and has at least one published form,
-	 * returns a shortcode block referencing the oldest form. Otherwise
-	 * returns a self-contained group block explaining that no form is
-	 * connected and offering a "mailto:" button — never a dead form that
-	 * silently goes nowhere.
+	 * the oldest form's `[contact-form-7]` shortcode is rendered here with
+	 * do_shortcode() and its HTML returned directly. This is deliberate:
+	 * the core/shortcode block only runs do_shortcode() via the
+	 * `the_content` filter, which block-theme templates and patterns never
+	 * apply, so a `<!-- wp:shortcode -->` block placed in a pattern would
+	 * output the raw shortcode text instead of the form.
 	 *
-	 * @return string Serialized block markup for the contact section.
+	 * With no form connected it returns a self-contained group block
+	 * explaining the situation and offering a "mailto:" button — never a
+	 * dead form that silently goes nowhere.
+	 *
+	 * @return string Rendered contact-form HTML, or fallback block markup.
 	 */
 	function wpblockfolio_get_contact_form() {
 		$form = '<!-- wp:group {"backgroundColor":"surface","className":"fh-card","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"2rem","right":"2rem"}}}} -->
@@ -45,9 +51,13 @@ if ( ! function_exists( 'wpblockfolio_get_contact_form' ) ) {
 				]
 			);
 			if ( ! empty( $forms ) ) {
-				$id    = $forms[0]->hash();
-				$title = $forms[0]->title();
-				$form  = '<!-- wp:shortcode -->[contact-form-6 id="' . esc_attr( $id ) . '" title="' . esc_attr( $title ) . '"]<!-- /wp:shortcode -->';
+				$form = do_shortcode(
+					sprintf(
+						'[contact-form-7 id="%s" title="%s"]',
+						esc_attr( $forms[0]->hash() ),
+						esc_attr( $forms[0]->title() )
+					)
+				);
 			}
 		}
 
