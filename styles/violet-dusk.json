@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Violet Dusk",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "primary", "name": "Violet", "color": "#6d4aff" },
+				{ "slug": "primary-dark", "name": "Violet Dark", "color": "#5436d6" },
+				{ "slug": "primary-light", "name": "Violet Light", "color": "#9c86ff" },
+				{ "slug": "accent", "name": "Pink", "color": "#ff5da2" },
+				{ "slug": "accent-dark", "name": "Pink Dark", "color": "#db3d84" },
+				{ "slug": "ink", "name": "Ink", "color": "#17131f" },
+				{ "slug": "body-text", "name": "Body Text", "color": "#5b5566" },
+				{ "slug": "surface", "name": "Surface", "color": "#f7f5fc" },
+				{ "slug": "surface-alt", "name": "Surface Alt", "color": "#ede7fb" },
+				{ "slug": "border", "name": "Border", "color": "#e4dcf5" },
+				{ "slug": "white", "name": "White", "color": "#ffffff" }
+			],
+			"gradients": [
+				{
+					"slug": "primary-gradient",
+					"name": "Violet Gradient",
+					"gradient": "linear-gradient(135deg,#6d4aff 0%,#9c86ff 100%)"
+				},
+				{
+					"slug": "accent-gradient",
+					"name": "Pink Gradient",
+					"gradient": "linear-gradient(135deg,#ff5da2 0%,#ff9ec6 100%)"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "#ffffff",
+			"text": "#17131f"
+		},
+		"elements": {
+			"heading": {
+				"color": {
+					"text": "#17131f"
+				}
+			}
+		}
+	}
+}

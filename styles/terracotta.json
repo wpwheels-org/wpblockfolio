@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Terracotta & Gold",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "primary", "name": "Terracotta", "color": "#b8502f" },
+				{ "slug": "primary-dark", "name": "Terracotta Dark", "color": "#8f371d" },
+				{ "slug": "primary-light", "name": "Terracotta Light", "color": "#d97b56" },
+				{ "slug": "accent", "name": "Gold", "color": "#dca23a" },
+				{ "slug": "accent-dark", "name": "Gold Dark", "color": "#b67f22" },
+				{ "slug": "ink", "name": "Ink", "color": "#201712" },
+				{ "slug": "body-text", "name": "Body Text", "color": "#6a5c52" },
+				{ "slug": "surface", "name": "Surface", "color": "#faf3ec" },
+				{ "slug": "surface-alt", "name": "Surface Alt", "color": "#f1e4d6" },
+				{ "slug": "border", "name": "Border", "color": "#e7d8c6" },
+				{ "slug": "white", "name": "White", "color": "#ffffff" }
+			],
+			"gradients": [
+				{
+					"slug": "primary-gradient",
+					"name": "Terracotta Gradient",
+					"gradient": "linear-gradient(135deg,#b8502f 0%,#d97b56 100%)"
+				},
+				{
+					"slug": "accent-gradient",
+					"name": "Gold Gradient",
+					"gradient": "linear-gradient(135deg,#dca23a 0%,#f0c579 100%)"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "#fffdfb",
+			"text": "#201712"
+		},
+		"elements": {
+			"heading": {
+				"color": {
+					"text": "#201712"
+				}
+			}
+		}
+	}
+}

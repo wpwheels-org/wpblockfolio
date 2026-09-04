@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Cobalt & Coral",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "primary", "name": "Cobalt", "color": "#2f5fe0" },
+				{ "slug": "primary-dark", "name": "Cobalt Dark", "color": "#2247ab" },
+				{ "slug": "primary-light", "name": "Cobalt Light", "color": "#6f97f2" },
+				{ "slug": "accent", "name": "Coral", "color": "#ff6b5e" },
+				{ "slug": "accent-dark", "name": "Coral Dark", "color": "#e0463a" },
+				{ "slug": "ink", "name": "Ink", "color": "#14171f" },
+				{ "slug": "body-text", "name": "Body Text", "color": "#545a68" },
+				{ "slug": "surface", "name": "Surface", "color": "#f4f6fb" },
+				{ "slug": "surface-alt", "name": "Surface Alt", "color": "#e8ecf6" },
+				{ "slug": "border", "name": "Border", "color": "#dbe2f0" },
+				{ "slug": "white", "name": "White", "color": "#ffffff" }
+			],
+			"gradients": [
+				{
+					"slug": "primary-gradient",
+					"name": "Cobalt Gradient",
+					"gradient": "linear-gradient(135deg,#2f5fe0 0%,#6f97f2 100%)"
+				},
+				{
+					"slug": "accent-gradient",
+					"name": "Coral Gradient",
+					"gradient": "linear-gradient(135deg,#ff6b5e 0%,#ffa07a 100%)"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "#ffffff",
+			"text": "#14171f"
+		},
+		"elements": {
+			"heading": {
+				"color": {
+					"text": "#14171f"
+				}
+			}
+		}
+	}
+}
