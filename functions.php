@@ -52,7 +52,7 @@ function wpblockfolio_setup() {
 	add_image_size( 'wpblockfolio-portfolio', 600, 600, true );
 	add_image_size( 'wpblockfolio-blog-card', 500, 340, true );
 
-	add_editor_style( 'assets/css/editor-style.css' );
+	add_editor_style( 'assets/build/css/editor-style.css' );
 }
 add_action( 'after_setup_theme', 'wpblockfolio_setup' );
 
