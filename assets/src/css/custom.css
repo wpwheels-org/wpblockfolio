@@ -1192,6 +1192,93 @@ h2 {
 }
 
 /* ===================================================
+   404 / Not found
+   =================================================== */
+.fh-404 {
+	background: var(--wp--preset--color--surface);
+	text-align: center;
+}
+
+.fh-404-eyebrow {
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.fh-404-code {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--heading);
+	font-weight: 800;
+	font-size: clamp(6rem, 22vw, 11rem);
+	line-height: 0.9;
+	letter-spacing: -0.04em;
+	color: var(--wp--preset--color--primary);
+	background: var(--wp--preset--gradient--primary-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.fh-404-title {
+	font-size: clamp(1.6rem, 4vw, 2.2rem);
+	letter-spacing: -0.02em;
+}
+
+.fh-404-search .wp-block-search__inside-wrapper {
+	max-width: 420px;
+	margin-inline: auto;
+	padding: 0.25rem 0.25rem 0.25rem 0.35rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 999px;
+	background: var(--wp--preset--color--white);
+}
+
+.fh-404-search .wp-block-search__input {
+	border: 0;
+	background: transparent;
+	padding: 0.55rem 0.85rem;
+	font-size: 0.95rem;
+}
+
+.fh-404-search .wp-block-search__input:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.fh-404-search .wp-block-search__button {
+	margin: 0;
+	padding: 0.6rem 1.35rem;
+	border: 0;
+	border-radius: 999px;
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--white);
+	font-weight: 600;
+	font-size: 0.9rem;
+	transition: background 0.2s ease;
+}
+
+.fh-404-search .wp-block-search__button:hover {
+	background: var(--wp--preset--color--primary);
+}
+
+.fh-404-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.4rem 1.25rem;
+	color: var(--wp--preset--color--body-text);
+}
+
+.fh-404-links a {
+	color: var(--wp--preset--color--body-text);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.fh-404-links a:hover {
+	color: var(--wp--preset--color--accent);
+}
+
+/* ===================================================
    Query pagination (archive / blog / search)
    =================================================== */
 .fh-pagination {

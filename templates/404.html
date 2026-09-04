@@ -1,21 +1,41 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","align":"wide","style":{"spacing":{"margin":{"top":"5rem","bottom":"5rem"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group alignwide" style="margin-top:5rem;margin-bottom:5rem">
+<!-- wp:group {"tagName":"main","align":"full","className":"fh-404","style":{"spacing":{"padding":{"top":"5rem","bottom":"6rem"}}},"layout":{"type":"constrained","contentSize":"620px"}} -->
+<main class="wp-block-group alignfull fh-404" style="padding-top:5rem;padding-bottom:6rem">
 
-	<!-- wp:paragraph {"align":"center","textColor":"accent","style":{"typography":{"fontWeight":"700","fontSize":"5rem"},"spacing":{"margin":{"bottom":"0"}}}} -->
-	<p class="has-text-align-center has-accent-color has-text-color" style="margin-bottom:0;font-size:5rem;font-weight:700">404</p>
+	<!-- wp:paragraph {"align":"center","className":"fh-eyebrow fh-404-eyebrow"} -->
+	<p class="has-text-align-center fh-eyebrow fh-404-eyebrow">Error 404</p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:heading {"level":2,"textAlign":"center","style":{"spacing":{"margin":{"top":"0.5rem","bottom":"1rem"}}}} -->
-	<h2 class="wp-block-heading has-text-align-center" style="margin-top:0.5rem;margin-bottom:1rem">This page couldn't be found</h2>
+	<!-- wp:paragraph {"align":"center","className":"fh-404-code"} -->
+	<p class="has-text-align-center fh-404-code">404</p>
+	<!-- /wp:paragraph -->
+
+	<!-- wp:heading {"textAlign":"center","level":1,"className":"fh-404-title","style":{"spacing":{"margin":{"top":"0.25rem","bottom":"1rem"}}}} -->
+	<h1 class="wp-block-heading has-text-align-center fh-404-title" style="margin-top:0.25rem;margin-bottom:1rem">This page took a wrong turn</h1>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","textColor":"body-text","style":{"spacing":{"margin":{"bottom":"2rem"}}}} -->
-	<p class="has-text-align-center has-body-text-color has-text-color" style="margin-bottom:2rem">The page you're looking for may have been moved or no longer exists. Try searching for what you need instead.</p>
+	<p class="has-text-align-center has-body-text-color has-text-color" style="margin-bottom:2rem">The page you're looking for was moved, renamed, or never existed. Let's get you back on track.</p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:search {"label":"Search","buttonText":"Search","align":"center","width":50,"widthUnit":"%"} /-->
+	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1rem","margin":{"bottom":"2.5rem"}}}} -->
+	<div class="wp-block-buttons" style="margin-bottom:2.5rem">
+		<!-- wp:button {"backgroundColor":"primary"} -->
+		<div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" href="/">Back to home</a></div>
+		<!-- /wp:button -->
+
+		<!-- wp:button {"className":"is-style-outline"} -->
+		<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/#portfolio">Browse work</a></div>
+		<!-- /wp:button -->
+	</div>
+	<!-- /wp:buttons -->
+
+	<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search the site…","buttonText":"Search","buttonPosition":"button-inside","className":"fh-404-search"} /-->
+
+	<!-- wp:paragraph {"align":"center","className":"fh-404-links","style":{"spacing":{"margin":{"top":"2.5rem"}},"typography":{"fontSize":"0.85rem"}}} -->
+	<p class="has-text-align-center fh-404-links" style="margin-top:2.5rem;font-size:0.85rem"><a href="/">Home</a> <a href="/#about">About</a> <a href="/#portfolio">Work</a> <a href="/#blog">Blog</a> <a href="/#contact">Contact</a></p>
+	<!-- /wp:paragraph -->
 
 </main>
 <!-- /wp:group -->
