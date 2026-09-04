@@ -1184,6 +1184,13 @@ h2 {
 	background: var(--wp--preset--color--primary);
 }
 
+/* Search form: sits in the wide column (so it lines up with the title
+   and results grid), but the field itself stays a sensible width,
+   flush left. */
+.fh-search-form .wp-block-search__inside-wrapper {
+	max-width: 520px;
+}
+
 /* ===================================================
    Query pagination (archive / blog / search)
    =================================================== */
