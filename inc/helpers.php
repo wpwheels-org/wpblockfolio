@@ -1,15 +1,25 @@
 <?php
-/*
------------------------------------------------------------
-// Get Contact Form
-------------------------------------------------------------*/
+/**
+ * Theme helper functions.
+ *
+ * Small presentational helpers used by the theme's block patterns and
+ * template parts.
+ *
+ * @package WPBlockfolio
+ */
+
+// Get contact form.
 if ( ! function_exists( 'wpblockfolio_get_contact_form' ) ) {
 	/**
-	 * Get the site's contact form: real plugin form if one is active,
-	 * otherwise a friendly "email me directly" fallback — never a fake
-	 * form that goes nowhere.
+	 * Return block markup for the site's contact section.
 	 *
-	 * @return string
+	 * When Contact Form 7 is active and has at least one published form,
+	 * returns a shortcode block referencing the oldest form. Otherwise
+	 * returns a self-contained group block explaining that no form is
+	 * connected and offering a "mailto:" button — never a dead form that
+	 * silently goes nowhere.
+	 *
+	 * @return string Serialized block markup for the contact section.
 	 */
 	function wpblockfolio_get_contact_form() {
 		$form = '<!-- wp:group {"backgroundColor":"surface","className":"fh-card","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"2rem","right":"2rem"}}}} -->
@@ -26,12 +36,14 @@ if ( ! function_exists( 'wpblockfolio_get_contact_form' ) ) {
 			<!-- /wp:group -->';
 
 		if ( defined( 'WPCF7_VERSION' ) && class_exists( 'WPCF7_ContactForm' ) ) {
-			$forms = WPCF7_ContactForm::find( array(
-				'post_status'    => 'publish',
-				'orderby'        => 'ID',
-				'order'          => 'ASC',
-				'posts_per_page' => 1,
-			) );
+			$forms = WPCF7_ContactForm::find(
+				[
+					'post_status'    => 'publish',
+					'orderby'        => 'ID',
+					'order'          => 'ASC',
+					'posts_per_page' => 1,
+				]
+			);
 			if ( ! empty( $forms ) ) {
 				$id    = $forms[0]->hash();
 				$title = $forms[0]->title();
@@ -44,32 +56,38 @@ if ( ! function_exists( 'wpblockfolio_get_contact_form' ) ) {
 }
 
 
-/*
------------------------------------------------------------
-// Site logo fallback
-------------------------------------------------------------*/
+// Site logo fallback.
 if ( ! function_exists( 'wpblockfolio_get_custom_logo' ) ) {
 
+	/**
+	 * Provide a text-based site-title fallback when no custom logo is set.
+	 *
+	 * Filters `get_custom_logo`. If a custom logo exists the markup is
+	 * returned unchanged. Otherwise a linked site title is appended,
+	 * wrapped in an `<h1>` on the front page / blog index and an `<h2>`
+	 * elsewhere.
+	 *
+	 * @param string $html Existing custom-logo markup (empty when none is set).
+	 * @return string The logo markup, or the site-title fallback markup.
+	 */
 	function wpblockfolio_get_custom_logo( $html ) {
 		if ( has_custom_logo() ) {
 			return $html;
-		} else {
-			$site_title = get_bloginfo( 'name' );
-	
-			$html .= '<a href="' . esc_url( get_home_url( null, '/' ) ) . '">';
-	
-			if ( ( is_front_page() || is_home() ) && ! is_page() ) {
-	
-				$html .= '<h1 class="site-title">' . esc_html( $site_title ) . '</h1>';
-	
-			} else {
-				$html .= '<h2 class="site-title">' . esc_html( $site_title ) . '</h2>';
-			}
-	
-			$html .= '</a>';
-	
-			return $html;
 		}
+
+		$site_title = get_bloginfo( 'name' );
+
+		$html .= '<a href="' . esc_url( get_home_url( null, '/' ) ) . '">';
+
+		if ( ( is_front_page() || is_home() ) && ! is_page() ) {
+			$html .= '<h1 class="site-title">' . esc_html( $site_title ) . '</h1>';
+		} else {
+			$html .= '<h2 class="site-title">' . esc_html( $site_title ) . '</h2>';
+		}
+
+		$html .= '</a>';
+
+		return $html;
 	}
 }
 add_filter( 'get_custom_logo', 'wpblockfolio_get_custom_logo' );
