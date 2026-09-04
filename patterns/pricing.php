@@ -8,8 +8,8 @@
  * Viewport width: 1400
  */
 ?>
-<!-- wp:group {"anchor":"pricing","align":"wide","className":"fh-pad-x","style":{"spacing":{"margin":{"top":"2rem"}}}} -->
-<div id="pricing" class="wp-block-group alignwide fh-pad-x" style="margin-top:2rem">
+<!-- wp:group {"anchor":"pricing","align":"wide","style":{"spacing":{"margin":{"top":"2rem"}}}} -->
+<div id="pricing" class="wp-block-group alignwide" style="margin-top:2rem">
 
 	<!-- wp:paragraph {"className":"fh-eyebrow","align":"center"} -->
 	<p class="has-text-align-center fh-eyebrow">Pricing</p>

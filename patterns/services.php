@@ -17,8 +17,8 @@ $wpblockfolio_services = array(
 	array( '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2 2.8-2.8z"/></svg>', 'Support', 'Ongoing maintenance, updates and priority troubleshooting.' ),
 );
 ?>
-<!-- wp:group {"anchor":"services","align":"wide","className":"fh-pad-x","style":{"spacing":{"margin":{"top":"2rem"}}}} -->
-<div id="services" class="wp-block-group alignwide fh-pad-x" style="margin-top:2rem">
+<!-- wp:group {"anchor":"services","align":"wide","style":{"spacing":{"margin":{"top":"2rem"}}}} -->
+<div id="services" class="wp-block-group alignwide" style="margin-top:2rem">
 
 	<!-- wp:paragraph {"className":"fh-eyebrow","align":"center"} -->
 	<p class="has-text-align-center fh-eyebrow">Services</p>
