@@ -15,6 +15,21 @@
 	box-sizing: border-box;
 }
 
+/* ---------- Anchor / in-page navigation ---------- */
+/* Smooth scrolling for native hash jumps (back/forward, no-JS), and a
+   scroll offset so target sections clear the sticky header. JS in
+   assets/src/js/main.js applies the same offset for click navigation. */
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 .fh-pad-x {
 	padding-left: clamp(1.25rem, 4vw, 3rem);
 	padding-right: clamp(1.25rem, 4vw, 3rem);
