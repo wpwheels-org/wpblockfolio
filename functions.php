@@ -57,16 +57,41 @@ function wpblockfolio_setup() {
 add_action( 'after_setup_theme', 'wpblockfolio_setup' );
 
 /**
+ * Read the webpack-generated asset manifest for the theme's main bundle.
+ *
+ * Returns the `dependencies` and `version` written to
+ * `assets/build/js/main.asset.php` by @wordpress/scripts, falling back to
+ * an empty dependency list and `WPBLOCKFOLIO_VERSION` when the file is
+ * missing (e.g. before a first build).
+ *
+ * @return array{dependencies: string[], version: string} Asset manifest.
+ */
+function wpblockfolio_asset_meta() {
+	if ( file_exists( get_template_directory() . '/assets/build/js/main.asset.php' ) ) {
+		return require get_template_directory() . '/assets/build/js/main.asset.php';
+	}
+
+	return [
+		'dependencies' => [],
+		'version'      => WPBLOCKFOLIO_VERSION,
+	];
+}
+
+/**
  * Enqueue front-end styles and scripts.
  *
  * Hooked to `wp_enqueue_scripts`. Loads the root `style.css`, the compiled
  * `assets/build/css/custom.css` (dependent on the root stylesheet) for the
  * rules theme.json cannot express, and the compiled `assets/build/js/main.js`
- * in the footer. All assets are versioned with `WPBLOCKFOLIO_VERSION`.
+ * in the footer. The script's dependencies and cache-busting version come
+ * from `assets/build/js/main.asset.php`, and `custom.css` is registered with
+ * an RTL counterpart (`custom-rtl.css`) served automatically on RTL locales.
  *
  * @return void
  */
 function wpblockfolio_enqueue_assets() {
+	$asset = wpblockfolio_asset_meta();
+
 	// Theme styles that theme.json cannot express (progress bars, timeline, cards, hovers).
 	wp_enqueue_style(
 		'wpblockfolio-style',
@@ -79,14 +104,15 @@ function wpblockfolio_enqueue_assets() {
 		'wpblockfolio-custom',
 		get_template_directory_uri() . '/assets/build/css/custom.css',
 		[ 'wpblockfolio-style' ],
-		WPBLOCKFOLIO_VERSION
+		$asset['version']
 	);
+	wp_style_add_data( 'wpblockfolio-custom', 'rtl', 'replace' );
 
 	wp_enqueue_script(
 		'wpblockfolio-script',
 		get_template_directory_uri() . '/assets/build/js/main.js',
-		[],
-		WPBLOCKFOLIO_VERSION,
+		$asset['dependencies'],
+		$asset['version'],
 		true
 	);
 }
@@ -97,11 +123,15 @@ add_action( 'wp_enqueue_scripts', 'wpblockfolio_enqueue_assets' );
  *
  * Hooked to `enqueue_block_editor_assets` so the editor canvas matches the
  * front end. The font stylesheet is enqueued with a null version; the custom
- * stylesheet is versioned with `WPBLOCKFOLIO_VERSION`.
+ * stylesheet is versioned from `assets/build/js/main.asset.php` and registered
+ * with an RTL counterpart (`custom-rtl.css`) served automatically on RTL
+ * locales.
  *
  * @return void
  */
 function wpblockfolio_editor_assets() {
+	$asset = wpblockfolio_asset_meta();
+
 	wp_enqueue_style(
 		'wpblockfolio-editor-fonts',
 		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap',
@@ -112,8 +142,9 @@ function wpblockfolio_editor_assets() {
 		'wpblockfolio-editor-custom',
 		get_template_directory_uri() . '/assets/build/css/custom.css',
 		[],
-		WPBLOCKFOLIO_VERSION
+		$asset['version']
 	);
+	wp_style_add_data( 'wpblockfolio-editor-custom', 'rtl', 'replace' );
 }
 add_action( 'enqueue_block_editor_assets', 'wpblockfolio_editor_assets' );
 
