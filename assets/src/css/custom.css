@@ -314,6 +314,7 @@ h2 {
 
 /* ---------- Cards shared ---------- */
 .fh-card {
+	overflow: hidden;
 	background: #fff;
 	border: 1px solid var(--wp--preset--color--border);
 	border-radius: var(--wp--custom--radius--medium, 14px);
@@ -692,6 +693,497 @@ h2 {
 	margin-left: 0.75rem;
 }
 
+/* ===================================================
+   Single post
+   =================================================== */
+.fh-single {
+	background: var(--wp--preset--color--surface);
+	/* Guard against any wide child (e.g. an oversized imported image)
+	   forcing the whole page to scroll horizontally. */
+	overflow-x: clip;
+}
+
+.fh-single :is(img, figure, iframe, video, pre) {
+	max-width: 100%;
+}
+
+/* --- Back link --- */
+.fh-back-link {
+	margin: 0 0 1.5rem;
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+.fh-back-link a {
+	color: var(--wp--preset--color--body-text);
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.fh-back-link a:hover {
+	color: var(--wp--preset--color--accent);
+}
+
+/* --- Category pills --- */
+.fh-post-cats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.fh-post-cats a {
+	display: inline-block;
+	padding: 0.32rem 0.72rem;
+	border-radius: 999px;
+	background: var(--wp--preset--color--surface-alt);
+	color: var(--wp--preset--color--primary);
+	text-decoration: none;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.fh-post-cats a:hover {
+	background: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+}
+
+.fh-post-cats .wp-block-post-terms__separator,
+.fh-post-tags .wp-block-post-terms__separator {
+	display: none;
+}
+
+/* --- Title --- */
+.fh-single-title {
+	font-size: clamp(2rem, 5vw, 3rem);
+	line-height: 1.15;
+	letter-spacing: -0.02em;
+}
+
+/* --- Meta row (author + date) --- */
+.fh-post-meta {
+	align-items: center;
+	gap: 0 !important;
+	color: var(--wp--preset--color--body-text);
+	font-size: 0.9rem;
+}
+
+.fh-post-meta .wp-block-post-author {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	margin: 0;
+}
+
+.fh-post-meta .wp-block-post-author__avatar img {
+	display: block;
+	border-radius: 999px;
+}
+
+.fh-post-meta .wp-block-post-author__byline {
+	display: none;
+}
+
+.fh-post-meta .wp-block-post-author__name {
+	margin: 0;
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: var(--wp--preset--color--ink);
+}
+
+.fh-post-meta .wp-block-post-date {
+	position: relative;
+	margin: 0;
+	padding-left: 1.5rem;
+}
+
+.fh-post-meta .wp-block-post-date::before {
+	content: "\2022";
+	position: absolute;
+	left: 0.6rem;
+}
+
+/* --- Featured image --- */
+.fh-single-featured img {
+	width: 100%;
+	max-height: 520px;
+	object-fit: cover;
+	border-radius: 18px;
+}
+
+/* --- Content rhythm & typography --- */
+.fh-single-content {
+	font-size: 1.05rem;
+	line-height: 1.8;
+	color: var(--wp--preset--color--ink);
+}
+
+.fh-single-content > * {
+	margin-top: 1.5rem;
+	margin-bottom: 0;
+}
+
+.fh-single-content > *:first-child {
+	margin-top: 0;
+}
+
+/* Lead paragraph */
+.fh-single-content > p:first-of-type {
+	font-size: 1.2rem;
+	line-height: 1.7;
+	color: var(--wp--preset--color--body-text);
+}
+
+/* Rein in heading scale inside article flow (theme.json sizes them for
+   landing sections, which is far too large in running text; imported
+   content also carries bare <h1> tags we need to tame). */
+.fh-single-content h1 {
+	margin-top: 3rem;
+	font-size: 2rem;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+}
+
+.fh-single-content h2 {
+	margin-top: 3rem;
+	font-size: 1.7rem;
+	line-height: 1.3;
+	letter-spacing: -0.01em;
+}
+
+.fh-single-content h3 {
+	margin-top: 2.5rem;
+	font-size: 1.3rem;
+	line-height: 1.35;
+}
+
+.fh-single-content h4,
+.fh-single-content h5,
+.fh-single-content h6 {
+	margin-top: 2rem;
+	font-size: 1.08rem;
+	line-height: 1.4;
+	font-weight: 700;
+}
+
+.fh-single-content p a,
+.fh-single-content li a {
+	color: var(--wp--preset--color--primary);
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
+
+.fh-single-content ul,
+.fh-single-content ol {
+	padding-left: 1.25rem;
+}
+
+.fh-single-content li {
+	margin: 0.4rem 0;
+}
+
+.fh-single-content figure {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.fh-single-content img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 14px;
+}
+
+.fh-single-content img.aligncenter,
+.fh-single-content img.alignnone {
+	display: block;
+	margin-inline: auto;
+}
+
+.fh-single-content figcaption,
+/* Imported content places a caption in an <h6> right after the image. */
+.fh-single-content p:has(img) + h6,
+.fh-single-content img + h6 {
+	margin-top: 0.6rem;
+	font-size: 0.85rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: var(--wp--preset--color--body-text);
+	text-align: center;
+}
+
+.fh-single-content blockquote {
+	margin: 2rem 0;
+	padding-left: 1.25rem;
+	border-left: 3px solid var(--wp--preset--color--accent);
+	font-size: 1.15rem;
+	font-style: italic;
+	color: var(--wp--preset--color--ink);
+}
+
+.fh-single-content pre {
+	padding: 1.1rem 1.25rem;
+	border-radius: 12px;
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--white);
+	font-size: 0.9rem;
+	overflow-x: auto;
+}
+
+/* --- Tags --- */
+.fh-post-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.fh-post-tags a {
+	padding: 0.3rem 0.75rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 999px;
+	font-size: 0.8rem;
+	color: var(--wp--preset--color--body-text);
+	text-decoration: none;
+	transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.fh-post-tags a:hover {
+	border-color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--accent);
+}
+
+/* --- Author bio card --- */
+.fh-author-card {
+	padding: 1.5rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: var(--wp--custom--radius--medium, 14px);
+	background: var(--wp--preset--color--white);
+}
+
+.fh-author-card .wp-block-post-author {
+	display: flex;
+	gap: 1rem;
+	align-items: flex-start;
+	margin: 0;
+}
+
+.fh-author-card .wp-block-post-author__avatar img {
+	border-radius: 999px;
+}
+
+.fh-author-card .wp-block-post-author__byline {
+	margin: 0 0 0.15rem;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--accent);
+}
+
+.fh-author-card .wp-block-post-author__name {
+	margin: 0 0 0.35rem;
+	font-size: 1.05rem;
+	font-weight: 700;
+	color: var(--wp--preset--color--ink);
+}
+
+.fh-author-card .wp-block-post-author__bio {
+	margin: 0;
+	font-size: 0.9rem;
+	line-height: 1.65;
+	color: var(--wp--preset--color--body-text);
+}
+
+/* --- Previous / next --- */
+.fh-post-nav {
+	gap: 1rem !important;
+}
+
+.fh-post-nav .wp-block-post-navigation-link {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	padding: 1.1rem 1.25rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: var(--wp--custom--radius--medium, 14px);
+	background: var(--wp--preset--color--white);
+	font-size: 0.95rem;
+	transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.fh-post-nav .wp-block-post-navigation-link:hover {
+	border-color: var(--wp--preset--color--accent);
+	transform: translateY(-2px);
+}
+
+.fh-post-nav .wp-block-post-navigation-link::before {
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--body-text);
+}
+
+.fh-post-nav .post-navigation-link-previous::before {
+	content: "\2190  Previous";
+}
+
+.fh-post-nav .post-navigation-link-next {
+	text-align: right;
+}
+
+.fh-post-nav .post-navigation-link-next::before {
+	content: "Next  \2192";
+}
+
+.fh-post-nav .wp-block-post-navigation-link__arrow-previous,
+.fh-post-nav .wp-block-post-navigation-link__arrow-next {
+	display: none;
+}
+
+.fh-post-nav a {
+	color: var(--wp--preset--color--ink);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.fh-post-nav a:hover {
+	color: var(--wp--preset--color--accent);
+}
+
+/* --- Comments --- */
+.fh-comments {
+	margin-top: 3.5rem;
+	padding-top: 2.5rem;
+	border-top: 1px solid var(--wp--preset--color--border);
+}
+
+.fh-comments .wp-block-comments-title,
+.fh-comments .comment-reply-title {
+	margin-bottom: 1.25rem;
+	font-size: 1.5rem;
+}
+
+.fh-comments .wp-block-comment-template {
+	margin: 0 0 2.5rem;
+	padding: 0;
+	list-style: none;
+}
+
+.fh-comment {
+	align-items: flex-start;
+	gap: 0.9rem !important;
+	padding: 1.5rem 0;
+	border-top: 1px solid var(--wp--preset--color--border);
+}
+
+.fh-comment > .wp-block-avatar {
+	flex: 0 0 auto;
+	line-height: 0;
+}
+
+.fh-comment > .wp-block-avatar img {
+	width: 44px;
+	height: 44px;
+	border-radius: 999px;
+}
+
+.fh-comment-body {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.fh-comment-meta {
+	align-items: center;
+}
+
+.fh-comment .wp-block-comment-author-name {
+	color: var(--wp--preset--color--ink);
+}
+
+.fh-comment .wp-block-comment-author-name a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.fh-comment .wp-block-comment-content {
+	font-size: 0.95rem;
+	line-height: 1.7;
+}
+
+.fh-comment .wp-block-comment-content :is(h1, h2, h3, h4, h5, h6) {
+	margin: 0.75rem 0 0.25rem;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.fh-comment .wp-block-comment-content > *:first-child {
+	margin-top: 0;
+}
+
+.fh-comment .wp-block-comment-reply-link a {
+	color: var(--wp--preset--color--primary);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.fh-comments .comment-form {
+	margin-top: 1.5rem;
+}
+
+.fh-comments .comment-form label {
+	display: block;
+	margin-bottom: 0.35rem;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--wp--preset--color--ink);
+}
+
+.fh-comments .comment-form input[type="text"],
+.fh-comments .comment-form input[type="email"],
+.fh-comments .comment-form input[type="url"],
+.fh-comments .comment-form textarea {
+	width: 100%;
+	padding: 0.8rem 1rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 10px;
+	background: var(--wp--preset--color--white);
+	font: inherit;
+	font-size: 0.95rem;
+	color: var(--wp--preset--color--ink);
+}
+
+.fh-comments .comment-form input:focus,
+.fh-comments .comment-form textarea:focus {
+	outline: none;
+	border-color: var(--wp--preset--color--primary);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--wp--preset--color--primary) 18%, transparent);
+}
+
+.fh-comments .comment-form-comment,
+.fh-comments .comment-form-author,
+.fh-comments .comment-form-email,
+.fh-comments .comment-form-url {
+	margin-bottom: 1rem;
+}
+
+.fh-comments .form-submit .submit {
+	padding: 0.85rem 1.85rem;
+	border: 0;
+	border-radius: 999px;
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--white);
+	font-weight: 600;
+	font-size: 0.95rem;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
+
+.fh-comments .form-submit .submit:hover {
+	background: var(--wp--preset--color--primary);
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
 
@@ -815,6 +1307,18 @@ button:focus-visible,
 
 	.fh-blog-grid {
 		grid-template-columns: 1fr !important;
+	}
+
+	.fh-post-nav {
+		grid-template-columns: 1fr !important;
+	}
+
+	.fh-post-nav .post-navigation-link-next {
+		text-align: left;
+	}
+
+	.fh-single-featured img {
+		max-height: 360px;
 	}
 
 	/* Hide the standalone desktop CTA button */

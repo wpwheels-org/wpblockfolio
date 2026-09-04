@@ -78,6 +78,26 @@ function wpblockfolio_asset_meta() {
 }
 
 /**
+ * Cache-busting version string for a built asset.
+ *
+ * The webpack style entries do not emit their own `*.asset.php`, so their
+ * content hash is not available. Fall back to the file's modification time
+ * (and `WPBLOCKFOLIO_VERSION` when the file is missing) so a rebuilt
+ * stylesheet always invalidates the browser cache.
+ *
+ * @param string $relative_path Path below the theme root, e.g.
+ *                              'assets/build/css/custom.css'.
+ * @return string|int Version string suitable for wp_enqueue_style().
+ */
+function wpblockfolio_asset_version( $relative_path ) {
+	$absolute_path = get_template_directory() . '/' . ltrim( $relative_path, '/' );
+
+	return file_exists( $absolute_path )
+		? filemtime( $absolute_path )
+		: WPBLOCKFOLIO_VERSION;
+}
+
+/**
  * Enqueue front-end styles and scripts.
  *
  * Hooked to `wp_enqueue_scripts`. Loads the root `style.css`, the compiled
@@ -104,7 +124,7 @@ function wpblockfolio_enqueue_assets() {
 		'wpblockfolio-custom',
 		get_template_directory_uri() . '/assets/build/css/custom.css',
 		[ 'wpblockfolio-style' ],
-		$asset['version']
+		wpblockfolio_asset_version( 'assets/build/css/custom.css' )
 	);
 	wp_style_add_data( 'wpblockfolio-custom', 'rtl', 'replace' );
 
@@ -123,15 +143,12 @@ add_action( 'wp_enqueue_scripts', 'wpblockfolio_enqueue_assets' );
  *
  * Hooked to `enqueue_block_editor_assets` so the editor canvas matches the
  * front end. The font stylesheet is enqueued with a null version; the custom
- * stylesheet is versioned from `assets/build/js/main.asset.php` and registered
- * with an RTL counterpart (`custom-rtl.css`) served automatically on RTL
- * locales.
+ * stylesheet is versioned by its file modification time and registered with
+ * an RTL counterpart (`custom-rtl.css`) served automatically on RTL locales.
  *
  * @return void
  */
 function wpblockfolio_editor_assets() {
-	$asset = wpblockfolio_asset_meta();
-
 	wp_enqueue_style(
 		'wpblockfolio-editor-fonts',
 		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap',
@@ -142,7 +159,7 @@ function wpblockfolio_editor_assets() {
 		'wpblockfolio-editor-custom',
 		get_template_directory_uri() . '/assets/build/css/custom.css',
 		[],
-		$asset['version']
+		wpblockfolio_asset_version( 'assets/build/css/custom.css' )
 	);
 	wp_style_add_data( 'wpblockfolio-editor-custom', 'rtl', 'replace' );
 }
