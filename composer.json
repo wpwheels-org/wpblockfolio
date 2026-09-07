@@ -34,7 +34,7 @@
 	"prefer-stable": true,
 	"autoload-dev": {
 		"psr-4": {
-			"Zenvy\\Tests\\": "tests/"
+			"WPBlockfolio\\Tests\\": "tests/"
 		}
 	},
 	"extra": {
