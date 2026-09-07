@@ -31,7 +31,6 @@ The Contact section includes a plain HTML form (name, email, subject, message) s
 * templates/ — front-page, index, single, page, page-no-title, archive, search, 404
 * parts/ — header.html, footer.html
 * patterns/ — one file per homepage section, registered under the "WPBlockfolio Sections" category
-* assets/css/custom.css — supplemental CSS for progress bars, timeline, card hovers, stat icons (things theme.json block supports can't express)
 
 == Changelog ==
 
@@ -42,7 +41,7 @@ The Contact section includes a plain HTML form (name, email, subject, message) s
 
 WPBlockfolio is distributed under the terms of the GNU GPL v3 or later.
 
-This theme bundles no third-party images or icon fonts.
+This theme bundles the following third-party resources:
 
 Fonts:
 * Poppins, Copyright 2014-2023 The Poppins Project Authors (https://github.com/itfoundry/Poppins)
@@ -53,4 +52,15 @@ Fonts:
   Licensed under the SIL Open Font License, Version 1.1
   https://scripts.sil.org/OFL
 
-Full license text is included with each font in assets/fonts/[Font Name]/OFL.txt
+Images:
+
+Simple Icons (https://simpleicons.org)
+License: CC0 1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+Note: while the Simple Icons SVG artwork itself is released under CC0,
+  the individual brand marks depicted (WordPress, Figma, jQuery, GitHub,
+  Envato, React, etc.) remain trademarks of their respective
+  owners and are used here only to visually represent tools/platforms —
+  not as an endorsement or affiliation claim.
+
+placeholder.png,
+License: CC0 license - https://creativecommons.org/about/cc0
