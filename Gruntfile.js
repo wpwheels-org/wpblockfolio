@@ -7,15 +7,15 @@ module.exports = function( grunt ) {
 		'!vendor/**', // exclude vendor directory
 		'!assets/src/images/**', // exclude source assets/images
 		'!assets/src/library/**', // exclude source assets/library
-		'!assets/src/webfonts/**', // exclude source assets/webfonts
+		'!assets/src/fonts/**', // exclude source assets/fonts
 		'!cypress/**', // exclude Cypress tests
 		'!tests/**', // exclude unit tests
 		'!build/**', // exclude build output
 		'!.git/**', // exclude git directory
 		'!.gitignore', // exclude git config
-		'!package.json', // exclude lock files
+		'!package.json', // exclude package manifest
 		'!package-lock.json', // exclude lock files
-		'!composer.json', // exclude lock files
+		'!composer.json', // exclude composer manifest
 		'!composer.lock',
 		'!*.config.js', // exclude config files used only for development
 		'!Gruntfile.js', // exclude this build file
@@ -32,12 +32,9 @@ module.exports = function( grunt ) {
 		'!**/*.tmp', // exclude temporary files
 		'!.phpcs-cache.json', // exclude phpcs cache
 		'!clean-errors.txt',
-		'!CLAUDE.md', // exclude CLAUDE.md
-		'!AGENTS.md', // exclude AGENTS.md
-		'CHANGELOG.md', // include CHANGELOG.md
+		'!CLAUDE.md', // exclude AI assistant instructions
+		'!AGENTS.md', // exclude AI assistant instructions
 	];
-
-	const excludeCopyFilesPro = copyFiles.slice( 0 ).concat( [ '!changelog.txt' ] );
 
 	// Project configuration
 	grunt.initConfig( {
@@ -94,7 +91,7 @@ module.exports = function( grunt ) {
 			pro: {
 				files: [ {
 					expand: true,
-					src: excludeCopyFilesPro,
+					src: copyFiles,
 					dest: 'build/<%= pkg.name %>/',
 				} ],
 			},
