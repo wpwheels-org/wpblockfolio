@@ -3,15 +3,15 @@
 <!-- wp:group {"tagName":"main","align":"wide","style":{"spacing":{"margin":{"top":"3rem","bottom":"3rem"}}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group alignwide" style="margin-top:3rem;margin-bottom:3rem">
 
-	<!-- wp:query-title {"type":"archive","style":{"spacing":{"margin":{"bottom":"0.5rem"}}}} /-->
-	<!-- wp:term-description {"textColor":"body-text","style":{"spacing":{"margin":{"bottom":"2rem"}}}} /-->
+	<!-- wp:query-title {"type":"archive","align":"wide","style":{"spacing":{"margin":{"bottom":"0.5rem"}}}} /-->
+	<!-- wp:term-description {"align":"wide","textColor":"body-text","style":{"spacing":{"margin":{"bottom":"2rem"}}}} /-->
 
-	<!-- wp:query {"queryId":3,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true}} -->
-	<div class="wp-block-query">
+	<!-- wp:query {"queryId":3,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true},"align":"wide"} -->
+	<div class="wp-block-query alignwide">
 		<!-- wp:post-template {"style":{"spacing":{"blockGap":{"top":"1.5rem","left":"1.5rem"}}},"layout":{"type":"grid","columnCount":3}} -->
 
-			<!-- wp:group {"className":"fh-card","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group fh-card">
+			<!-- wp:group {"className":"wpblockfolio-card","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group wpblockfolio-card">
 				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3"} /-->
 				<!-- wp:group {"style":{"spacing":{"padding":{"left":"1.5rem","right":"1.5rem","top":"1.25rem","bottom":"1.5rem"}}}} -->
 				<div class="wp-block-group" style="padding-top:1.25rem;padding-right:1.5rem;padding-bottom:1.5rem;padding-left:1.5rem">
@@ -25,10 +25,10 @@
 
 		<!-- /wp:post-template -->
 
-		<!-- wp:query-pagination {"style":{"spacing":{"margin":{"top":"2.5rem"}}}} -->
-			<!-- wp:query-pagination-previous /-->
+		<!-- wp:query-pagination {"paginationArrow":"arrow","className":"wpblockfolio-pagination","style":{"spacing":{"margin":{"top":"3rem"}}},"layout":{"type":"flex","justifyContent":"space-between"}} -->
+			<!-- wp:query-pagination-previous {"label":"Previous"} /-->
 			<!-- wp:query-pagination-numbers /-->
-			<!-- wp:query-pagination-next /-->
+			<!-- wp:query-pagination-next {"label":"Next"} /-->
 		<!-- /wp:query-pagination -->
 
 		<!-- wp:query-no-results -->

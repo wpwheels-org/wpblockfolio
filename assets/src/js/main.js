@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	 * to their target section, offset by the sticky header height.
 	 * ----------------------------------------------------------------- */
 	(function () {
-		var header = document.querySelector('.fh-header');
+		var header = document.querySelector('.wpblockfolio-header');
 
 		function headerOffset() {
 			return header ? header.getBoundingClientRect().height + 16 : 0;
@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	})();
 
-	var navLinks = document.querySelectorAll('.fh-sidebar-nav a[href^="#"]');
-	var sidebar = document.querySelector('.fh-sidebar-card');
+	var navLinks = document.querySelectorAll('.wpblockfolio-sidebar-nav a[href^="#"]');
+	var sidebar = document.querySelector('.wpblockfolio-sidebar-card');
 	if (!navLinks.length || !sidebar) return;
 
 	var sections = [];

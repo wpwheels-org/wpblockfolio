@@ -8,14 +8,14 @@
  * Viewport width: 400
  */
 ?>
-<!-- wp:group {"className":"fh-card fh-pad-x fh-pad-y fh-sidebar-card","layout":{"type":"constrained"}} -->
-<div class="wp-block-group fh-card fh-pad-x fh-pad-y fh-sidebar-card">
+<!-- wp:group {"className":"wpblockfolio-card wpblockfolio-pad-x wpblockfolio-pad-y wpblockfolio-sidebar-card","layout":{"type":"constrained"}} -->
+<div class="wp-block-group wpblockfolio-card wpblockfolio-pad-x wpblockfolio-pad-y wpblockfolio-sidebar-card">
 
 	<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 	<div class="wp-block-group">
 
-		<!-- wp:group {"className":"fh-avatar-ring"} -->
-		<div class="wp-block-group fh-avatar-ring">
+		<!-- wp:group {"className":"wpblockfolio-avatar-ring"} -->
+		<div class="wp-block-group wpblockfolio-avatar-ring">
 			<!-- wp:image {"sizeSlug":"thumbnail"} -->
 			<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/build/images/placeholder.png'); ?>" alt="Portrait photo"/></figure>
 			<!-- /wp:image -->
@@ -33,12 +33,12 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:separator {"className":"fh-separator-left","style":{"spacing":{"margin":{"top":"1.5rem","bottom":"1.5rem"}}},"backgroundColor":"border"} -->
-	<hr class="wp-block-separator has-text-color has-border-color has-alpha-channel-opacity has-border-background-color has-background fh-separator-left" style="margin-top:1.5rem;margin-bottom:1.5rem"/>
+	<!-- wp:separator {"className":"wpblockfolio-separator-left","style":{"spacing":{"margin":{"top":"1.5rem","bottom":"1.5rem"}}},"backgroundColor":"border"} -->
+	<hr class="wp-block-separator has-text-color has-border-color has-alpha-channel-opacity has-border-background-color has-background wpblockfolio-separator-left" style="margin-top:1.5rem;margin-bottom:1.5rem"/>
 	<!-- /wp:separator -->
 
-	<!-- wp:list {"className":"fh-sidebar-nav","style":{"typography":{"fontSize":"0.9rem"},"spacing":{"blockGap":"0.7rem"}}} -->
-	<ul class="wp-block-list fh-sidebar-nav" style="font-size:0.9rem">
+	<!-- wp:list {"className":"wpblockfolio-sidebar-nav","style":{"typography":{"fontSize":"0.9rem"},"spacing":{"blockGap":"0.7rem"}}} -->
+	<ul class="wp-block-list wpblockfolio-sidebar-nav" style="font-size:0.9rem">
 		<!-- wp:list-item --><li><a href="#home">Home</a></li><!-- /wp:list-item -->
 		<!-- wp:list-item --><li><a href="#about">About</a></li><!-- /wp:list-item -->
 		<!-- wp:list-item --><li><a href="#skills">Skills</a></li><!-- /wp:list-item -->
@@ -51,12 +51,12 @@
 	</ul>
 	<!-- /wp:list -->
 
-	<!-- wp:separator {"className":"fh-separator-left","style":{"spacing":{"margin":{"top":"1.5rem","bottom":"1.5rem"}}},"backgroundColor":"border"} -->
-	<hr class="wp-block-separator has-text-color has-border-color has-alpha-channel-opacity has-border-background-color has-background fh-separator-left" style="margin-top:1.5rem;margin-bottom:1.5rem"/>
+	<!-- wp:separator {"className":"wpblockfolio-separator-left","style":{"spacing":{"margin":{"top":"1.5rem","bottom":"1.5rem"}}},"backgroundColor":"border"} -->
+	<hr class="wp-block-separator has-text-color has-border-color has-alpha-channel-opacity has-border-background-color has-background wpblockfolio-separator-left" style="margin-top:1.5rem;margin-bottom:1.5rem"/>
 	<!-- /wp:separator -->
 
-	<!-- wp:social-links {"iconColor":"ink","iconColorValue":"#181a17","className":"is-style-logos-only fh-social","style":{"spacing":{"blockGap":{"left":"0.5rem"}}},"layout":{"type":"flex","orientation":"horizontal","justifyContent":"center"}} -->
-	<ul class="wp-block-social-links has-icon-color is-style-logos-only fh-social">
+	<!-- wp:social-links {"iconColor":"ink","iconColorValue":"#181a17","className":"is-style-logos-only wpblockfolio-social","style":{"spacing":{"blockGap":{"left":"0.5rem"}}},"layout":{"type":"flex","orientation":"horizontal","justifyContent":"center"}} -->
+	<ul class="wp-block-social-links has-icon-color is-style-logos-only wpblockfolio-social">
 		<!-- wp:social-link {"url":"#","service":"facebook"} /-->
 		<!-- wp:social-link {"url":"#","service":"twitter"} /-->
 		<!-- wp:social-link {"url":"#","service":"instagram"} /-->

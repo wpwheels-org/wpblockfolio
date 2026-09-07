@@ -18,22 +18,22 @@ $wpblockfolio_projects = array(
 );
 
 ?>
-<!-- wp:group {"anchor":"portfolio","align":"wide","className":"fh-pad-x","style":{"spacing":{"margin":{"top":"2rem"}}}} -->
-<div id="portfolio" class="wp-block-group alignwide fh-pad-x" style="margin-top:2rem">
+<!-- wp:group {"anchor":"portfolio","align":"wide","style":{"spacing":{"margin":{"top":"2rem"}}}} -->
+<div id="portfolio" class="wp-block-group alignwide" style="margin-top:2rem">
 
-	<!-- wp:paragraph {"className":"fh-eyebrow","align":"center"} -->
-	<p class="has-text-align-center fh-eyebrow">Portfolio</p>
+	<!-- wp:paragraph {"className":"wpblockfolio-eyebrow","align":"center"} -->
+	<p class="has-text-align-center wpblockfolio-eyebrow">Portfolio</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0.5rem","bottom":"2.5rem"}}}} -->
 	<h2 class="wp-block-heading" style="margin-top:0.5rem;margin-bottom:2.5rem">Selected work</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:group {"className":"fh-portfolio-grid"} -->
-	<div class="wp-block-group fh-portfolio-grid">
+	<!-- wp:group {"className":"wpblockfolio-portfolio-grid"} -->
+	<div class="wp-block-group wpblockfolio-portfolio-grid">
 		<?php foreach ( $wpblockfolio_projects as $project ) : ?>
-		<!-- wp:image {"sizeSlug":"large","className":"fh-portfolio-item"} -->
-		<figure class="wp-block-image size-large fh-portfolio-item"><img src="<?php echo esc_attr( get_template_directory_uri() . '/assets/build/images/' . $project[0] ); ?>" alt="<?php echo esc_attr( $project[2] ); ?>"/><figcaption class="wp-element-caption"><?php echo esc_html( $project[2] ); ?></figcaption></figure>
+		<!-- wp:image {"sizeSlug":"large","className":"wpblockfolio-portfolio-item"} -->
+		<figure class="wp-block-image size-large wpblockfolio-portfolio-item"><img src="<?php echo esc_attr( get_template_directory_uri() . '/assets/build/images/' . $project[0] ); ?>" alt="<?php echo esc_attr( $project[2] ); ?>"/><figcaption class="wp-element-caption"><?php echo esc_html( $project[2] ); ?></figcaption></figure>
 		<!-- /wp:image -->
 		<?php endforeach; ?>
 	</div>

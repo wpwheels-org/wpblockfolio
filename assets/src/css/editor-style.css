@@ -5,7 +5,7 @@
 	font-family: var(--wp--preset--font-family--body);
 }
 
-.fh-portfolio-grid .fh-portfolio-item {
+.wpblockfolio-portfolio-grid .wpblockfolio-portfolio-item {
 	margin-block-start: 0;
 }
 

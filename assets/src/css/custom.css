@@ -30,37 +30,37 @@ html {
 	}
 }
 
-.fh-pad-x {
+.wpblockfolio-pad-x {
 	padding-left: clamp(1.25rem, 4vw, 3rem);
 	padding-right: clamp(1.25rem, 4vw, 3rem);
 }
 
-.fh-pad-y {
+.wpblockfolio-pad-y {
 	padding-top: clamp(1.75rem, 5vw, 3rem);
 	padding-bottom: clamp(1.75rem, 5vw, 3rem);
 }
 
-.fh-nav-hire {
+.wpblockfolio-nav-hire {
 	display: none;
 }
 
 /* ---------- Sticky resume-style sidebar ---------- */
-/* .fh-separator-left {
+/* .wpblockfolio-separator-left {
 	margin-right: auto !important;
 	width: 40px;
 } */
 
-.fh-sidebar-col {
+.wpblockfolio-sidebar-col {
 	flex: 0 0 360px;
 	max-width: 360px;
 }
 
-.fh-content-col {
+.wpblockfolio-content-col {
 	flex: 1 1 0%;
 	min-width: 0;
 }
 
-.fh-sidebar-card {
+.wpblockfolio-sidebar-card {
 	position: sticky;
 	top: 6rem;
 	/* clears the sticky header (~4.5rem) plus breathing room */
@@ -71,68 +71,68 @@ html {
 }
 
 /* Chrome / Edge / Safari */
-.fh-sidebar-card::-webkit-scrollbar {
+.wpblockfolio-sidebar-card::-webkit-scrollbar {
 	width: 5px;
 }
 
-.fh-sidebar-card::-webkit-scrollbar-track {
+.wpblockfolio-sidebar-card::-webkit-scrollbar-track {
 	background: transparent;
 }
 
-.fh-sidebar-card::-webkit-scrollbar-thumb {
+.wpblockfolio-sidebar-card::-webkit-scrollbar-thumb {
 	background-color: var(--wp--preset--color--border);
 	border-radius: 999px;
 }
 
-.fh-sidebar-card:hover::-webkit-scrollbar-thumb {
+.wpblockfolio-sidebar-card:hover::-webkit-scrollbar-thumb {
 	background-color: var(--wp--preset--color--body-text);
 }
 
-.fh-sidebar-nav {
+.wpblockfolio-sidebar-nav {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	text-align: center;
 }
 
-.fh-sidebar-nav li {
+.wpblockfolio-sidebar-nav li {
 	margin: 0;
 }
 
-.fh-sidebar-nav a {
+.wpblockfolio-sidebar-nav a {
 	color: var(--wp--preset--color--ink);
 	font-weight: 600;
 	display: block;
 	padding: 0.25rem 0;
 }
 
-.fh-sidebar-nav a:hover {
+.wpblockfolio-sidebar-nav a:hover {
 	color: var(--wp--preset--color--accent);
 }
 
 /* ---------- Contained brand strip (no longer full-bleed, sits inside content column) ---------- */
-.fh-brands-strip {
+.wpblockfolio-brands-strip {
 	border-radius: var(--wp--custom--radius--large, 20px);
 }
 
-.fh-marquee {
+.wpblockfolio-marquee {
 	overflow: hidden;
 	-webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 	mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 
-.fh-marquee-track {
+.wpblockfolio-marquee-track {
 	display: flex;
 	width: max-content;
 	gap: 3rem;
-	animation: fh-marquee 22s linear infinite;
+	animation: wpblockfolio-marquee 22s linear infinite;
 }
 
-.fh-marquee:hover .fh-marquee-track {
+.wpblockfolio-marquee:hover .wpblockfolio-marquee-track {
 	animation-play-state: paused;
 }
 
-.fh-marquee-item {
+.wpblockfolio-marquee-item {
 	display: flex;
 	align-items: center;
 	gap: 0.6rem;
@@ -141,24 +141,24 @@ html {
 	transition: opacity 0.2s ease;
 }
 
-.fh-marquee-item:hover {
+.wpblockfolio-marquee-item:hover {
 	opacity: 1;
 }
 
-.fh-marquee-item img {
+.wpblockfolio-marquee-item img {
 	width: 28px;
 	height: 28px;
 	object-fit: contain;
 }
 
-.fh-marquee-item span {
+.wpblockfolio-marquee-item span {
 	font-weight: 700;
 	font-size: 0.95rem;
 	color: var(--wp--preset--color--ink);
 	white-space: nowrap;
 }
 
-@keyframes fh-marquee {
+@keyframes wpblockfolio-marquee {
 	from {
 		transform: translateX(0);
 	}
@@ -169,11 +169,11 @@ html {
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.fh-marquee-track {
+	.wpblockfolio-marquee-track {
 		animation: none;
 	}
 
-	.fh-marquee {
+	.wpblockfolio-marquee {
 		overflow-x: auto;
 	}
 }
@@ -182,7 +182,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-.fh-tight-stack {
+.wpblockfolio-tight-stack {
 	gap: 0.2rem;
 }
 
@@ -195,7 +195,7 @@ h2 {
 	display: block;
 }
 
-.fh-eyebrow {
+.wpblockfolio-eyebrow {
 	display: inline-flex;
 	align-items: center;
 	gap: 0.5rem;
@@ -206,7 +206,7 @@ h2 {
 	text-transform: uppercase;
 }
 
-.fh-eyebrow::before {
+.wpblockfolio-eyebrow::before {
 	content: "";
 	width: 28px;
 	height: 3px;
@@ -215,12 +215,12 @@ h2 {
 	border-radius: 2px;
 }
 
-.fh-footer-muted {
+.wpblockfolio-footer-muted {
 	color: rgba(255, 255, 255, 0.7);
 }
 
 /* ---------- Sticky header ---------- */
-/* .fh-header {
+/* .wpblockfolio-header {
 	position: sticky;
 	top: 0;
 	z-index: 100;
@@ -229,7 +229,7 @@ h2 {
 	border-bottom: 1px solid var(--wp--preset--color--border);
 } */
 
-.fh-header {
+.wpblockfolio-header {
 	position: sticky;
 	top: 0;
 	z-index: 100;
@@ -238,19 +238,19 @@ h2 {
 }
 
 /* ---------- Hero ---------- */
-.fh-hero-card {
+.wpblockfolio-hero-card {
 	border-radius: var(--wp--custom--radius--large, 20px);
 	overflow: hidden;
 	box-shadow: var(--wp--custom--shadow--card, 0 10px 40px rgba(24, 26, 46, 0.06));
 }
 
-.fh-hero-panel {
+.wpblockfolio-hero-panel {
 	border-radius: var(--wp--custom--radius--large, 20px);
 	position: relative;
 	overflow: hidden;
 }
 
-.fh-hero-panel::after {
+.wpblockfolio-hero-panel::after {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -258,22 +258,22 @@ h2 {
 	pointer-events: none;
 }
 
-.fh-hero-eyebrow {
+.wpblockfolio-hero-eyebrow {
 	color: rgba(255, 255, 255, 0.8);
 }
 
-.fh-hero-bio {
+.wpblockfolio-hero-bio {
 	color: rgba(255, 255, 255, 0.88);
 }
 
-.fh-avatar-ring {
+.wpblockfolio-avatar-ring {
 	border-radius: 999px;
 	padding: 6px;
 	background: linear-gradient(135deg, var(--wp--preset--color--accent), var(--wp--preset--color--primary));
 	display: inline-block;
 }
 
-.fh-avatar-ring img {
+.wpblockfolio-avatar-ring img {
 	border-radius: 999px;
 	display: block;
 	border: 4px solid #fff;
@@ -284,7 +284,7 @@ h2 {
 
 /* ---------- Reusable avatar sizing (sizing lives in CSS, not in
    fragile hand-written block "width/height" attributes) ---------- */
-.fh-about-avatar img {
+.wpblockfolio-about-avatar img {
 	width: 140px;
 	height: 140px;
 	object-fit: cover;
@@ -292,7 +292,7 @@ h2 {
 	display: block;
 }
 
-.fh-avatar-sm img {
+.wpblockfolio-avatar-sm img {
 	width: 48px;
 	height: 48px;
 	object-fit: cover;
@@ -301,19 +301,20 @@ h2 {
 }
 
 /* ---------- Outline button variant for use on colored backgrounds ---------- */
-.fh-btn-outline-white .wp-block-button__link {
+.wpblockfolio-btn-outline-white .wp-block-button__link {
 	background: transparent;
 	border: 2px solid #fff;
 	color: #fff;
 }
 
-.fh-btn-outline-white .wp-block-button__link:hover {
+.wpblockfolio-btn-outline-white .wp-block-button__link:hover {
 	background: #fff;
 	color: var(--wp--preset--color--primary);
 }
 
 /* ---------- Cards shared ---------- */
-.fh-card {
+.wpblockfolio-card {
+	overflow: hidden;
 	background: #fff;
 	border: 1px solid var(--wp--preset--color--border);
 	border-radius: var(--wp--custom--radius--medium, 14px);
@@ -321,17 +322,17 @@ h2 {
 	transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.fh-card:hover {
+.wpblockfolio-card:hover {
 	transform: translateY(-4px);
 	box-shadow: var(--wp--custom--shadow--card-hover, 0 20px 50px rgba(24, 26, 46, 0.12));
 }
 
 /* ---------- Skills / progress bars ---------- */
-.fh-skill {
+.wpblockfolio-skill {
 	margin-bottom: 1.5rem;
 }
 
-.fh-skill-label {
+.wpblockfolio-skill-label {
 	display: flex;
 	justify-content: space-between;
 	font-weight: 600;
@@ -342,7 +343,7 @@ h2 {
 	color: var(--wp--preset--color--ink);
 }
 
-.fh-skill-track {
+.wpblockfolio-skill-track {
 	width: 100%;
 	height: 8px;
 	background: var(--wp--preset--color--surface-alt);
@@ -350,19 +351,19 @@ h2 {
 	overflow: hidden;
 }
 
-.fh-skill-fill {
+.wpblockfolio-skill-fill {
 	height: 100%;
 	border-radius: 999px;
 	background: linear-gradient(90deg, var(--wp--preset--color--accent), var(--wp--preset--color--primary));
 }
 
 /* ---------- Stats strip ---------- */
-.fh-stats {
+.wpblockfolio-stats {
 	background: linear-gradient(135deg, var(--wp--preset--color--primary) 0%, #34a17f 100%);
 	border-radius: var(--wp--custom--radius--large, 20px);
 }
 
-.fh-stat-icon {
+.wpblockfolio-stat-icon {
 	width: 56px;
 	height: 56px;
 	border-radius: 999px;
@@ -373,7 +374,7 @@ h2 {
 	margin: 0 auto 0.75rem;
 }
 
-.fh-stat-number {
+.wpblockfolio-stat-number {
 	font-family: var(--wp--preset--font-family--heading);
 	font-weight: 700;
 	font-size: 2.25rem;
@@ -381,20 +382,20 @@ h2 {
 	line-height: 1;
 }
 
-.fh-stat-label {
+.wpblockfolio-stat-label {
 	color: rgba(255, 255, 255, 0.85);
 	font-size: 0.9rem;
 	margin-top: 0.35rem;
 }
 
 /* ---------- Services ---------- */
-.fh-services-grid {
+.wpblockfolio-services-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 1.5rem;
 }
 
-.fh-service-icon {
+.wpblockfolio-service-icon {
 	width: 54px;
 	height: 54px;
 	border-radius: var(--wp--custom--radius--small, 8px);
@@ -406,41 +407,41 @@ h2 {
 	margin-bottom: 1rem;
 }
 
-.fh-service-icon svg {
+.wpblockfolio-service-icon svg {
 	width: 26px;
 	height: 26px;
 }
 
-.fh-services-grid .fh-card {
+.wpblockfolio-services-grid .wpblockfolio-card {
 	margin-block-start: 0;
 }
 
-.fh-stat-icon {
+.wpblockfolio-stat-icon {
 	color: #ffffff;
 }
 
-.fh-stat-icon svg {
+.wpblockfolio-stat-icon svg {
 	width: 28px;
 	height: 28px;
 }
 
 /* ---------- Experience timeline ---------- */
-.fh-timeline {
+.wpblockfolio-timeline {
 	position: relative;
 	border-left: 2px solid var(--wp--preset--color--border);
 	margin-left: 8px;
 }
 
-.fh-timeline-item {
+.wpblockfolio-timeline-item {
 	position: relative;
 	padding: 0 0 2.5rem 2rem;
 }
 
-.fh-timeline-item:last-child {
+.wpblockfolio-timeline-item:last-child {
 	padding-bottom: 0;
 }
 
-.fh-timeline-item::before {
+.wpblockfolio-timeline-item::before {
 	content: "";
 	position: absolute;
 	left: -7px;
@@ -452,7 +453,7 @@ h2 {
 	box-shadow: 0 0 0 4px rgba(224, 151, 58, 0.18);
 }
 
-.fh-timeline-date {
+.wpblockfolio-timeline-date {
 	color: var(--wp--preset--color--accent);
 	font-weight: 600;
 	font-size: 0.85rem;
@@ -461,14 +462,14 @@ h2 {
 }
 
 /* ---------- Portfolio filter / grid ---------- */
-.fh-portfolio-grid {
+.wpblockfolio-portfolio-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-auto-rows: 1fr;
 	gap: 1.5rem;
 }
 
-.fh-portfolio-item {
+.wpblockfolio-portfolio-item {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
@@ -478,12 +479,12 @@ h2 {
 	transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.fh-portfolio-item:hover {
+.wpblockfolio-portfolio-item:hover {
 	transform: translateY(-4px);
 	box-shadow: var(--wp--custom--shadow--card-hover, 0 20px 50px rgba(24, 26, 46, 0.12));
 }
 
-.fh-portfolio-item img {
+.wpblockfolio-portfolio-item img {
 	display: block;
 	width: 100%;
 	aspect-ratio: 1 / 1;
@@ -491,11 +492,11 @@ h2 {
 	transition: transform 0.4s ease;
 }
 
-.fh-portfolio-item:hover img {
+.wpblockfolio-portfolio-item:hover img {
 	transform: scale(1.06);
 }
 
-.fh-portfolio-item figcaption {
+.wpblockfolio-portfolio-item figcaption {
 	margin: 0;
 	padding: 1rem 1.25rem;
 	background: #fff;
@@ -507,39 +508,39 @@ h2 {
 
 
 /* ---------- Pricing ---------- */
-.fh-pricing-card {
+.wpblockfolio-pricing-card {
 	text-align: center;
 	border-radius: var(--wp--custom--radius--large, 20px);
 }
 
-.fh-price-list {
+.wpblockfolio-price-list {
 	list-style: none;
 	text-align: left;
 	margin: 0;
 	padding: 0;
 }
 
-.fh-pricing-card.is-featured {
+.wpblockfolio-pricing-card.is-featured {
 	background: linear-gradient(160deg, var(--wp--preset--color--primary), #34a17f);
 	color: #fff;
 	transform: scale(1.04);
 }
 
-.fh-pricing-card.is-featured * {
+.wpblockfolio-pricing-card.is-featured * {
 	color: #fff !important;
 }
 
-.fh-pricing-card.is-featured .wp-block-button__link {
+.wpblockfolio-pricing-card.is-featured .wp-block-button__link {
 	background: #fff !important;
 	color: var(--wp--preset--color--primary) !important;
 }
 
 /* ---------- Testimonials ---------- */
-.fh-testimonial {
+.wpblockfolio-testimonial {
 	position: relative;
 }
 
-.fh-testimonial::before {
+.wpblockfolio-testimonial::before {
 	content: "\201C";
 	position: absolute;
 	top: -2.75rem;
@@ -553,12 +554,12 @@ h2 {
 	z-index: 0;
 }
 
-.fh-testimonial>* {
+.wpblockfolio-testimonial>* {
 	position: relative;
 	z-index: 1;
 }
 
-/* .fh-quote-icon {
+/* .wpblockfolio-quote-icon {
 	width: 40px;
 	height: 40px;
 	border-radius: 999px;
@@ -569,28 +570,28 @@ h2 {
 	justify-content: center;
 	margin-bottom: 1rem;
 }
-.fh-quote-icon svg {
+.wpblockfolio-quote-icon svg {
 	width: 18px;
 	height: 18px;
 } */
 
 /* ---------- Social icon buttons ---------- */
-.fh-social .wp-block-social-links a {
+.wpblockfolio-social .wp-block-social-links a {
 	background: var(--wp--preset--color--surface) !important;
 }
 
-.fh-social .wp-block-social-links a:hover {
+.wpblockfolio-social .wp-block-social-links a:hover {
 	background: var(--wp--preset--color--accent) !important;
 }
 
 /* ---------- Contact styling ---------- */
-.fh-contact-item {
+.wpblockfolio-contact-item {
 	align-items: center;
 	gap: 0.9rem;
 	margin-bottom: 1.5rem;
 }
 
-.fh-contact-icon {
+.wpblockfolio-contact-icon {
 	flex-shrink: 0;
 	width: 40px;
 	height: 40px;
@@ -602,7 +603,7 @@ h2 {
 	justify-content: center;
 }
 
-.fh-contact-icon svg {
+.wpblockfolio-contact-icon svg {
 	width: 18px;
 	height: 18px;
 }
@@ -692,11 +693,691 @@ h2 {
 	margin-left: 0.75rem;
 }
 
+/* ===================================================
+   Single post
+   =================================================== */
+.wpblockfolio-single {
+	background: var(--wp--preset--color--surface);
+	/* Guard against any wide child (e.g. an oversized imported image)
+	   forcing the whole page to scroll horizontally. */
+	overflow-x: clip;
+}
+
+.wpblockfolio-single :is(img, figure, iframe, video, pre) {
+	max-width: 100%;
+}
+
+/* --- Back link --- */
+.wpblockfolio-back-link {
+	margin: 0 0 1.5rem;
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+.wpblockfolio-back-link a {
+	color: var(--wp--preset--color--body-text);
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.wpblockfolio-back-link a:hover {
+	color: var(--wp--preset--color--accent);
+}
+
+/* --- Category pills --- */
+.wpblockfolio-post-cats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.wpblockfolio-post-cats a {
+	display: inline-block;
+	padding: 0.32rem 0.72rem;
+	border-radius: 999px;
+	background: var(--wp--preset--color--surface-alt);
+	color: var(--wp--preset--color--primary);
+	text-decoration: none;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.wpblockfolio-post-cats a:hover {
+	background: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+}
+
+.wpblockfolio-post-cats .wp-block-post-terms__separator,
+.wpblockfolio-post-tags .wp-block-post-terms__separator {
+	display: none;
+}
+
+/* --- Title --- */
+.wpblockfolio-single-title {
+	font-size: clamp(2rem, 5vw, 3rem);
+	line-height: 1.15;
+	letter-spacing: -0.02em;
+}
+
+/* --- Meta row (author + date) --- */
+.wpblockfolio-post-meta {
+	align-items: center;
+	gap: 0 !important;
+	color: var(--wp--preset--color--body-text);
+	font-size: 0.9rem;
+}
+
+.wpblockfolio-post-meta .wp-block-post-author {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	margin: 0;
+}
+
+.wpblockfolio-post-meta .wp-block-post-author__avatar img {
+	display: block;
+	border-radius: 999px;
+}
+
+.wpblockfolio-post-meta .wp-block-post-author__byline {
+	display: none;
+}
+
+.wpblockfolio-post-meta .wp-block-post-author__name {
+	margin: 0;
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: var(--wp--preset--color--ink);
+}
+
+.wpblockfolio-post-meta .wp-block-post-date {
+	position: relative;
+	margin: 0;
+	padding-left: 1.5rem;
+}
+
+.wpblockfolio-post-meta .wp-block-post-date::before {
+	content: "\2022";
+	position: absolute;
+	left: 0.6rem;
+}
+
+/* --- Featured image --- */
+.wpblockfolio-single-featured img {
+	width: 100%;
+	max-height: 520px;
+	object-fit: cover;
+	border-radius: 18px;
+}
+
+/* --- Content rhythm & typography --- */
+.wpblockfolio-single-content {
+	font-size: 1.05rem;
+	line-height: 1.8;
+	color: var(--wp--preset--color--ink);
+}
+
+.wpblockfolio-single-content > * {
+	margin-top: 1.5rem;
+	margin-bottom: 0;
+}
+
+.wpblockfolio-single-content > *:first-child {
+	margin-top: 0;
+}
+
+/* Lead paragraph */
+.wpblockfolio-single-content > p:first-of-type {
+	font-size: 1.2rem;
+	line-height: 1.7;
+	color: var(--wp--preset--color--body-text);
+}
+
+/* Rein in heading scale inside article flow (theme.json sizes them for
+   landing sections, which is far too large in running text; imported
+   content also carries bare <h1> tags we need to tame). */
+.wpblockfolio-single-content h1 {
+	margin-top: 3rem;
+	font-size: 2rem;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+}
+
+.wpblockfolio-single-content h2 {
+	margin-top: 3rem;
+	font-size: 1.7rem;
+	line-height: 1.3;
+	letter-spacing: -0.01em;
+}
+
+.wpblockfolio-single-content h3 {
+	margin-top: 2.5rem;
+	font-size: 1.3rem;
+	line-height: 1.35;
+}
+
+.wpblockfolio-single-content h4,
+.wpblockfolio-single-content h5,
+.wpblockfolio-single-content h6 {
+	margin-top: 2rem;
+	font-size: 1.08rem;
+	line-height: 1.4;
+	font-weight: 700;
+}
+
+.wpblockfolio-single-content p a,
+.wpblockfolio-single-content li a {
+	color: var(--wp--preset--color--primary);
+	text-decoration: underline;
+	text-underline-offset: 0.15em;
+}
+
+.wpblockfolio-single-content ul,
+.wpblockfolio-single-content ol {
+	padding-left: 1.25rem;
+}
+
+.wpblockfolio-single-content li {
+	margin: 0.4rem 0;
+}
+
+.wpblockfolio-single-content figure {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.wpblockfolio-single-content img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 14px;
+}
+
+.wpblockfolio-single-content img.aligncenter,
+.wpblockfolio-single-content img.alignnone {
+	display: block;
+	margin-inline: auto;
+}
+
+.wpblockfolio-single-content figcaption,
+/* Imported content places a caption in an <h6> right after the image. */
+.wpblockfolio-single-content p:has(img) + h6,
+.wpblockfolio-single-content img + h6 {
+	margin-top: 0.6rem;
+	font-size: 0.85rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: var(--wp--preset--color--body-text);
+	text-align: center;
+}
+
+.wpblockfolio-single-content blockquote {
+	margin: 2rem 0;
+	padding-left: 1.25rem;
+	border-left: 3px solid var(--wp--preset--color--accent);
+	font-size: 1.15rem;
+	font-style: italic;
+	color: var(--wp--preset--color--ink);
+}
+
+.wpblockfolio-single-content pre {
+	padding: 1.1rem 1.25rem;
+	border-radius: 12px;
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--white);
+	font-size: 0.9rem;
+	overflow-x: auto;
+}
+
+/* --- Tags --- */
+.wpblockfolio-post-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.wpblockfolio-post-tags a {
+	padding: 0.3rem 0.75rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 999px;
+	font-size: 0.8rem;
+	color: var(--wp--preset--color--body-text);
+	text-decoration: none;
+	transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.wpblockfolio-post-tags a:hover {
+	border-color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--accent);
+}
+
+/* --- Author bio card --- */
+.wpblockfolio-author-card {
+	padding: 1.5rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: var(--wp--custom--radius--medium, 14px);
+	background: var(--wp--preset--color--white);
+}
+
+.wpblockfolio-author-card .wp-block-post-author {
+	display: flex;
+	gap: 1rem;
+	align-items: flex-start;
+	margin: 0;
+}
+
+.wpblockfolio-author-card .wp-block-post-author__avatar img {
+	border-radius: 999px;
+}
+
+.wpblockfolio-author-card .wp-block-post-author__byline {
+	margin: 0 0 0.15rem;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--accent);
+}
+
+.wpblockfolio-author-card .wp-block-post-author__name {
+	margin: 0 0 0.35rem;
+	font-size: 1.05rem;
+	font-weight: 700;
+	color: var(--wp--preset--color--ink);
+}
+
+.wpblockfolio-author-card .wp-block-post-author__bio {
+	margin: 0;
+	font-size: 0.9rem;
+	line-height: 1.65;
+	color: var(--wp--preset--color--body-text);
+}
+
+/* --- Previous / next --- */
+.wpblockfolio-post-nav {
+	gap: 1rem !important;
+}
+
+.wpblockfolio-post-nav .wp-block-post-navigation-link {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	padding: 1.1rem 1.25rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: var(--wp--custom--radius--medium, 14px);
+	background: var(--wp--preset--color--white);
+	font-size: 0.95rem;
+	transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.wpblockfolio-post-nav .wp-block-post-navigation-link:hover {
+	border-color: var(--wp--preset--color--accent);
+	transform: translateY(-2px);
+}
+
+.wpblockfolio-post-nav .wp-block-post-navigation-link::before {
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--body-text);
+}
+
+.wpblockfolio-post-nav .post-navigation-link-previous::before {
+	content: "\2190  Previous";
+}
+
+.wpblockfolio-post-nav .post-navigation-link-next {
+	text-align: right;
+}
+
+.wpblockfolio-post-nav .post-navigation-link-next::before {
+	content: "Next  \2192";
+}
+
+.wpblockfolio-post-nav .wp-block-post-navigation-link__arrow-previous,
+.wpblockfolio-post-nav .wp-block-post-navigation-link__arrow-next {
+	display: none;
+}
+
+.wpblockfolio-post-nav a {
+	color: var(--wp--preset--color--ink);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.wpblockfolio-post-nav a:hover {
+	color: var(--wp--preset--color--accent);
+}
+
+/* --- Comments --- */
+.wpblockfolio-comments {
+	margin-top: 3.5rem;
+	padding-top: 2.5rem;
+	border-top: 1px solid var(--wp--preset--color--border);
+}
+
+.wpblockfolio-comments .wp-block-comments-title,
+.wpblockfolio-comments .comment-reply-title {
+	margin-bottom: 1.25rem;
+	font-size: 1.5rem;
+}
+
+.wpblockfolio-comments .wp-block-comment-template {
+	margin: 0 0 2.5rem;
+	padding: 0;
+	list-style: none;
+}
+
+.wpblockfolio-comment {
+	align-items: flex-start;
+	gap: 0.9rem !important;
+	padding: 1.5rem 0;
+	border-top: 1px solid var(--wp--preset--color--border);
+}
+
+.wpblockfolio-comment > .wp-block-avatar {
+	flex: 0 0 auto;
+	line-height: 0;
+}
+
+.wpblockfolio-comment > .wp-block-avatar img {
+	width: 44px;
+	height: 44px;
+	border-radius: 999px;
+}
+
+.wpblockfolio-comment-body {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.wpblockfolio-comment-meta {
+	align-items: center;
+}
+
+.wpblockfolio-comment .wp-block-comment-author-name {
+	color: var(--wp--preset--color--ink);
+}
+
+.wpblockfolio-comment .wp-block-comment-author-name a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.wpblockfolio-comment .wp-block-comment-content {
+	font-size: 0.95rem;
+	line-height: 1.7;
+}
+
+.wpblockfolio-comment .wp-block-comment-content :is(h1, h2, h3, h4, h5, h6) {
+	margin: 0.75rem 0 0.25rem;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.wpblockfolio-comment .wp-block-comment-content > *:first-child {
+	margin-top: 0;
+}
+
+.wpblockfolio-comment .wp-block-comment-reply-link a {
+	color: var(--wp--preset--color--primary);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.wpblockfolio-comments .comment-form {
+	margin-top: 1.5rem;
+}
+
+.wpblockfolio-comments .comment-form label {
+	display: block;
+	margin-bottom: 0.35rem;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--wp--preset--color--ink);
+}
+
+.wpblockfolio-comments .comment-form input[type="text"],
+.wpblockfolio-comments .comment-form input[type="email"],
+.wpblockfolio-comments .comment-form input[type="url"],
+.wpblockfolio-comments .comment-form textarea {
+	width: 100%;
+	padding: 0.8rem 1rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 10px;
+	background: var(--wp--preset--color--white);
+	font: inherit;
+	font-size: 0.95rem;
+	color: var(--wp--preset--color--ink);
+}
+
+.wpblockfolio-comments .comment-form input:focus,
+.wpblockfolio-comments .comment-form textarea:focus {
+	outline: none;
+	border-color: var(--wp--preset--color--primary);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--wp--preset--color--primary) 18%, transparent);
+}
+
+.wpblockfolio-comments .comment-form-comment,
+.wpblockfolio-comments .comment-form-author,
+.wpblockfolio-comments .comment-form-email,
+.wpblockfolio-comments .comment-form-url {
+	margin-bottom: 1rem;
+}
+
+.wpblockfolio-comments .form-submit .submit {
+	padding: 0.85rem 1.85rem;
+	border: 0;
+	border-radius: 999px;
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--white);
+	font-weight: 600;
+	font-size: 0.95rem;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
+
+.wpblockfolio-comments .form-submit .submit:hover {
+	background: var(--wp--preset--color--primary);
+}
+
+/* Search form: sits in the wide column (so it lines up with the title
+   and results grid), but the field itself stays a sensible width,
+   flush left. */
+.wpblockfolio-search-form .wp-block-search__inside-wrapper {
+	max-width: 520px;
+}
+
+/* ===================================================
+   404 / Not found
+   =================================================== */
+.wpblockfolio-404 {
+	background: var(--wp--preset--color--surface);
+	text-align: center;
+}
+
+.wpblockfolio-404-eyebrow {
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.wpblockfolio-404-code {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--heading);
+	font-weight: 800;
+	font-size: clamp(6rem, 22vw, 11rem);
+	line-height: 0.9;
+	letter-spacing: -0.04em;
+	color: var(--wp--preset--color--primary);
+	background: var(--wp--preset--gradient--primary-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.wpblockfolio-404-title {
+	font-size: clamp(1.6rem, 4vw, 2.2rem);
+	letter-spacing: -0.02em;
+}
+
+.wpblockfolio-404-search .wp-block-search__inside-wrapper {
+	max-width: 420px;
+	margin-inline: auto;
+	padding: 0.25rem 0.25rem 0.25rem 0.35rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 999px;
+	background: var(--wp--preset--color--white);
+}
+
+.wpblockfolio-404-search .wp-block-search__input {
+	border: 0;
+	background: transparent;
+	padding: 0.55rem 0.85rem;
+	font-size: 0.95rem;
+}
+
+.wpblockfolio-404-search .wp-block-search__input:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.wpblockfolio-404-search .wp-block-search__button {
+	margin: 0;
+	padding: 0.6rem 1.35rem;
+	border: 0;
+	border-radius: 999px;
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--white);
+	font-weight: 600;
+	font-size: 0.9rem;
+	transition: background 0.2s ease;
+}
+
+.wpblockfolio-404-search .wp-block-search__button:hover {
+	background: var(--wp--preset--color--primary);
+}
+
+.wpblockfolio-404-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.4rem 1.25rem;
+	color: var(--wp--preset--color--body-text);
+}
+
+.wpblockfolio-404-links a {
+	color: var(--wp--preset--color--body-text);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.wpblockfolio-404-links a:hover {
+	color: var(--wp--preset--color--accent);
+}
+
+/* ===================================================
+   Query pagination (archive / blog / search)
+   =================================================== */
+.wpblockfolio-pagination {
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem;
+	margin-top: 3rem;
+	padding-top: 2rem;
+	border-top: 1px solid var(--wp--preset--color--border);
+}
+
+.wpblockfolio-pagination .wp-block-query-pagination-numbers {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin-inline: auto;
+}
+
+.wpblockfolio-pagination .page-numbers {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 42px;
+	height: 42px;
+	padding: 0 0.6rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: var(--wp--custom--radius--small, 8px);
+	background: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--ink);
+	font-size: 0.9rem;
+	font-weight: 600;
+	text-decoration: none;
+	transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.wpblockfolio-pagination .page-numbers:hover {
+	border-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--primary);
+}
+
+.wpblockfolio-pagination .page-numbers.current {
+	border-color: var(--wp--preset--color--primary);
+	background: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+}
+
+.wpblockfolio-pagination .page-numbers.dots {
+	min-width: 1.5rem;
+	border-color: transparent;
+	background: transparent;
+	color: var(--wp--preset--color--body-text);
+}
+
+.wpblockfolio-pagination .wp-block-query-pagination-previous,
+.wpblockfolio-pagination .wp-block-query-pagination-next {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	height: 42px;
+	padding: 0 1.15rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 999px;
+	background: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--ink);
+	font-size: 0.9rem;
+	font-weight: 600;
+	text-decoration: none;
+	transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.wpblockfolio-pagination .wp-block-query-pagination-previous:hover,
+.wpblockfolio-pagination .wp-block-query-pagination-next:hover {
+	border-color: var(--wp--preset--color--accent);
+	transform: translateY(-1px);
+}
+
+.wpblockfolio-pagination .wp-block-query-pagination-previous-arrow,
+.wpblockfolio-pagination .wp-block-query-pagination-next-arrow {
+	margin: 0;
+}
+
+@media (max-width: 600px) {
+	.wpblockfolio-pagination {
+		justify-content: center;
+	}
+
+	.wpblockfolio-pagination .wp-block-query-pagination-numbers {
+		order: -1;
+		width: 100%;
+		margin-bottom: 0.25rem;
+		justify-content: center;
+	}
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
 
-	.fh-card,
-	.fh-portfolio-item img {
+	.wpblockfolio-card,
+	.wpblockfolio-portfolio-item img {
 		transition: none;
 	}
 }
@@ -709,116 +1390,128 @@ button:focus-visible,
 	outline-offset: 2px
 }
 
-.fh-sidebar-nav a {
+.wpblockfolio-sidebar-nav a {
 	transition: color 0.2s ease;
 }
-.fh-sidebar-nav a.is-active {
+.wpblockfolio-sidebar-nav a.is-active {
 	color: var(--wp--preset--color--accent);
 	font-weight: 700;
 }
 
 @media (max-width: 1049px) {
-	.fh-price-card-grid {
+	.wpblockfolio-price-card-grid {
 		flex-wrap: wrap !important;
 	}
 
-	.fh-price-card-grid>div {
+	.wpblockfolio-price-card-grid>div {
 		flex-basis: 100% !important;
 	}
 
-	.fh-hero-panel,
-	.fh-hero-card {
+	.wpblockfolio-hero-panel,
+	.wpblockfolio-hero-card {
 		text-align: center;
 	}
 
-	.fh-pricing-card.is-featured {
+	.wpblockfolio-pricing-card.is-featured {
 		transform: none;
 	}
 
-	.fh-portfolio-grid {
+	.wpblockfolio-portfolio-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.fh-hero-panel,
-	.fh-hero-card {
+	.wpblockfolio-hero-panel,
+	.wpblockfolio-hero-card {
 		text-align: center;
 	}
 
-	.fh-hero-panel .wp-block-buttons {
+	.wpblockfolio-hero-panel .wp-block-buttons {
 		justify-content: center;
 	}
 
-	.fh-services-grid {
+	.wpblockfolio-services-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.fh-price-list {
+	.wpblockfolio-price-list {
 		text-align: center;
 	}
 
-	.fh-stats-grid {
+	.wpblockfolio-stats-grid {
 		display: grid !important;
 		grid-template-columns: 1fr 1fr;
 		gap: 1.75rem 1rem;
 	}
 
-	.fh-stats-grid>.wp-block-column {
+	.wpblockfolio-stats-grid>.wp-block-column {
 		flex-basis: auto !important;
 		width: auto !important;
 		margin: 0 !important;
 	}
 
-	.fh-blog-grid {
+	.wpblockfolio-blog-grid {
 		grid-template-columns: repeat(2, 1fr) !important;
 	}
 
-	.fh-testimonial:not(:last-child) {
+	.wpblockfolio-testimonial:not(:last-child) {
 		padding-bottom: 2rem;
 		margin-bottom: 0.75rem;
 		border-bottom: 1px solid var(--wp--preset--color--border);
 	}
 
-	.fh-testimonial::before {
+	.wpblockfolio-testimonial::before {
 		left: -1.4rem;
 	}
 }
 
 @media (max-width: 782px) {
-	.fh-sidebar-col {
+	.wpblockfolio-sidebar-col {
 		flex: 1 1 100%;
 		max-width: 100%;
 	}
 
-	.fh-sidebar-card {
+	.wpblockfolio-sidebar-card {
 		position: static;
 		max-height: none;
 		overflow: visible;
 	}
 
-	.fh-pad-x {
+	.wpblockfolio-pad-x {
 		padding-left: 1.25rem;
 		padding-right: 1.25rem;
 	}
 
-	.fh-pad-y {
+	.wpblockfolio-pad-y {
 		padding-top: 1.75rem;
 		padding-bottom: 1.75rem;
 	}
 
-	.fh-services-grid {
+	.wpblockfolio-services-grid {
 		grid-template-columns: 1fr;
 	}
 
-	.fh-portfolio-grid {
+	.wpblockfolio-portfolio-grid {
 		grid-template-columns: 1fr;
 	}
 
-	.fh-blog-grid {
+	.wpblockfolio-blog-grid {
 		grid-template-columns: 1fr !important;
 	}
 
+	.wpblockfolio-post-nav {
+		grid-template-columns: 1fr !important;
+	}
+
+	.wpblockfolio-post-nav .post-navigation-link-next {
+		text-align: left;
+	}
+
+	.wpblockfolio-single-featured img {
+		max-height: 360px;
+	}
+
 	/* Hide the standalone desktop CTA button */
-	.fh-header .wp-block-buttons {
+	.wpblockfolio-header .wp-block-buttons {
 		display: none !important;
 	}
 
@@ -862,12 +1555,12 @@ button:focus-visible,
 	}
 
 	/* The Hire Me link, styled as a CTA pill, only visible inside the open overlay */
-	.wp-block-navigation__responsive-container.is-menu-open .fh-nav-hire {
+	.wp-block-navigation__responsive-container.is-menu-open .wpblockfolio-nav-hire {
 		display: block !important;
 		margin-top: 0.5rem !important;
 	}
 
-	.wp-block-navigation__responsive-container.is-menu-open .fh-nav-hire a {
+	.wp-block-navigation__responsive-container.is-menu-open .wpblockfolio-nav-hire a {
 		background: var(--wp--preset--color--accent) !important;
 		color: #fff !important;
 		padding: 0.75rem 1.5rem !important;
@@ -877,6 +1570,20 @@ button:focus-visible,
 }
 
 /* Hire Me nav-link: hidden everywhere except inside the open mobile overlay */
-.fh-nav-hire {
+.wpblockfolio-nav-hire {
 	display: none;
+}
+
+.wp-site-blocks > * + * {
+	margin-block-start: 0;
+}
+
+.wp-site-blocks {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.wp-site-blocks > main {
+	flex: 1 0 auto;
 }
