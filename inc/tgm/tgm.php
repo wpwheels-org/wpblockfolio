@@ -27,6 +27,11 @@ if ( ! function_exists( 'wpblockfolio_recommended_plugins' ) ) :
 				'slug'     => 'contact-form-7',
 				'required' => false,
 			],
+			[
+				'name'     => esc_html__( 'Aarambha Demo Sites', 'block-aarambha' ),
+				'slug'     => 'aarambha-demo-sites',
+				'required' => false,
+			],
 		];
 
 		$config = [];
