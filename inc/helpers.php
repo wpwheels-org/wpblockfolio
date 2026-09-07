@@ -28,8 +28,8 @@ if ( ! function_exists( 'wpblockfolio_get_contact_form' ) ) {
 	 * @return string Rendered contact-form HTML, or fallback block markup.
 	 */
 	function wpblockfolio_get_contact_form() {
-		$form = '<!-- wp:group {"backgroundColor":"surface","className":"fh-card","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"2rem","right":"2rem"}}}} -->
-			<div class="wp-block-group has-surface-background-color has-background fh-card" style="padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
+		$form = '<!-- wp:group {"backgroundColor":"surface","className":"wpblockfolio-card","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"2rem","right":"2rem"}}}} -->
+			<div class="wp-block-group has-surface-background-color has-background wpblockfolio-card" style="padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
 			<!-- wp:paragraph -->
 			<p>' . esc_html__( 'No contact form is connected yet. Install Contact Form 7 (or your preferred form plugin) and this section switches to it automatically or manually entry shortcode via site editor — for now, reach out by email.', 'wpblockfolio' ) . '</p>
 			<!-- /wp:paragraph -->

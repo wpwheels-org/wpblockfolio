@@ -8,11 +8,11 @@
  * Viewport width: 1400
  */
 ?>
-<!-- wp:group {"anchor":"about","align":"wide","className":"fh-card fh-pad-x fh-pad-y","style":{"spacing":{"margin":{"top":"3rem"}}}} -->
-<div id="about" class="wp-block-group alignwide fh-card fh-pad-x fh-pad-y" style="margin-top:3rem">
+<!-- wp:group {"anchor":"about","align":"wide","className":"wpblockfolio-card wpblockfolio-pad-x wpblockfolio-pad-y","style":{"spacing":{"margin":{"top":"3rem"}}}} -->
+<div id="about" class="wp-block-group alignwide wpblockfolio-card wpblockfolio-pad-x wpblockfolio-pad-y" style="margin-top:3rem">
 
-	<!-- wp:paragraph {"className":"fh-eyebrow"} -->
-	<p class="fh-eyebrow">About Me</p>
+	<!-- wp:paragraph {"className":"wpblockfolio-eyebrow"} -->
+	<p class="wpblockfolio-eyebrow">About Me</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0.5rem","bottom":"2rem"}}}} -->
@@ -24,8 +24,8 @@
 
 		<!-- wp:column {"verticalAlignment":"top","width":"180px"} -->
 		<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:180px">
-			<!-- wp:image {"sizeSlug":"large","className":"fh-about-avatar"} -->
-			<figure class="wp-block-image size-large fh-about-avatar"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/build/images/placeholder.png'); ?>" alt="Portrait of Alex Rivera"/></figure>
+			<!-- wp:image {"sizeSlug":"large","className":"wpblockfolio-about-avatar"} -->
+			<figure class="wp-block-image size-large wpblockfolio-about-avatar"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/build/images/placeholder.png'); ?>" alt="Portrait of Alex Rivera"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

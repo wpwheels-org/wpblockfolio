@@ -232,3 +232,25 @@ add_filter( 'excerpt_more', 'wpblockfolio_excerpt_more' );
  */
 
 require_once get_theme_file_path( '/inc/inc.php' );
+
+/**
+ * On any page that isn't the homepage, rewrite the header's in-page
+ * anchor links (#about, #services, etc.) to point back through the
+ * homepage first, so they still work instead of doing nothing.
+ */
+function wpblockfolio_fix_header_anchors() {
+	if ( is_front_page() ) {
+		return;
+	}
+	?>
+	<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		var homeUrl = <?php echo wp_json_encode( home_url( '/' ) ); ?>;
+		document.querySelectorAll('.wpblockfolio-header a[href^="#"]').forEach(function (link) {
+			link.setAttribute('href', homeUrl + link.getAttribute('href'));
+		});
+	});
+	</script>
+	<?php
+}
+add_action( 'wp_footer', 'wpblockfolio_fix_header_anchors' );

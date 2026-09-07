@@ -21,16 +21,16 @@ $wpblockfolio_tools = array(
 function wpblockfolio_marquee_track( $tools ) {
 	$out = '';
 	foreach ( $tools as $tool ) {
-		$out .= '<div class="fh-marquee-item"><img src="' . get_template_directory_uri() . '/assets/build/images/' . $tool[0] . '" alt="' . esc_attr( $tool[1] ) . '" loading="lazy" width="28" height="28"/><span>' . esc_html( $tool[1] ) . '</span></div>';
+		$out .= '<div class="wpblockfolio-marquee-item"><img src="' . get_template_directory_uri() . '/assets/build/images/' . $tool[0] . '" alt="' . esc_attr( $tool[1] ) . '" loading="lazy" width="28" height="28"/><span>' . esc_html( $tool[1] ) . '</span></div>';
 	}
 	return $out;
 }
 ?>
-<!-- wp:group {"className":"fh-card fh-pad-x fh-pad-y","style":{"spacing":{"margin":{"top":"2rem"}}}} -->
-<div class="wp-block-group fh-card fh-pad-x fh-pad-y" style="margin-top:2rem">
+<!-- wp:group {"className":"wpblockfolio-card wpblockfolio-pad-x wpblockfolio-pad-y","style":{"spacing":{"margin":{"top":"2rem"}}}} -->
+<div class="wp-block-group wpblockfolio-card wpblockfolio-pad-x wpblockfolio-pad-y" style="margin-top:2rem">
 
-	<!-- wp:paragraph {"className":"fh-eyebrow","align":"center"} -->
-	<p class="has-text-align-center fh-eyebrow">Toolkit</p>
+	<!-- wp:paragraph {"className":"wpblockfolio-eyebrow","align":"center"} -->
+	<p class="has-text-align-center wpblockfolio-eyebrow">Toolkit</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":3,"fontSize":"large","style":{"spacing":{"margin":{"top":"0.5rem","bottom":"2rem"}}}} -->
@@ -38,8 +38,8 @@ function wpblockfolio_marquee_track( $tools ) {
 	<!-- /wp:heading -->
 
 	<!-- wp:html -->
-	<div class="fh-marquee" role="group" aria-label="Tools and platforms I work with">
-		<div class="fh-marquee-track">
+	<div class="wpblockfolio-marquee" role="group" aria-label="Tools and platforms I work with">
+		<div class="wpblockfolio-marquee-track">
 			<?php echo wpblockfolio_marquee_track( $wpblockfolio_tools ); ?>
 			<?php echo wpblockfolio_marquee_track( $wpblockfolio_tools ); ?>
 		</div>

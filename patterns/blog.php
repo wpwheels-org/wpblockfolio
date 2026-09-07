@@ -11,8 +11,8 @@
 <!-- wp:group {"anchor":"blog","align":"wide","style":{"spacing":{"margin":{"top":"2rem"}}}} -->
 <div id="blog" class="wp-block-group alignwide" style="margin-top:2rem">
 
-	<!-- wp:paragraph {"className":"fh-eyebrow","align":"center"} -->
-	<p class="has-text-align-center fh-eyebrow">Blog</p>
+	<!-- wp:paragraph {"className":"wpblockfolio-eyebrow","align":"center"} -->
+	<p class="has-text-align-center wpblockfolio-eyebrow">Blog</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0.5rem","bottom":"2.5rem"}}}} -->
@@ -21,10 +21,10 @@
 
 	<!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false}} -->
 	<div class="wp-block-query">
-		 <!-- wp:post-template {"className":"fh-blog-grid","style":{"spacing":{"blockGap":{"top":"1.5rem","left":"1.5rem"}}},"layout":{"type":"grid","columnCount":3}} -->
+		 <!-- wp:post-template {"className":"wpblockfolio-blog-grid","style":{"spacing":{"blockGap":{"top":"1.5rem","left":"1.5rem"}}},"layout":{"type":"grid","columnCount":3}} -->
 
-			<!-- wp:group {"className":"fh-card","style":{"spacing":{"padding":{"bottom":"1.5rem"}}},"layout":{"type":"constrained"}} -->
-			<div class="wp-block-group fh-card" style="padding-bottom:1.5rem">
+			<!-- wp:group {"className":"wpblockfolio-card","style":{"spacing":{"padding":{"bottom":"1.5rem"}}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group wpblockfolio-card" style="padding-bottom:1.5rem">
 
 				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3","style":{"border":{"radius":"0px"}}} /-->
 

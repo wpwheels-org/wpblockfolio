@@ -20,20 +20,20 @@ $wpblockfolio_services = array(
 <!-- wp:group {"anchor":"services","align":"wide","style":{"spacing":{"margin":{"top":"2rem"}}}} -->
 <div id="services" class="wp-block-group alignwide" style="margin-top:2rem">
 
-	<!-- wp:paragraph {"className":"fh-eyebrow","align":"center"} -->
-	<p class="has-text-align-center fh-eyebrow">Services</p>
+	<!-- wp:paragraph {"className":"wpblockfolio-eyebrow","align":"center"} -->
+	<p class="has-text-align-center wpblockfolio-eyebrow">Services</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0.5rem","bottom":"2.5rem"}}}} -->
 	<h2 class="wp-block-heading" style="margin-top:0.5rem;margin-bottom:2.5rem">What I can help you with</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:group {"className":"fh-services-grid"} -->
-	<div class="wp-block-group fh-services-grid">
+	<!-- wp:group {"className":"wpblockfolio-services-grid"} -->
+	<div class="wp-block-group wpblockfolio-services-grid">
 		<?php foreach ( $wpblockfolio_services as $service ) : ?>
-		<!-- wp:group {"className":"fh-card fh-tight-stack","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"1.75rem","right":"1.75rem"}}}} -->
-		<div class="wp-block-group fh-card fh-tight-stack" style="padding-top:2rem;padding-right:1.75rem;padding-bottom:2rem;padding-left:1.75rem">
-			<!-- wp:html --><div class="fh-service-icon" aria-hidden="true"><?php echo $service[0]; ?></div><!-- /wp:html -->
+		<!-- wp:group {"className":"wpblockfolio-card wpblockfolio-tight-stack","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"1.75rem","right":"1.75rem"}}}} -->
+		<div class="wp-block-group wpblockfolio-card wpblockfolio-tight-stack" style="padding-top:2rem;padding-right:1.75rem;padding-bottom:2rem;padding-left:1.75rem">
+			<!-- wp:html --><div class="wpblockfolio-service-icon" aria-hidden="true"><?php echo $service[0]; ?></div><!-- /wp:html -->
 			<!-- wp:heading {"level":3,"fontSize":"medium"} --><h3 class="wp-block-heading has-medium-font-size"><?php echo esc_html( $service[1] ); ?></h3><!-- /wp:heading -->
 			<!-- wp:paragraph {"textColor":"body-text","style":{"typography":{"fontSize":"0.9rem"}}} --><p class="has-body-text-color has-text-color" style="font-size:0.9rem"><?php echo esc_html( $service[2] ); ?></p><!-- /wp:paragraph -->
 		</div>
