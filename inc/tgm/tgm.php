@@ -28,7 +28,7 @@ if ( ! function_exists( 'wpblockfolio_recommended_plugins' ) ) :
 				'required' => false,
 			],
 			[
-				'name'     => esc_html__( 'Aarambha Demo Sites', 'block-aarambha' ),
+				'name'     => esc_html__( 'Aarambha Demo Sites', 'wpblockfolio' ),
 				'slug'     => 'aarambha-demo-sites',
 				'required' => false,
 			],
