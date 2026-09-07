@@ -59,8 +59,3 @@ Note: while the Simple Icons SVG artwork itself is released under CC0,
 
 placeholder.png,
 License: CC0 license - https://creativecommons.org/about/cc0
-
-== Changelog ==
-
-= 1.0.0 =
-* Initial release.
