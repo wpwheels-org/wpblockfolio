@@ -1,7 +1,7 @@
 === WPBlockfolio ===
 Contributors: wpwheels
 Requires at least: 6.4
-Tested up to: 6.6
+Tested up to: 7.1
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
@@ -32,11 +32,6 @@ The Contact section includes a plain HTML form (name, email, subject, message) s
 * parts/ — header.html, footer.html
 * patterns/ — one file per homepage section, registered under the "WPBlockfolio Sections" category
 
-== Changelog ==
-
-= 1.0.0 =
-* Initial release.
-
 == Copyright ==
 
 WPBlockfolio is distributed under the terms of the GNU GPL v3 or later.
@@ -64,3 +59,8 @@ Note: while the Simple Icons SVG artwork itself is released under CC0,
 
 placeholder.png,
 License: CC0 license - https://creativecommons.org/about/cc0
+
+== Changelog ==
+
+= 1.0.0 =
+* Initial release.

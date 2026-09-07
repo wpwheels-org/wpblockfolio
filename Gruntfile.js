@@ -32,6 +32,9 @@ module.exports = function( grunt ) {
 		'!**/*.tmp', // exclude temporary files
 		'!.phpcs-cache.json', // exclude phpcs cache
 		'!clean-errors.txt',
+		'!CLAUDE.md', // exclude CLAUDE.md
+		'!AGENTS.md', // exclude AGENTS.md
+		'CHANGELOG.md', // include CHANGELOG.md
 	];
 
 	const excludeCopyFilesPro = copyFiles.slice( 0 ).concat( [ '!changelog.txt' ] );
