@@ -25,7 +25,7 @@
 		<!-- wp:column {"verticalAlignment":"top","width":"180px"} -->
 		<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:180px">
 			<!-- wp:image {"sizeSlug":"large","className":"wpblockfolio-about-avatar"} -->
-			<figure class="wp-block-image size-large wpblockfolio-about-avatar"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/build/images/placeholder.png'); ?>" alt="Portrait of Alex Rivera"/></figure>
+			<figure class="wp-block-image size-large wpblockfolio-about-avatar"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/build/images/placeholder.png' ); ?>" alt="Portrait of Alex Rivera"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
@@ -61,7 +61,7 @@
 			<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"1.5rem"}}}} -->
 			<div class="wp-block-buttons" style="margin-top:1.5rem">
 				<!-- wp:button {"backgroundColor":"accent"} -->
-				<div class="wp-block-button"><a class="wp-block-button__link has-accent-background-color has-background wp-element-button" href="<?php echo esc_url( home_url( '/#contact' ) ); ?>">Download CV</a></div>
+				<div class="wp-block-button"><a class="wp-block-button__link has-accent-background-color has-background wp-element-button" href="#experience">View Resume</a></div>
 				<!-- /wp:button -->
 
 				<!-- wp:button {"className":"is-style-outline"} -->

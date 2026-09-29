@@ -1,5 +1,6 @@
 ## Ignore build and dependency directories
 /build
+/assets/build
 /node_modules
 /tests
 /vendor

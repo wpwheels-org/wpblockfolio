@@ -35,7 +35,7 @@ if ( ! function_exists( 'wpblockfolio_get_contact_form' ) ) {
 			<!-- /wp:paragraph -->
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"accent"} -->
-			<div class="wp-block-button"><a class="wp-block-button__link has-accent-background-color has-background wp-element-button" href="' . esc_url( 'mailto:' . antispambot( 'hello@example.com' ) ) . '">' . esc_html__( 'Email Me', 'wpblockfolio' ) . '</a></div>
+			<div class="wp-block-button"><a class="wp-block-button__link has-accent-background-color has-background wp-element-button" href="' . esc_url( 'mailto:hello@example.com' ) . '">' . esc_html__( 'Email Me', 'wpblockfolio' ) . '</a></div>
 			<!-- /wp:button --></div>
 			<!-- /wp:buttons -->
 			</div>

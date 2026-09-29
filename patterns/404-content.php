@@ -7,7 +7,7 @@
  * Viewport width: 1000
  */
 
-$home = home_url( '/' );
+$wpblockfolio_home = home_url( '/' );
 ?>
 <!-- wp:group {"tagName":"main","align":"full","className":"wpblockfolio-404","style":{"spacing":{"padding":{"top":"5rem","bottom":"6rem"}}},"layout":{"type":"constrained","contentSize":"620px"}} -->
 <main class="wp-block-group alignfull wpblockfolio-404" style="padding-top:5rem;padding-bottom:6rem">
@@ -31,11 +31,11 @@ $home = home_url( '/' );
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1rem","margin":{"bottom":"2.5rem"}}}} -->
 	<div class="wp-block-buttons" style="margin-bottom:2.5rem">
 		<!-- wp:button {"backgroundColor":"primary"} -->
-		<div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" href="<?php echo esc_url( $home ); ?>">Back to home</a></div>
+		<div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" href="<?php echo esc_url( $wpblockfolio_home ); ?>">Back to home</a></div>
 		<!-- /wp:button -->
 
 		<!-- wp:button {"className":"is-style-outline"} -->
-		<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $home . '#portfolio' ); ?>">Browse work</a></div>
+		<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $wpblockfolio_home . '#portfolio' ); ?>">Browse work</a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->
@@ -44,11 +44,11 @@ $home = home_url( '/' );
 
 	<!-- wp:paragraph {"align":"center","className":"wpblockfolio-404-links","style":{"spacing":{"margin":{"top":"2.5rem"}},"typography":{"fontSize":"0.85rem"}}} -->
 	<p class="has-text-align-center wpblockfolio-404-links" style="margin-top:2.5rem;font-size:0.85rem">
-		<a href="<?php echo esc_url( $home ); ?>">Home</a>
-		<a href="<?php echo esc_url( $home . '#about' ); ?>">About</a>
-		<a href="<?php echo esc_url( $home . '#portfolio' ); ?>">Work</a>
-		<a href="<?php echo esc_url( $home . '#blog' ); ?>">Blog</a>
-		<a href="<?php echo esc_url( $home . '#contact' ); ?>">Contact</a>
+		<a href="<?php echo esc_url( $wpblockfolio_home ); ?>">Home</a>
+		<a href="<?php echo esc_url( $wpblockfolio_home . '#about' ); ?>">About</a>
+		<a href="<?php echo esc_url( $wpblockfolio_home . '#portfolio' ); ?>">Work</a>
+		<a href="<?php echo esc_url( $wpblockfolio_home . '#blog' ); ?>">Blog</a>
+		<a href="<?php echo esc_url( $wpblockfolio_home . '#contact' ); ?>">Contact</a>
 	</p>
 	<!-- /wp:paragraph -->
 

@@ -21,7 +21,7 @@
 
 	<!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false}} -->
 	<div class="wp-block-query">
-		 <!-- wp:post-template {"className":"wpblockfolio-blog-grid","style":{"spacing":{"blockGap":{"top":"1.5rem","left":"1.5rem"}}},"layout":{"type":"grid","columnCount":3}} -->
+		<!-- wp:post-template {"className":"wpblockfolio-blog-grid","style":{"spacing":{"blockGap":{"top":"1.5rem","left":"1.5rem"}}},"layout":{"type":"grid","columnCount":3}} -->
 
 			<!-- wp:group {"className":"wpblockfolio-card","style":{"spacing":{"padding":{"bottom":"1.5rem"}}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group wpblockfolio-card" style="padding-bottom:1.5rem">

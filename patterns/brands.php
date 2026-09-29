@@ -8,22 +8,37 @@
  * Viewport width: 1000
  */
 
-$wpblockfolio_tools = array(
-	array( 'wordpress.svg', 'WordPress' ),
-	array( 'figma.svg', 'Figma' ),
-	array( 'jquery.svg', 'jQuery' ),
-	array( 'github.svg', 'GitHub' ),
-	array( 'envato.svg', 'Envato' ),
-	array( 'react.svg', 'React' ),
-);
+$wpblockfolio_tools = [
+	[ 'wordpress.svg', 'WordPress' ],
+	[ 'figma.svg', 'Figma' ],
+	[ 'jquery.svg', 'jQuery' ],
+	[ 'github.svg', 'GitHub' ],
+	[ 'envato.svg', 'Envato' ],
+	[ 'react.svg', 'React' ],
+];
 
 // Render the strip twice back-to-back so the CSS animation can loop seamlessly.
-function wpblockfolio_marquee_track( $tools ) {
-	$out = '';
-	foreach ( $tools as $tool ) {
-		$out .= '<div class="wpblockfolio-marquee-item"><img src="' . get_template_directory_uri() . '/assets/build/images/' . $tool[0] . '" alt="' . esc_attr( $tool[1] ) . '" loading="lazy" width="28" height="28"/><span>' . esc_html( $tool[1] ) . '</span></div>';
+if ( ! function_exists( 'wpblockfolio_marquee_track' ) ) {
+	/**
+	 * Build the markup for one pass of the tool marquee.
+	 *
+	 * Each entry is a two-element list of the image filename to show and
+	 * the human-readable label to render beside it. The whole track is
+	 * emitted twice by the caller so the CSS animation can loop without a
+	 * visible seam.
+	 *
+	 * @param array<int, array{0: string, 1: string}> $tools Ordered list of
+	 *                     `[ filename, label ]` pairs, where filename is a
+	 *                     file in `assets/build/images/`.
+	 * @return string Concatenated `<div class="wpblockfolio-marquee-item">` markup.
+	 */
+	function wpblockfolio_marquee_track( $tools ) {
+		$out = '';
+		foreach ( $tools as $tool ) {
+			$out .= '<div class="wpblockfolio-marquee-item"><img src="' . get_template_directory_uri() . '/assets/build/images/' . esc_attr( $tool[0] ) . '" alt="' . esc_attr( $tool[1] ) . '" loading="lazy" width="28" height="28"/><span>' . esc_html( $tool[1] ) . '</span></div>';
+		}
+		return $out;
 	}
-	return $out;
 }
 ?>
 <!-- wp:group {"className":"wpblockfolio-card wpblockfolio-pad-x wpblockfolio-pad-y","style":{"spacing":{"margin":{"top":"2rem"}}}} -->

@@ -5,6 +5,7 @@
    ===================================================== */
 
 /* ---------- Consistent, responsive section padding ---------- */
+
 /* All front-page sections (boxed or open) share the same horizontal
    inset so headings/paragraphs line up on the same left edge, and it
    scales down on smaller screens instead of staying a fixed 3rem. */
@@ -16,6 +17,7 @@
 }
 
 /* ---------- Anchor / in-page navigation ---------- */
+
 /* Smooth scrolling for native hash jumps (back/forward, no-JS), and a
    scroll offset so target sections clear the sticky header. JS in
    assets/src/js/main.js applies the same offset for click navigation. */
@@ -25,6 +27,7 @@ html {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
 	html {
 		scroll-behavior: auto;
 	}
@@ -45,6 +48,7 @@ html {
 }
 
 /* ---------- Sticky resume-style sidebar ---------- */
+
 /* .wpblockfolio-separator-left {
 	margin-right: auto !important;
 	width: 40px;
@@ -63,6 +67,7 @@ html {
 .wpblockfolio-sidebar-card {
 	position: sticky;
 	top: 6rem;
+
 	/* clears the sticky header (~4.5rem) plus breathing room */
 	max-height: calc(100vh - 8rem);
 	overflow-y: auto;
@@ -104,6 +109,7 @@ html {
 	font-weight: 600;
 	display: block;
 	padding: 0.25rem 0;
+	transition: color 0.2s ease;
 }
 
 .wpblockfolio-sidebar-nav a:hover {
@@ -159,6 +165,7 @@ html {
 }
 
 @keyframes wpblockfolio-marquee {
+
 	from {
 		transform: translateX(0);
 	}
@@ -169,6 +176,7 @@ html {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
 	.wpblockfolio-marquee-track {
 		animation: none;
 	}
@@ -220,6 +228,7 @@ h2 {
 }
 
 /* ---------- Sticky header ---------- */
+
 /* .wpblockfolio-header {
 	position: sticky;
 	top: 0;
@@ -372,6 +381,7 @@ h2 {
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto 0.75rem;
+	color: #fff;
 }
 
 .wpblockfolio-stat-number {
@@ -414,10 +424,6 @@ h2 {
 
 .wpblockfolio-services-grid .wpblockfolio-card {
 	margin-block-start: 0;
-}
-
-.wpblockfolio-stat-icon {
-	color: #ffffff;
 }
 
 .wpblockfolio-stat-icon svg {
@@ -698,6 +704,7 @@ h2 {
    =================================================== */
 .wpblockfolio-single {
 	background: var(--wp--preset--color--surface);
+
 	/* Guard against any wide child (e.g. an oversized imported image)
 	   forcing the whole page to scroll horizontally. */
 	overflow-x: clip;
@@ -1365,6 +1372,7 @@ h2 {
 }
 
 @media (max-width: 600px) {
+
 	.wpblockfolio-pagination {
 		justify-content: center;
 	}
@@ -1394,15 +1402,13 @@ button:focus-visible,
 	outline-offset: 2px
 }
 
-.wpblockfolio-sidebar-nav a {
-	transition: color 0.2s ease;
-}
 .wpblockfolio-sidebar-nav a.is-active {
 	color: var(--wp--preset--color--accent);
 	font-weight: 700;
 }
 
 @media (max-width: 1049px) {
+
 	.wpblockfolio-price-card-grid {
 		flex-wrap: wrap !important;
 	}
@@ -1422,11 +1428,6 @@ button:focus-visible,
 
 	.wpblockfolio-portfolio-grid {
 		grid-template-columns: repeat(2, 1fr);
-	}
-
-	.wpblockfolio-hero-panel,
-	.wpblockfolio-hero-card {
-		text-align: center;
 	}
 
 	.wpblockfolio-hero-panel .wp-block-buttons {
@@ -1469,6 +1470,7 @@ button:focus-visible,
 }
 
 @media (max-width: 782px) {
+
 	.wpblockfolio-sidebar-col {
 		flex: 1 1 100%;
 		max-width: 100%;
@@ -1574,10 +1576,6 @@ button:focus-visible,
 }
 
 /* Hire Me nav-link: hidden everywhere except inside the open mobile overlay */
-.wpblockfolio-nav-hire {
-	display: none;
-}
-
 .wp-site-blocks > * + * {
 	margin-block-start: 0;
 }
