@@ -15,6 +15,8 @@
 	<exclude-pattern>**/vendor/**</exclude-pattern>
 	<exclude-pattern>**/vendor-prefixed/**</exclude-pattern>
 	<exclude-pattern>**/tests/**</exclude-pattern>
+	<!-- Third-party TGM Plugin Activation library - not our code to fix. -->
+	<exclude-pattern>**/inc/tgm/**</exclude-pattern>
 
 	<!-- CLI args -->
 	<arg value="sp" />
@@ -25,8 +27,12 @@
 	<arg name="parallel" value="20" />
 	<arg name="severity" value="1" />
 
-	<!-- PHP version compatibility: matches platform.php in composer.json -->
-	<config name="testVersion" value="8.0-" />
+	<!--
+		PHP version compatibility: matches the "Requires PHP: 7.4" declared in
+		style.css / readme.txt, so PHP 8-only syntax is reported. composer.json
+		requires ^8.0 only because the dev toolchain needs it.
+	-->
+	<config name="testVersion" value="7.4-" />
 
 	<!-- WordPress version compatibility: correct WPCS config key -->
 	<config name="minimum_supported_wp_version" value="6.4" />
@@ -118,6 +124,43 @@
 				<element value="wpblockfolio" />
 			</property>
 		</properties>
+	</rule>
+
+	<!--
+		Theme helpers that return already-escaped markup, so echoing their
+		return value needs no further escaping:
+		- wpblockfolio_marquee_track() escapes each filename/label itself.
+		- wpblockfolio_get_contact_form() returns either do_shortcode() output
+		  (a Contact Form 7 form) or an esc_html()'d notice with an
+		  esc_url()'d mailto link. Running it through wp_kses_post() would
+		  strip the <form> markup and break the form.
+	-->
+	<rule ref="WordPress.Security.EscapeOutput">
+		<properties>
+			<property name="customEscapingFunctions" type="array">
+				<element value="wpblockfolio_marquee_track" />
+				<element value="wpblockfolio_get_contact_form" />
+			</property>
+		</properties>
+	</rule>
+
+	<!--
+		Block pattern files open with a WordPress pattern header comment
+		(Title:/Slug:/Categories:/...), which is a WordPress convention rather
+		than a PHPDoc file comment, so @package does not apply.
+	-->
+	<rule ref="Squiz.Commenting.FileComment">
+		<exclude-pattern>**/patterns/*.php</exclude-pattern>
+	</rule>
+
+	<!--
+		WordPress action/filter callbacks must match the hook's signature. A
+		filter that replaces a value outright (e.g. excerpt_length) is
+		required by the API to accept the incoming parameter without using
+		it, so this sniff is incompatible with the filter idiom.
+	-->
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter">
+		<severity>0</severity>
 	</rule>
 
 </ruleset>

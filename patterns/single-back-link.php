@@ -7,8 +7,8 @@
  * Keywords: single, back, blog
  */
 
-$home = home_url( '/' );
+$wpblockfolio_home = home_url( '/' );
 ?>
 <!-- wp:paragraph {"className":"wpblockfolio-back-link"} -->
-<p class="wpblockfolio-back-link"><a href="<?php echo esc_url( $home . '#blog' ); ?>">&#8592; Back to all posts</a></p>
+<p class="wpblockfolio-back-link"><a href="<?php echo esc_url( $wpblockfolio_home . '#blog' ); ?>">&#8592; Back to all posts</a></p>
 <!-- /wp:paragraph -->

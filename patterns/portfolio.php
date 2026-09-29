@@ -8,14 +8,23 @@
  * Viewport width: 1400
  */
 
-$wpblockfolio_projects = array(
-	array( 'placeholder.png', 'Project 01', 'Brand identity for a coffee roastery' ),
-	array( 'placeholder.png', 'Project 02', 'Dashboard UI for a SaaS analytics tool' ),
-	array( 'placeholder.png', 'Project 03', 'E-commerce storefront redesign' ),
-	array( 'placeholder.png', 'Project 04', 'Mobile app onboarding flow' ),
-	array( 'placeholder.png', 'Project 05', 'Marketing site for a design studio' ),
-	array( 'placeholder.png', 'Project 06', 'Editorial layout for a print magazine' ),
-);
+$wpblockfolio_projects = [
+	[ 'placeholder.png', 'Project 01', 'Brand identity for a coffee roastery' ],
+	[ 'placeholder.png', 'Project 02', 'Dashboard UI for a SaaS analytics tool' ],
+	[ 'placeholder.png', 'Project 03', 'E-commerce storefront redesign' ],
+	[ 'placeholder.png', 'Project 04', 'Mobile app onboarding flow' ],
+	[ 'placeholder.png', 'Project 05', 'Marketing site for a design studio' ],
+	[ 'placeholder.png', 'Project 06', 'Editorial layout for a print magazine' ],
+];
+
+// The "View All Work" target. get_post_type_archive_link() returns the posts
+// page (or the site home) for the built-in 'post' type, but is typed
+// string|false, so fall back to the home URL to guarantee a valid href.
+$wpblockfolio_work_url = get_post_type_archive_link( 'post' );
+
+if ( ! $wpblockfolio_work_url ) {
+	$wpblockfolio_work_url = home_url( '/' );
+}
 
 ?>
 <!-- wp:group {"anchor":"portfolio","align":"wide","style":{"spacing":{"margin":{"top":"2rem"}}}} -->
@@ -42,7 +51,7 @@ $wpblockfolio_projects = array(
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"2.5rem"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:2.5rem">
 		<!-- wp:button {"backgroundColor":"accent"} -->
-		<div class="wp-block-button"><a class="wp-block-button__link has-accent-background-color has-background wp-element-button" href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">View All Work</a></div>
+		<div class="wp-block-button"><a class="wp-block-button__link has-accent-background-color has-background wp-element-button" href="<?php echo esc_url( $wpblockfolio_work_url ); ?>">View All Work</a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

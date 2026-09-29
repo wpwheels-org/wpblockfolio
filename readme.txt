@@ -24,7 +24,14 @@ WPBlockfolio is a Full Site Editing (block) theme. Every part of the design — 
 
 == Notes on the contact form ==
 
-The Contact section includes a plain HTML form (name, email, subject, message) styled to match the theme. It does not send email by itself — connect it to a form plugin such as Contact Form 7, WPForms, or Fluent Forms, or wire up a custom `admin-post.php` handler, then swap in the plugin's shortcode/block if you'd rather not edit PHP.
+The Contact section does not ship a working form. It is rendered server-side by `wpblockfolio_get_contact_form()` in `inc/helpers.php`, which behaves as follows:
+
+* If Contact Form 7 is active and has at least one published form, the oldest form is rendered automatically via `do_shortcode()`.
+* Otherwise the section shows a short notice explaining that no form is connected, together with an "Email Me" button that opens a `mailto:` link.
+
+This is deliberate. A `core/shortcode` block placed in a pattern would output the raw shortcode text rather than the form, because block-theme templates and patterns never run the shortcode filter that `the_content` applies.
+
+To use your own form plugin instead, replace the call to `wpblockfolio_get_contact_form()` in `patterns/contact.php` with that plugin's shortcode or block.
 
 == Structure ==
 
@@ -32,6 +39,8 @@ The Contact section includes a plain HTML form (name, email, subject, message) s
 * templates/ — front-page, index, single, page, page-no-title, archive, search, 404
 * parts/ — header.html, footer.html
 * patterns/ — one file per homepage section, registered under the "WPBlockfolio Sections" category
+* assets/build/ — compiled CSS, JS, fonts and images; committed because the theme loads these at runtime
+* LICENSE — GNU GPL v3
 
 == Copyright ==
 

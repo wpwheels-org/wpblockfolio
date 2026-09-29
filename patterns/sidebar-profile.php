@@ -17,7 +17,7 @@
 		<!-- wp:group {"className":"wpblockfolio-avatar-ring"} -->
 		<div class="wp-block-group wpblockfolio-avatar-ring">
 			<!-- wp:image {"sizeSlug":"thumbnail"} -->
-			<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/build/images/placeholder.png'); ?>" alt="Portrait photo"/></figure>
+			<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/build/images/placeholder.png' ); ?>" alt="Portrait photo"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:group -->

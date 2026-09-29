@@ -64,16 +64,39 @@ add_action( 'after_setup_theme', 'wpblockfolio_setup' );
  * an empty dependency list and `WPBLOCKFOLIO_VERSION` when the file is
  * missing (e.g. before a first build).
  *
- * @return array{dependencies: string[], version: string} Asset manifest.
+ * The manifest is a generated PHP file read with `require`, so its return
+ * value is untyped. The dependency list is normalised here into a list of
+ * non-empty strings, dropping any entry WordPress could not act on as a
+ * script handle.
+ *
+ * @return array{dependencies: list<non-empty-string>, version: string} Asset manifest.
  */
 function wpblockfolio_asset_meta() {
+	$dependencies = [];
+	$version      = WPBLOCKFOLIO_VERSION;
+
 	if ( file_exists( get_template_directory() . '/assets/build/js/main.asset.php' ) ) {
-		return require get_template_directory() . '/assets/build/js/main.asset.php';
+		$manifest = require get_template_directory() . '/assets/build/js/main.asset.php';
+
+		if ( is_array( $manifest ) ) {
+			$dependencies = array_values(
+				array_filter(
+					(array) ( $manifest['dependencies'] ?? [] ),
+					static function ( $dependency ) {
+						return is_string( $dependency ) && '' !== $dependency;
+					}
+				)
+			);
+
+			if ( isset( $manifest['version'] ) && is_string( $manifest['version'] ) && '' !== $manifest['version'] ) {
+				$version = $manifest['version'];
+			}
+		}
 	}
 
 	return [
-		'dependencies' => [],
-		'version'      => WPBLOCKFOLIO_VERSION,
+		'dependencies' => $dependencies,
+		'version'      => $version,
 	];
 }
 
@@ -85,16 +108,24 @@ function wpblockfolio_asset_meta() {
  * (and `WPBLOCKFOLIO_VERSION` when the file is missing) so a rebuilt
  * stylesheet always invalidates the browser cache.
  *
+ * Returned as a string because wp_enqueue_style() and wp_enqueue_script()
+ * only accept `bool|string|null`; filemtime()'s int and false are both
+ * converted to a usable version here.
+ *
  * @param string $relative_path Path below the theme root, e.g.
  *                              'assets/build/css/custom.css'.
- * @return string|int Version string suitable for wp_enqueue_style().
+ * @return string Version string suitable for wp_enqueue_style().
  */
 function wpblockfolio_asset_version( $relative_path ) {
 	$absolute_path = get_template_directory() . '/' . ltrim( $relative_path, '/' );
 
-	return file_exists( $absolute_path )
-		? filemtime( $absolute_path )
-		: WPBLOCKFOLIO_VERSION;
+	if ( ! file_exists( $absolute_path ) ) {
+		return WPBLOCKFOLIO_VERSION;
+	}
+
+	$modified_time = filemtime( $absolute_path );
+
+	return false !== $modified_time ? (string) $modified_time : WPBLOCKFOLIO_VERSION;
 }
 
 /**
@@ -139,22 +170,22 @@ function wpblockfolio_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'wpblockfolio_enqueue_assets' );
 
 /**
- * Enqueue the Google Fonts and compiled custom stylesheet inside the block editor.
+ * Enqueue the compiled custom stylesheet inside the block editor.
  *
  * Hooked to `enqueue_block_editor_assets` so the editor canvas matches the
- * front end. The font stylesheet is enqueued with a null version; the custom
- * stylesheet is versioned by its file modification time and registered with
- * an RTL counterpart (`custom-rtl.css`) served automatically on RTL locales.
+ * front end. Fonts are not enqueued here: theme.json registers Poppins and
+ * Inter as self-hosted `fontFace` families (served from
+ * `assets/build/fonts/`), and WordPress emits those `@font-face` rules in the
+ * editor automatically. That keeps the theme fully self-hosted with no
+ * external font requests.
+ *
+ * The custom stylesheet is versioned by its file modification time and
+ * registered with an RTL counterpart (`custom-rtl.css`) served automatically
+ * on RTL locales.
  *
  * @return void
  */
 function wpblockfolio_editor_assets() {
-	wp_enqueue_style(
-		'wpblockfolio-editor-fonts',
-		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap',
-		[],
-		null
-	);
 	wp_enqueue_style(
 		'wpblockfolio-editor-custom',
 		get_template_directory_uri() . '/assets/build/css/custom.css',
@@ -237,6 +268,10 @@ require_once get_theme_file_path( '/inc/inc.php' );
  * On any page that isn't the homepage, rewrite the header's in-page
  * anchor links (#about, #services, etc.) to point back through the
  * homepage first, so they still work instead of doing nothing.
+ *
+ * Hooked to `wp_footer`.
+ *
+ * @return void
  */
 function wpblockfolio_fix_header_anchors() {
 	if ( is_front_page() ) {

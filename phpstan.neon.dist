@@ -1,34 +1,43 @@
 parameters:
-		# Rules
-		treatPhpDocTypesAsCertain: false
-		inferPrivatePropertyTypeFromConstructor: true
-		checkExplicitMixedMissingReturn: true
-		checkFunctionNameCase: true
-		checkInternalClassCaseSensitivity: true
-		checkTooWideReturnTypesInProtectedAndPublicMethods: true
-		polluteScopeWithAlwaysIterableForeach: false
-		polluteScopeWithLoopInitialAssignments: false
-		reportAlwaysTrueInLastCondition: true
-		reportStaticMethodSignatures: true
-		reportWrongPhpDocTypeInVarTag: true
+	# Rules
+	treatPhpDocTypesAsCertain: false
+	inferPrivatePropertyTypeFromConstructor: true
+	checkExplicitMixedMissingReturn: true
+	checkFunctionNameCase: true
+	checkInternalClassCaseSensitivity: true
+	checkTooWideReturnTypesInProtectedAndPublicMethods: true
+	polluteScopeWithAlwaysIterableForeach: false
+	polluteScopeWithLoopInitialAssignments: false
+	reportAlwaysTrueInLastCondition: true
+	reportStaticMethodSignatures: true
+	reportWrongPhpDocTypeInVarTag: true
 
-		# Configuration
-		level: 8
-		phpVersion:
-			min: 80000
-			max: 80400
-		bootstrapFiles:
-				- wpblockfolio.php
-		paths:
-				- wpblockfolio.php
-				- uninstall.php
-				- inc/
-		excludePaths:
-			analyse:
-				- tests/
-				- vendor/
-			analyseAndScan:
-				- node_modules (?)
-		ignoreErrors:
-			- # Too noisy for now.
-				identifier: missingType.generics
+	# Configuration
+	level: 8
+
+	# The theme advertises "Requires PHP: 7.4" in style.css and readme.txt, so
+	# the lower bound is pinned to 7.4 to make PHPStan reject PHP 8-only syntax.
+	# (composer.json requires ^8.0 only because the dev toolchain needs it.)
+	phpVersion:
+		min: 70400
+		max: 80400
+
+	# WordPress function/class signatures. Provided by the php-stubs/
+	# wordpress-stubs dev dependency; required so esc_url(), get_option() and
+	# friends resolve instead of reporting "Function not found".
+	bootstrapFiles:
+		- vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+
+	paths:
+		- functions.php
+		- inc/
+		- patterns/
+
+	excludePaths:
+		analyse:
+			# Third-party TGM Plugin Activation library - not our code to fix.
+			- inc/tgm/
+			- tests/
+			- vendor/
+		analyseAndScan:
+			- node_modules (?)

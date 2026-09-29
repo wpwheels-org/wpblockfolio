@@ -15,6 +15,9 @@ phpstan.neon
 *.log
 /tests/logs
 
+# Lint / analysis caches
+.phpcs-cache.json
+
 # Test output
 /tests/_output/*
 !/tests/_output/.gitkeep
@@ -34,4 +37,10 @@ phpstan.neon
 *.code-workspace
 
 # Build
-build/
+# Only the top-level Grunt release artifact is ignored. assets/build/ is
+# webpack output that the theme loads at runtime (functions.php enqueues
+# assets/build/css/custom.css and assets/build/js/main.js), so it is tracked.
+/build/
+
+# Source maps are never committed, but the built assets themselves are.
+assets/build/**/*.map

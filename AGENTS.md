@@ -23,31 +23,75 @@ is *not* a plugin:
 and `assets/build/js/main.js`, so the theme won't look right before a build.
 
 - `npm run start` — dev watch mode
-- `npm run build` — development build
+- `npm run build` — `clean` → webpack build (JS + CSS)
 - `npm run build:prod` — full production build (`clean` → build → strip maps →
   `composer install --no-dev`); use for shipped artifacts
-- JS/TS entry: `assets/src/js/main.js`; webpack alias `@` → `assets/src`
+- JS entry: `assets/src/js/main.js` (plain JS, no TypeScript); webpack alias
+  `@` → `assets/src`
 - `assets/src/images/` and `assets/src/fonts/` copy verbatim into `build/`
 
 Do not hand-edit files under `assets/build/`; edit `assets/src/` and rebuild.
 
+> The `build` / `lint` scripts list their sub-scripts **explicitly**. They used
+> to glob (`build:*` / `lint:*`), which silently pulled in `build:prod` (stripping
+> dev Composer deps) and the `lint:*:fix` autofixers (mutating files mid-lint).
+> If you add a sub-script, add it to the parent's list too.
+
 ## Lint / checks
 
 ```sh
-npm run lint                    # all of the below in parallel
+npm run lint                    # all of the below in parallel, exit 0 = clean
 npm run lint:js                 # eslint (wp-scripts, single quote, 2-space tab)
-npm run lint:js:types           # tsc --noEmit (TS/TSX supported)
 npm run lint:css                # stylelint
-composer run-script lint:php     # parallel-lint (PHP syntax)
-composer run-script phpstan      # static analysis (phpstan.neon.dist)
-composer run-script lint:phpcs   # phpcs (phpcs.xml.dist)
-npm run phpcbf                  # composer run-script format (auto-fix phpcs)
+npm run lint:php                # parallel-lint (PHP syntax)
+npm run lint:phpcs              # phpcs (phpcs.xml.dist)
+npm run lint:php:stan           # phpstan (phpstan.neon.dist)
+composer run-script format      # phpcbf (auto-fix phpcs)
 ```
+
+There is no `lint:js:types` — the theme ships no TypeScript and has no
+`tsconfig.json`, so `tsc --noEmit` had nothing to compile and always failed.
+Reintroduce it (with a `tsconfig.json`) only if TS/TSX is actually added.
 
 PHP code is expected to pass **WPCS** ruleset plus `WordPress-VIP-Go` and
 `PHPCompatibilityWP`. Global prefix requirement (enforced by
 `PrefixAllGlobals`): constants `WPBLOCKFOLIO_`, classes `WPBlockfolio`,
 functions/variables `wpblockfolio_`. i18n text domain is **`wpblockfolio`**.
+
+### Deliberate lint-config deviations
+
+Don't "fix" these — they are intentional:
+
+- `phpstan.neon.dist` analyses `functions.php`, `inc/`, `patterns/` and
+  excludes `inc/tgm/` (third-party TGM Plugin Activation). `phpVersion.min` is
+  pinned to `70400` to match the `Requires PHP: 7.4` in `style.css` /
+  `readme.txt`, so PHPStan rejects PHP 8-only syntax. `composer.json`'s
+  `require.php` is `^8.0` because the *dev toolchain* needs it — that is not a
+  statement about the theme's runtime floor. Stubs come from the explicit
+  `php-stubs/wordpress-stubs` dev dependency, not a transitive one.
+- `phpcs.xml.dist` `testVersion` is `7.4-` for the same reason, and
+  `inc/tgm/` is excluded. `Squiz.Commenting.FileComment` is excluded under
+  `patterns/` because a WordPress pattern header (`Title:`/`Slug:`/
+  `Categories:`) is not a PHPDoc file comment and has no `@package`.
+- `WordPress.Security.EscapeOutput` lists `wpblockfolio_marquee_track()` and
+  `wpblockfolio_get_contact_form()` as `customEscapingFunctions` — both return
+  already-escaped markup, and `wp_kses_post()` on the contact form would strip
+  the `<form>` element. The trusted inline SVG in `patterns/services.php`
+  carries a `phpcs:ignore` for the same reason (kses has no `svg` context).
+- `Generic.CodeAnalysis.UnusedFunctionParameter` is at severity 0: a filter
+  that replaces a value outright (`excerpt_length`) is *required* by the WP
+  API to accept a parameter it never uses.
+- `.stylelintrc.json` overrides `selector-class-pattern` to allow a BEM `__`
+  element suffix. A block theme must be able to target core block classes
+  (`.wp-block-button__link`, `.wp-block-navigation__responsive-container`),
+  which the upstream wp-scripts pattern rejects.
+- `.stylelintrc.json` also disables `no-descending-specificity`. It compares
+  specificity purely by trailing key selector, so it flags unrelated
+  container-scoped rules (`.wpblockfolio-post-cats a` vs
+  `.wpblockfolio-sidebar-nav a:hover`) that can never conflict. All 23 reports
+  were audited: two were selectors inside a single grouped rule sharing
+  identical declarations, the rest set disjoint properties. Reordering them
+  would churn unrelated page sections for no rendering benefit.
 
 ## PHP conventions
 

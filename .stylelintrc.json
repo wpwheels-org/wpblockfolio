@@ -6,5 +6,13 @@
 		"**/*.php",
 		"**/*.svg"
 	],
-	"rules": {}
+	"rules": {
+		"selector-class-pattern": [
+			"^([a-z][a-z0-9]*)(-[a-z0-9]+)*(_{1,2}[a-z0-9]+(-[a-z0-9]+)*)*$",
+			{
+				"message": "Selector should use lowercase, hyphen-separated words (and at most a BEM __ element suffix)"
+			}
+		],
+		"no-descending-specificity": null
+	}
 }
