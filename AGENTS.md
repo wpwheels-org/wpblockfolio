@@ -5,10 +5,10 @@
 A WordPress **block theme** built for Full Site Editing. Despite the names, it
 is *not* a plugin:
 
-- `composer.json` declares `type: wordpress-plugin` and `package.json`
-  describes a "plugin with a custom post type" — both are stale/incorrect
-  metadata inherited from an older project. Trust the actual code: `style.css`
-  header, `theme.json`, `templates/*.html`, `parts/*.html`, `patterns/*.php`.
+- `composer.json` / `package.json` derive from a plugin-scaffolded project.
+  Their metadata has been corrected to describe this theme, but the code is
+  the source of truth: `style.css` header, `theme.json`,
+  `templates/*.html`, `parts/*.html`, `patterns/*.php`.
 - `npm run test:php` still assumes a plugin layout
   (`wp-content/plugins/$(basename $(pwd))`) inside `wp-env`; PHPUnit currently
   has an empty `tests/phpunit/` suite, so tests mostly don't run.
