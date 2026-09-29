@@ -52,7 +52,7 @@
 				<!-- wp:column -->
 				<div class="wp-block-column">
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"}}} --><p style="font-size:0.9rem"><strong>Birthday:</strong> 14 August 1998</p><!-- /wp:paragraph -->
-					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"}}} --><p style="font-size:0.9rem"><strong>Email:</strong> hello@alexrivera.dev</p><!-- /wp:paragraph -->
+					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"}}} --><p style="font-size:0.9rem"><strong>Email:</strong> hello@example.com</p><!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:column -->
 			</div>
@@ -61,7 +61,7 @@
 			<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"1.5rem"}}}} -->
 			<div class="wp-block-buttons" style="margin-top:1.5rem">
 				<!-- wp:button {"backgroundColor":"accent"} -->
-				<div class="wp-block-button"><a class="wp-block-button__link has-accent-background-color has-background wp-element-button" href="#">Download CV</a></div>
+				<div class="wp-block-button"><a class="wp-block-button__link has-accent-background-color has-background wp-element-button" href="<?php echo esc_url( home_url( '/#contact' ) ); ?>">Download CV</a></div>
 				<!-- /wp:button -->
 
 				<!-- wp:button {"className":"is-style-outline"} -->

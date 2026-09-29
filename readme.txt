@@ -3,6 +3,7 @@ Contributors: wpwheels
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
+Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Tags: portfolio, grid-layout, one-page, one-column, two-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, style-variations, template-editing, theme-options, wide-blocks
@@ -59,3 +60,8 @@ Note: while the Simple Icons SVG artwork itself is released under CC0,
 
 placeholder.png,
 License: CC0 license - https://creativecommons.org/about/cc0
+
+== Changelog ==
+
+= 1.0.0 - September 07 2026 =
+* Initial release.

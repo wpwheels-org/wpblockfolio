@@ -31,9 +31,9 @@ $wpblockfolio_projects = array(
 
 	<!-- wp:group {"className":"wpblockfolio-portfolio-grid"} -->
 	<div class="wp-block-group wpblockfolio-portfolio-grid">
-		<?php foreach ( $wpblockfolio_projects as $project ) : ?>
+		<?php foreach ( $wpblockfolio_projects as $wpblockfolio_project ) : ?>
 		<!-- wp:image {"sizeSlug":"large","className":"wpblockfolio-portfolio-item"} -->
-		<figure class="wp-block-image size-large wpblockfolio-portfolio-item"><img src="<?php echo esc_attr( get_template_directory_uri() . '/assets/build/images/' . $project[0] ); ?>" alt="<?php echo esc_attr( $project[2] ); ?>"/><figcaption class="wp-element-caption"><?php echo esc_html( $project[2] ); ?></figcaption></figure>
+		<figure class="wp-block-image size-large wpblockfolio-portfolio-item"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/build/images/' . $wpblockfolio_project[0] ); ?>" alt="<?php echo esc_attr( $wpblockfolio_project[2] ); ?>"/><figcaption class="wp-element-caption"><?php echo esc_html( $wpblockfolio_project[2] ); ?></figcaption></figure>
 		<!-- /wp:image -->
 		<?php endforeach; ?>
 	</div>
@@ -42,7 +42,7 @@ $wpblockfolio_projects = array(
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"2.5rem"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:2.5rem">
 		<!-- wp:button {"backgroundColor":"accent"} -->
-		<div class="wp-block-button"><a class="wp-block-button__link has-accent-background-color has-background wp-element-button" href="#">View All Work</a></div>
+		<div class="wp-block-button"><a class="wp-block-button__link has-accent-background-color has-background wp-element-button" href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">View All Work</a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

@@ -57,10 +57,10 @@
 
 	<!-- wp:social-links {"iconColor":"ink","iconColorValue":"#181a17","className":"is-style-logos-only wpblockfolio-social","style":{"spacing":{"blockGap":{"left":"0.5rem"}}},"layout":{"type":"flex","orientation":"horizontal","justifyContent":"center"}} -->
 	<ul class="wp-block-social-links has-icon-color is-style-logos-only wpblockfolio-social">
-		<!-- wp:social-link {"url":"#","service":"facebook"} /-->
-		<!-- wp:social-link {"url":"#","service":"twitter"} /-->
-		<!-- wp:social-link {"url":"#","service":"instagram"} /-->
-		<!-- wp:social-link {"url":"#","service":"linkedin"} /-->
+		<!-- wp:social-link {"url":"https://www.facebook.com/","service":"facebook"} /-->
+		<!-- wp:social-link {"url":"https://x.com/","service":"twitter"} /-->
+		<!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram"} /-->
+		<!-- wp:social-link {"url":"https://www.linkedin.com/","service":"linkedin"} /-->
 	</ul>
 	<!-- /wp:social-links -->
 

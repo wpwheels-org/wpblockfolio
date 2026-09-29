@@ -1,4 +1,4 @@
 == Changelog ==
 
-= 2.0.1 - September 07 2026 =
+= 1.0.0 - September 07 2026 =
 * Initial release.

@@ -1122,6 +1122,10 @@ h2 {
 	margin-top: 0;
 }
 
+.wpblockfolio-comment .wp-block-comment-content a {
+	text-decoration: none;
+}
+
 .wpblockfolio-comment .wp-block-comment-reply-link a {
 	color: var(--wp--preset--color--primary);
 	font-weight: 600;
