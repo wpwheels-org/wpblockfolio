@@ -215,10 +215,6 @@ add_action( 'init', 'wpblockfolio_pattern_categories' );
 /**
  * Register the theme's navigation menu locations.
  *
- * Hooked to `after_setup_theme`. Registers a single "primary" location used
- * as a fallback for classic-menu compatibility and so the Navigation block
- * has a menu to reference on first activation.
- *
  * @return void
  */
 function wpblockfolio_menus() {

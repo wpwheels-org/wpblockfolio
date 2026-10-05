@@ -6,7 +6,7 @@ Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Tags: portfolio, grid-layout, one-page, one-column, two-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, style-variations, template-editing, theme-options, wide-blocks
+Tags: portfolio, grid-layout, one-page, one-column, two-columns, block-patterns, block-styles, custom-logo, editor-style, featured-images, full-site-editing, full-width-template, style-variations, template-editing, wide-blocks
 
 A clean, one-page portfolio & resume block theme for freelancers, designers and developers, built with full site editing (FSE).
 
@@ -45,6 +45,11 @@ To use your own form plugin instead, replace the call to `wpblockfolio_get_conta
 == Copyright ==
 
 WPBlockfolio is distributed under the terms of the GNU GPL v3 or later.
+
+Screenshot image:
+"Smiling man with glasses and beard portrait" by Christian Buehner
+Source: https://unsplash.com/photos/smiling-man-with-glasses-and-beard-portrait-DItYlc26zVI
+License: Unsplash License (https://unsplash.com/license)
 
 This theme bundles the following third-party resources:
 
