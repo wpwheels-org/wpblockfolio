@@ -3,7 +3,7 @@ Contributors: wpwheels
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Tags: portfolio, grid-layout, one-page, one-column, two-columns, block-patterns, block-styles, custom-logo, editor-style, featured-images, full-site-editing, full-width-template, style-variations, template-editing, wide-blocks
@@ -76,6 +76,14 @@ placeholder.png,
 License: CC0 license - https://creativecommons.org/about/cc0
 
 == Changelog ==
+
+= 1.0.1 - September 29 2026 =
+* Add missing LICENSE file (GPL v3).
+* Replace dead links with valid URLs (social icons, hero and portfolio buttons).
+* Switch mailto links to an @example.com placeholder email and escape them with esc_url().
+* Restore underlines on content links for readability.
+* Populate the translation template (languages/wpblockfolio.pot).
+* Add stable tag to readme.txt.
 
 = 1.0.0 - September 07 2026 =
 * Initial release.

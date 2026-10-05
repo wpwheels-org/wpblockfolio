@@ -1,4 +1,22 @@
+= 1.0.3 - October 05 2026 =
+* Bump version, update changelog and readme.
+
+= 1.0.2 - October 05 2026 =
+* Remove 'theme-options' tag (not applicable to Customizer-less block theme).
+* Remove 'custom-menu' tag and properly use registered primary menu location in Navigation block.
+* Fix marquee image escaping and remove redundant lazy-loading in brands pattern.
+* Add screenshot source credit in readme.txt.
+* Ensure content and comment links are underlined.
+
 == Changelog ==
+
+= 1.0.1 - September 29 2026 =
+* Add missing LICENSE file (GPL v3).
+* Replace dead links with valid URLs (social icons, hero and portfolio buttons).
+* Switch mailto links to an @example.com placeholder email and escape them with esc_url().
+* Restore underlines on content links for readability.
+* Populate the translation template (languages/wpblockfolio.pot).
+* Add stable tag to readme.txt.
 
 = 1.0.0 - September 07 2026 =
 * Initial release.
