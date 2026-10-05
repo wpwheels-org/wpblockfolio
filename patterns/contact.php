@@ -3,7 +3,7 @@
  * Title: Get In Touch
  * Slug: wpblockfolio/contact
  * Categories: wpblockfolio-sections
- * Description: Contact details (phone, email, location) beside a native WordPress comment-style contact form built from Form/Input blocks.
+ * Description: Contact details (phone, email, location) beside a Contact Form 7 form when that plugin is active, or an email call-to-action otherwise.
  * Keywords: contact, form, get in touch
  * Viewport width: 1400
  */
@@ -12,11 +12,11 @@
 <div id="contact" class="wp-block-group alignwide wpblockfolio-card wpblockfolio-pad-x wpblockfolio-pad-y" style="margin-top:2rem;margin-bottom:2rem">
 
 	<!-- wp:paragraph {"className":"wpblockfolio-eyebrow"} -->
-	<p class="wpblockfolio-eyebrow">Get In Touch</p>
+	<p class="wpblockfolio-eyebrow"><?php esc_html_e( 'Get In Touch', 'wpblockfolio' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0.5rem","bottom":"2rem"}}}} -->
-	<h2 class="wp-block-heading" style="margin-top:0.5rem;margin-bottom:2rem">Let's work together</h2>
+	<h2 class="wp-block-heading" style="margin-top:0.5rem;margin-bottom:2rem"><?php esc_html_e( 'Let\'s work together', 'wpblockfolio' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"3rem"}}}} -->
@@ -26,7 +26,7 @@
 		<div class="wp-block-column" style="flex-basis:35%">
 
 			<!-- wp:paragraph {"textColor":"body-text"} -->
-			<p class="has-body-text-color has-text-color">Have a project in mind? Send a note — I typically reply within one business day.</p>
+			<p class="has-body-text-color has-text-color"><?php esc_html_e( 'Have a project in mind? Send a note — I typically reply within one business day.', 'wpblockfolio' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:group {"className":"wpblockfolio-contact-item","layout":{"type":"flex","flexWrap":"nowrap"}} -->
@@ -34,7 +34,7 @@
 				<!-- wp:html --><div class="wpblockfolio-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0-.6.4-1 1-1h3l2 4-2 1.5a11 11 0 0 0 5.5 5.5L15 13l4 2v3c0 .6-.4 1-1 1C10.5 19 4 12.5 4 5z"/></svg></div><!-- /wp:html -->
 				<!-- wp:group {"className":"wpblockfolio-tight-stack","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
 				<div class="wp-block-group wpblockfolio-tight-stack">
-					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"},"spacing":{"margin":{"bottom":"0"}}}} --><p style="margin-bottom:0;font-size:0.9rem"><strong>Phone</strong></p><!-- /wp:paragraph -->
+					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"},"spacing":{"margin":{"bottom":"0"}}}} --><p style="margin-bottom:0;font-size:0.9rem"><strong><?php esc_html_e( 'Phone', 'wpblockfolio' ); ?></strong></p><!-- /wp:paragraph -->
 					<!-- wp:paragraph {"textColor":"body-text","style":{"typography":{"fontSize":"0.9rem"}}} --><p class="has-body-text-color has-text-color" style="font-size:0.9rem">+49 151 12345678</p><!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
@@ -46,7 +46,7 @@
 				<!-- wp:html --><div class="wpblockfolio-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg></div><!-- /wp:html -->
 				<!-- wp:group {"className":"wpblockfolio-tight-stack","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
 				<div class="wp-block-group wpblockfolio-tight-stack">
-					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"},"spacing":{"margin":{"bottom":"0"}}}} --><p style="margin-bottom:0;font-size:0.9rem"><strong>Email</strong></p><!-- /wp:paragraph -->
+					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"},"spacing":{"margin":{"bottom":"0"}}}} --><p style="margin-bottom:0;font-size:0.9rem"><strong><?php esc_html_e( 'Email', 'wpblockfolio' ); ?></strong></p><!-- /wp:paragraph -->
 					<!-- wp:paragraph {"textColor":"body-text","style":{"typography":{"fontSize":"0.9rem"}}} --><p class="has-body-text-color has-text-color" style="font-size:0.9rem">hello@example.com</p><!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
@@ -58,8 +58,8 @@
 				<!-- wp:html --><div class="wpblockfolio-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><!-- /wp:html -->
 				<!-- wp:group {"className":"wpblockfolio-tight-stack","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
 				<div class="wp-block-group wpblockfolio-tight-stack">
-					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"},"spacing":{"margin":{"bottom":"0"}}}} --><p style="margin-bottom:0;font-size:0.9rem"><strong>Location</strong></p><!-- /wp:paragraph -->
-					<!-- wp:paragraph {"textColor":"body-text","style":{"typography":{"fontSize":"0.9rem"}}} --><p class="has-body-text-color has-text-color" style="font-size:0.9rem">Berlin, Germany</p><!-- /wp:paragraph -->
+					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"},"spacing":{"margin":{"bottom":"0"}}}} --><p style="margin-bottom:0;font-size:0.9rem"><strong><?php esc_html_e( 'Location', 'wpblockfolio' ); ?></strong></p><!-- /wp:paragraph -->
+					<!-- wp:paragraph {"textColor":"body-text","style":{"typography":{"fontSize":"0.9rem"}}} --><p class="has-body-text-color has-text-color" style="font-size:0.9rem"><?php esc_html_e( 'Berlin, Germany', 'wpblockfolio' ); ?></p><!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
 			</div>

@@ -265,7 +265,9 @@ require_once get_theme_file_path( '/inc/inc.php' );
  * anchor links (#about, #services, etc.) to point back through the
  * homepage first, so they still work instead of doing nothing.
  *
- * Hooked to `wp_footer`.
+ * Hooked to `wp_enqueue_scripts` after the main bundle is enqueued, and
+ * attached to it with wp_add_inline_script() rather than printing a raw
+ * `<script>` tag.
  *
  * @return void
  */
@@ -273,15 +275,12 @@ function wpblockfolio_fix_header_anchors() {
 	if ( is_front_page() ) {
 		return;
 	}
-	?>
-	<script>
-	document.addEventListener('DOMContentLoaded', function () {
-		var homeUrl = <?php echo wp_json_encode( home_url( '/' ) ); ?>;
-		document.querySelectorAll('.wpblockfolio-header a[href^="#"]').forEach(function (link) {
-			link.setAttribute('href', homeUrl + link.getAttribute('href'));
-		});
-	});
-	</script>
-	<?php
+
+	$script = sprintf(
+		'document.addEventListener("DOMContentLoaded",function(){var homeUrl=%s;document.querySelectorAll(".wpblockfolio-header a[href^=\'#\']").forEach(function(link){link.setAttribute("href",homeUrl+link.getAttribute("href"));});});',
+		wp_json_encode( home_url( '/' ) )
+	);
+
+	wp_add_inline_script( 'wpblockfolio-script', $script );
 }
-add_action( 'wp_footer', 'wpblockfolio_fix_header_anchors' );
+add_action( 'wp_enqueue_scripts', 'wpblockfolio_fix_header_anchors', 20 );

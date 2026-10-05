@@ -647,6 +647,7 @@ h2 {
 .wpcf7-form .wpcf7-form-control:focus {
 	outline: none;
 	border-color: var(--wp--preset--color--primary);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--wp--preset--color--primary) 18%, transparent);
 }
 
 .wpcf7-form input[type="submit"] {
@@ -1256,6 +1257,12 @@ h2 {
 .wpblockfolio-404-search .wp-block-search__input:focus {
 	outline: none;
 	box-shadow: none;
+}
+
+/* The input's own ring is suppressed, so show focus on the pill wrapper. */
+.wpblockfolio-404-search .wp-block-search__inside-wrapper:focus-within {
+	border-color: var(--wp--preset--color--primary);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--wp--preset--color--primary) 25%, transparent);
 }
 
 .wpblockfolio-404-search .wp-block-search__button {

@@ -9,23 +9,23 @@
  */
 
 $wpblockfolio_services = [
-	[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>', 'Product Design', 'Wireframes, prototypes and polished UI kits designed around real user goals.' ],
-	[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 3 12l5 6"/><path d="M16 6l5 6-5 6"/></svg>', 'Development', 'Fast, accessible, standards-based front-end and WordPress builds.' ],
-	[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 6h6v6"/></svg>', 'SEO', 'On-page structure and performance tuning that helps the right people find you.' ],
-	[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>', 'Copywriting', 'Clear, conversion-minded copy that matches your brand voice.' ],
-	[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a2 2 0 0 0 2 2h1l3 5V4l-3 5H5a2 2 0 0 0-2 2z"/><path d="M14 8a4 4 0 0 1 0 8"/><path d="M17 5a8 8 0 0 1 0 14"/></svg>', 'Marketing', 'Launch plans and content strategy across search and social.' ],
-	[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2 2.8-2.8z"/></svg>', 'Support', 'Ongoing maintenance, updates and priority troubleshooting.' ],
+	[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>', __( 'Product Design', 'wpblockfolio' ), __( 'Wireframes, prototypes and polished UI kits designed around real user goals.', 'wpblockfolio' ) ],
+	[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 3 12l5 6"/><path d="M16 6l5 6-5 6"/></svg>', __( 'Development', 'wpblockfolio' ), __( 'Fast, accessible, standards-based front-end and WordPress builds.', 'wpblockfolio' ) ],
+	[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 6h6v6"/></svg>', __( 'SEO', 'wpblockfolio' ), __( 'On-page structure and performance tuning that helps the right people find you.', 'wpblockfolio' ) ],
+	[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>', __( 'Copywriting', 'wpblockfolio' ), __( 'Clear, conversion-minded copy that matches your brand voice.', 'wpblockfolio' ) ],
+	[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a2 2 0 0 0 2 2h1l3 5V4l-3 5H5a2 2 0 0 0-2 2z"/><path d="M14 8a4 4 0 0 1 0 8"/><path d="M17 5a8 8 0 0 1 0 14"/></svg>', __( 'Marketing', 'wpblockfolio' ), __( 'Launch plans and content strategy across search and social.', 'wpblockfolio' ) ],
+	[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2 2.8-2.8z"/></svg>', __( 'Support', 'wpblockfolio' ), __( 'Ongoing maintenance, updates and priority troubleshooting.', 'wpblockfolio' ) ],
 ];
 ?>
 <!-- wp:group {"anchor":"services","align":"wide","style":{"spacing":{"margin":{"top":"2rem"}}}} -->
 <div id="services" class="wp-block-group alignwide" style="margin-top:2rem">
 
 	<!-- wp:paragraph {"className":"wpblockfolio-eyebrow","align":"center"} -->
-	<p class="has-text-align-center wpblockfolio-eyebrow">Services</p>
+	<p class="has-text-align-center wpblockfolio-eyebrow"><?php esc_html_e( 'Services', 'wpblockfolio' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0.5rem","bottom":"2.5rem"}}}} -->
-	<h2 class="wp-block-heading" style="margin-top:0.5rem;margin-bottom:2.5rem">What I can help you with</h2>
+	<h2 class="wp-block-heading" style="margin-top:0.5rem;margin-bottom:2.5rem"><?php esc_html_e( 'What I can help you with', 'wpblockfolio' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:group {"className":"wpblockfolio-services-grid"} -->
