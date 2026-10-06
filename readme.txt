@@ -3,7 +3,7 @@ Contributors: wpwheels
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.3
+Stable tag: 1.0.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Tags: portfolio, grid-layout, one-page, one-column, two-columns, block-patterns, block-styles, custom-logo, editor-style, featured-images, full-site-editing, full-width-template, style-variations, template-editing, wide-blocks
@@ -47,9 +47,8 @@ To use your own form plugin instead, replace the call to `wpblockfolio_get_conta
 WPBlockfolio is distributed under the terms of the GNU GPL v3 or later.
 
 Screenshot image:
-"Smiling man with glasses and beard portrait" by Christian Buehner
-Source: https://unsplash.com/photos/smiling-man-with-glasses-and-beard-portrait-DItYlc26zVI
-License: Unsplash License (https://unsplash.com/license)
+Source: https://stocksnap.io/photo/man-coffee-IS2NXEIDJV
+License: CC0 license - https://creativecommons.org/about/cc0
 
 This theme bundles the following third-party resources:
 
@@ -76,6 +75,13 @@ placeholder.png,
 License: CC0 license - https://creativecommons.org/about/cc0
 
 == Changelog ==
+
+= 1.0.2 - October 05 2026 =
+* Remove 'theme-options' tag (not applicable to Customizer-less block theme).
+* Remove 'custom-menu' tag and properly use registered primary menu location in Navigation block.
+* Fix marquee image escaping and remove redundant lazy-loading in brands pattern.
+* Add screenshot source credit in readme.txt.
+* Ensure content and comment links are underlined.
 
 = 1.0.1 - September 29 2026 =
 * Add missing LICENSE file (GPL v3).
