@@ -1,5 +1,11 @@
 == Changelog ==
 
+= 1.0.3 - October 09 2026 =
+* Remove the "one-page" tag from the style.css and readme.txt headers.
+* Add the theme copyright notice alongside the license in readme.txt and style.css.
+* Make all user-facing strings in patterns translation-ready with the appropriate i18n functions.
+* Regenerate the translation template (languages/wpblockfolio.pot).
+
 = 1.0.2 - October 05 2026 =
 * Remove 'theme-options' tag (not applicable to Customizer-less block theme).
 * Remove 'custom-menu' tag and properly use registered primary menu location in Navigation block.

@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPBlockfolio 1.0.0\n"
+"Project-Id-Version: WPBlockfolio 1.0.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wpblockfolio\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-29T05:21:23+00:00\n"
+"POT-Creation-Date: 2026-10-09T11:06:55+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -33,11 +33,16 @@ msgstr ""
 msgid "WPWheels"
 msgstr ""
 
-#: functions.php:179
+#. Author URI of the theme
+#: style.css
+msgid "https://wpwheels.com/"
+msgstr ""
+
+#: functions.php:210
 msgid "WPBlockfolio Sections"
 msgstr ""
 
-#: functions.php:196
+#: functions.php:223
 msgid "Primary Menu"
 msgstr ""
 
@@ -59,6 +64,70 @@ msgctxt "Pattern description"
 msgid "The 404 error page content — heading, CTA buttons, search, and quick links, all using site-relative URLs."
 msgstr ""
 
+#: patterns/404-content.php:16
+msgid "Error 404"
+msgstr ""
+
+#: patterns/404-content.php:20
+msgctxt "HTTP error code"
+msgid "404"
+msgstr ""
+
+#: patterns/404-content.php:24
+msgid "This page took a wrong turn"
+msgstr ""
+
+#: patterns/404-content.php:28
+msgid "The page you're looking for was moved, renamed, or never existed. Let's get you back on track."
+msgstr ""
+
+#: patterns/404-content.php:34
+msgid "Back to home"
+msgstr ""
+
+#: patterns/404-content.php:38
+msgid "Browse work"
+msgstr ""
+
+#: patterns/404-content.php:43
+msgctxt "search form label"
+msgid "Search"
+msgstr ""
+
+#: patterns/404-content.php:43
+msgid "Search the site…"
+msgstr ""
+
+#: patterns/404-content.php:43
+msgctxt "search button text"
+msgid "Search"
+msgstr ""
+
+#: patterns/404-content.php:47
+#: patterns/sidebar-profile.php:42
+msgid "Home"
+msgstr ""
+
+#: patterns/404-content.php:48
+#: patterns/sidebar-profile.php:43
+msgid "About"
+msgstr ""
+
+#: patterns/404-content.php:49
+msgid "Work"
+msgstr ""
+
+#: patterns/404-content.php:50
+#: patterns/blog.php:15
+#: patterns/sidebar-profile.php:49
+msgid "Blog"
+msgstr ""
+
+#: patterns/404-content.php:51
+#: patterns/sidebar-profile.php:50
+msgid "Contact"
+msgstr ""
+
 #: patterns/about.php
 msgctxt "Pattern title"
 msgid "About Me"
@@ -67,6 +136,71 @@ msgstr ""
 #: patterns/about.php
 msgctxt "Pattern description"
 msgid "Photo, greeting, quick-fact list (name, location, birthday, email) and CV / hire buttons."
+msgstr ""
+
+#: patterns/about.php:15
+msgid "About Me"
+msgstr ""
+
+#: patterns/about.php:19
+msgid "A little about who I am"
+msgstr ""
+
+#: patterns/about.php:28
+msgid "Portrait of Alex Rivera"
+msgstr ""
+
+#: patterns/about.php:37
+msgid "Hello, I'm Alex"
+msgstr ""
+
+#: patterns/about.php:41
+msgid "I'm a product designer and front-end developer based in Berlin, Germany. I care about accessible, well-crafted interfaces and I enjoy turning early ideas into polished, working software — from small business sites to full web applications."
+msgstr ""
+
+#: patterns/about.php:48
+msgid "Name:"
+msgstr ""
+
+#: patterns/about.php:48
+#: patterns/sidebar-profile.php:26
+msgid "Alex Rivera"
+msgstr ""
+
+#: patterns/about.php:49
+msgid "Location:"
+msgstr ""
+
+#: patterns/about.php:49
+#: patterns/contact.php:62
+msgid "Berlin, Germany"
+msgstr ""
+
+#: patterns/about.php:54
+msgid "Birthday:"
+msgstr ""
+
+#: patterns/about.php:54
+msgid "14 August 1998"
+msgstr ""
+
+#: patterns/about.php:55
+msgid "Email:"
+msgstr ""
+
+#: patterns/about.php:55
+#: patterns/contact.php:50
+msgid "hello@example.com"
+msgstr ""
+
+#: patterns/about.php:64
+msgid "View Resume"
+msgstr ""
+
+#: patterns/about.php:68
+#: patterns/hero.php:33
+#: patterns/sidebar-profile.php:70
+msgid "Hire Me"
 msgstr ""
 
 #: patterns/blog.php
@@ -79,6 +213,14 @@ msgctxt "Pattern description"
 msgid "A live Query Loop grid of the 3 most recent blog posts with featured image, date and excerpt."
 msgstr ""
 
+#: patterns/blog.php:19
+msgid "Recent posts"
+msgstr ""
+
+#: patterns/blog.php:50
+msgid "No posts published yet — your latest articles will appear here automatically."
+msgstr ""
+
 #: patterns/brands.php
 msgctxt "Pattern title"
 msgid "Tools & Platforms Marquee"
@@ -89,6 +231,44 @@ msgctxt "Pattern description"
 msgid "An auto-scrolling strip of tool/platform logos, pauses on hover."
 msgstr ""
 
+#: patterns/brands.php:12
+#: patterns/skills.php:34
+msgid "WordPress"
+msgstr ""
+
+#: patterns/brands.php:13
+#: patterns/skills.php:61
+msgid "Figma"
+msgstr ""
+
+#: patterns/brands.php:14
+msgid "jQuery"
+msgstr ""
+
+#: patterns/brands.php:15
+msgid "GitHub"
+msgstr ""
+
+#: patterns/brands.php:16
+msgid "Envato"
+msgstr ""
+
+#: patterns/brands.php:17
+msgid "React"
+msgstr ""
+
+#: patterns/brands.php:53
+msgid "Toolkit"
+msgstr ""
+
+#: patterns/brands.php:57
+msgid "Tools & platforms I work with"
+msgstr ""
+
+#: patterns/brands.php:61
+msgid "Tools and platforms I work with"
+msgstr ""
+
 #: patterns/contact.php
 msgctxt "Pattern title"
 msgid "Get In Touch"
@@ -96,7 +276,35 @@ msgstr ""
 
 #: patterns/contact.php
 msgctxt "Pattern description"
-msgid "Contact details (phone, email, location) beside a native WordPress comment-style contact form built from Form/Input blocks."
+msgid "Contact details (phone, email, location) beside a Contact Form 7 form when that plugin is active, or an email call-to-action otherwise."
+msgstr ""
+
+#: patterns/contact.php:15
+msgid "Get In Touch"
+msgstr ""
+
+#: patterns/contact.php:19
+msgid "Let's work together"
+msgstr ""
+
+#: patterns/contact.php:29
+msgid "Have a project in mind? Send a note — I typically reply within one business day."
+msgstr ""
+
+#: patterns/contact.php:37
+msgid "Phone"
+msgstr ""
+
+#: patterns/contact.php:38
+msgid "+49 151 12345678"
+msgstr ""
+
+#: patterns/contact.php:49
+msgid "Email"
+msgstr ""
+
+#: patterns/contact.php:61
+msgid "Location"
 msgstr ""
 
 #: patterns/experience.php
@@ -109,6 +317,51 @@ msgctxt "Pattern description"
 msgid "A vertical timeline of education / work history entries with a date, title and description."
 msgstr ""
 
+#: patterns/experience.php:15
+#: patterns/sidebar-profile.php:46
+msgid "Resume"
+msgstr ""
+
+#: patterns/experience.php:19
+msgid "Experience & education"
+msgstr ""
+
+#: patterns/experience.php:26
+msgid "2023 — Present"
+msgstr ""
+
+#: patterns/experience.php:27
+msgid "Senior Product Designer — Northlane Studio"
+msgstr ""
+
+#: patterns/experience.php:28
+msgid "Leading design for client web applications, from discovery workshops through to design-system hand-off."
+msgstr ""
+
+#: patterns/experience.php:32
+msgid "2020 — 2023"
+msgstr ""
+
+#: patterns/experience.php:33
+msgid "Front-End Developer — Brightform Labs"
+msgstr ""
+
+#: patterns/experience.php:34
+msgid "Built and maintained WordPress themes and React front ends for a portfolio of 20+ client sites."
+msgstr ""
+
+#: patterns/experience.php:38
+msgid "2016 — 2020"
+msgstr ""
+
+#: patterns/experience.php:39
+msgid "B.Sc. Computer Application — University"
+msgstr ""
+
+#: patterns/experience.php:40
+msgid "Graduated with focus on web technologies, human-computer interaction and software engineering."
+msgstr ""
+
 #: patterns/hero.php
 msgctxt "Pattern title"
 msgid "Hero — Intro Panel"
@@ -117,6 +370,22 @@ msgstr ""
 #: patterns/hero.php
 msgctxt "Pattern description"
 msgid "Bold gradient introduction panel with heading, bio and call-to-action buttons. Pairs with the \"Sidebar — Profile Card\" pattern, which carries the photo, name and navigation."
+msgstr ""
+
+#: patterns/hero.php:15
+msgid "WELCOME TO MY PORTFOLIO"
+msgstr ""
+
+#: patterns/hero.php:19
+msgid "I'm Alex Rivera."
+msgstr ""
+
+#: patterns/hero.php:23
+msgid "I design and build clean, purposeful digital products — from early concept sketches to fully shipped, production-ready interfaces."
+msgstr ""
+
+#: patterns/hero.php:29
+msgid "View Portfolio"
 msgstr ""
 
 #: patterns/portfolio.php
@@ -129,6 +398,66 @@ msgctxt "Pattern description"
 msgid "A responsive image grid for showcasing project work, with a \"view all\" button."
 msgstr ""
 
+#: patterns/portfolio.php:12
+msgid "Project 01"
+msgstr ""
+
+#: patterns/portfolio.php:12
+msgid "Brand identity for a coffee roastery"
+msgstr ""
+
+#: patterns/portfolio.php:13
+msgid "Project 02"
+msgstr ""
+
+#: patterns/portfolio.php:13
+msgid "Dashboard UI for a SaaS analytics tool"
+msgstr ""
+
+#: patterns/portfolio.php:14
+msgid "Project 03"
+msgstr ""
+
+#: patterns/portfolio.php:14
+msgid "E-commerce storefront redesign"
+msgstr ""
+
+#: patterns/portfolio.php:15
+msgid "Project 04"
+msgstr ""
+
+#: patterns/portfolio.php:15
+msgid "Mobile app onboarding flow"
+msgstr ""
+
+#: patterns/portfolio.php:16
+msgid "Project 05"
+msgstr ""
+
+#: patterns/portfolio.php:16
+msgid "Marketing site for a design studio"
+msgstr ""
+
+#: patterns/portfolio.php:17
+msgid "Project 06"
+msgstr ""
+
+#: patterns/portfolio.php:17
+msgid "Editorial layout for a print magazine"
+msgstr ""
+
+#: patterns/portfolio.php:34
+msgid "Portfolio"
+msgstr ""
+
+#: patterns/portfolio.php:38
+msgid "Selected work"
+msgstr ""
+
+#: patterns/portfolio.php:54
+msgid "View All Work"
+msgstr ""
+
 #: patterns/pricing.php
 msgctxt "Pattern title"
 msgid "Pricing Table"
@@ -137,6 +466,93 @@ msgstr ""
 #: patterns/pricing.php
 msgctxt "Pattern description"
 msgid "Three pricing tiers with the middle plan visually highlighted as the recommended option."
+msgstr ""
+
+#: patterns/pricing.php:15
+#: patterns/sidebar-profile.php:48
+msgid "Pricing"
+msgstr ""
+
+#: patterns/pricing.php:19
+msgid "Simple, transparent packages"
+msgstr ""
+
+#: patterns/pricing.php:27
+msgid "STARTER"
+msgstr ""
+
+#: patterns/pricing.php:28
+msgid "$249"
+msgstr ""
+
+#: patterns/pricing.php:29
+msgid "One-page site build"
+msgstr ""
+
+#: patterns/pricing.php:32
+msgid "1 template page"
+msgstr ""
+
+#: patterns/pricing.php:33
+msgid "Basic SEO setup"
+msgstr ""
+
+#: patterns/pricing.php:34
+msgid "7 days support"
+msgstr ""
+
+#: patterns/pricing.php:39
+#: patterns/pricing.php:59
+#: patterns/pricing.php:79
+msgid "Get Started"
+msgstr ""
+
+#: patterns/pricing.php:47
+msgid "PROFESSIONAL"
+msgstr ""
+
+#: patterns/pricing.php:48
+msgid "$549"
+msgstr ""
+
+#: patterns/pricing.php:49
+msgid "Full multi-page site"
+msgstr ""
+
+#: patterns/pricing.php:52
+msgid "Up to 6 template pages"
+msgstr ""
+
+#: patterns/pricing.php:53
+msgid "Full on-page SEO"
+msgstr ""
+
+#: patterns/pricing.php:54
+msgid "30 days support"
+msgstr ""
+
+#: patterns/pricing.php:67
+msgid "PREMIUM"
+msgstr ""
+
+#: patterns/pricing.php:68
+msgid "$999"
+msgstr ""
+
+#: patterns/pricing.php:69
+msgid "Custom web application"
+msgstr ""
+
+#: patterns/pricing.php:72
+msgid "Unlimited pages"
+msgstr ""
+
+#: patterns/pricing.php:73
+msgid "Custom functionality"
+msgstr ""
+
+#: patterns/pricing.php:74
+msgid "90 days support"
 msgstr ""
 
 #: patterns/services.php
@@ -149,6 +565,63 @@ msgctxt "Pattern description"
 msgid "A responsive grid of service cards, each with an icon, title and short description."
 msgstr ""
 
+#: patterns/services.php:12
+msgid "Product Design"
+msgstr ""
+
+#: patterns/services.php:12
+msgid "Wireframes, prototypes and polished UI kits designed around real user goals."
+msgstr ""
+
+#: patterns/services.php:13
+msgid "Development"
+msgstr ""
+
+#: patterns/services.php:13
+msgid "Fast, accessible, standards-based front-end and WordPress builds."
+msgstr ""
+
+#: patterns/services.php:14
+msgid "SEO"
+msgstr ""
+
+#: patterns/services.php:14
+msgid "On-page structure and performance tuning that helps the right people find you."
+msgstr ""
+
+#: patterns/services.php:15
+msgid "Copywriting"
+msgstr ""
+
+#: patterns/services.php:15
+msgid "Clear, conversion-minded copy that matches your brand voice."
+msgstr ""
+
+#: patterns/services.php:16
+msgid "Marketing"
+msgstr ""
+
+#: patterns/services.php:16
+msgid "Launch plans and content strategy across search and social."
+msgstr ""
+
+#: patterns/services.php:17
+msgid "Support"
+msgstr ""
+
+#: patterns/services.php:17
+msgid "Ongoing maintenance, updates and priority troubleshooting."
+msgstr ""
+
+#: patterns/services.php:24
+#: patterns/sidebar-profile.php:45
+msgid "Services"
+msgstr ""
+
+#: patterns/services.php:28
+msgid "What I can help you with"
+msgstr ""
+
 #: patterns/sidebar-profile.php
 msgctxt "Pattern title"
 msgid "Sidebar — Profile Card"
@@ -157,6 +630,22 @@ msgstr ""
 #: patterns/sidebar-profile.php
 msgctxt "Pattern description"
 msgid "Avatar, name, tagline, in-page navigation and social links — designed to sit in a sticky sidebar column that stays visible while the rest of the page scrolls, resume-style."
+msgstr ""
+
+#: patterns/sidebar-profile.php:20
+msgid "Portrait photo"
+msgstr ""
+
+#: patterns/sidebar-profile.php:30
+msgid "Product Designer & Front-End Developer"
+msgstr ""
+
+#: patterns/sidebar-profile.php:44
+msgid "Skills"
+msgstr ""
+
+#: patterns/sidebar-profile.php:47
+msgid "Works"
 msgstr ""
 
 #: patterns/single-back-link.php
@@ -169,6 +658,10 @@ msgctxt "Pattern description"
 msgid "\"Back to all posts\" link for the single post template, using a site-relative URL so it works when WordPress is installed in a subdirectory."
 msgstr ""
 
+#: patterns/single-back-link.php:13
+msgid "← Back to all posts"
+msgstr ""
+
 #: patterns/skills.php
 msgctxt "Pattern title"
 msgid "My Skills"
@@ -177,6 +670,35 @@ msgstr ""
 #: patterns/skills.php
 msgctxt "Pattern description"
 msgid "Intro paragraph plus a two-column set of labelled progress bars for key skills."
+msgstr ""
+
+#: patterns/skills.php:15
+msgid "My Skills"
+msgstr ""
+
+#: patterns/skills.php:19
+msgid "Tools & technologies I work with"
+msgstr ""
+
+#: patterns/skills.php:23
+msgid "A mix of design and front-end tools I use daily to take a project from wireframe to finished, responsive product."
+msgstr ""
+
+#. translators: %d: skill proficiency percentage.
+#: patterns/skills.php:34
+#: patterns/skills.php:41
+#: patterns/skills.php:54
+#: patterns/skills.php:61
+#, php-format
+msgid "%d%%"
+msgstr ""
+
+#: patterns/skills.php:41
+msgid "JavaScript"
+msgstr ""
+
+#: patterns/skills.php:54
+msgid "HTML & CSS"
 msgstr ""
 
 #: patterns/stats.php
@@ -189,6 +711,22 @@ msgctxt "Pattern description"
 msgid "Four-column gradient strip highlighting key numbers (projects, experience, clients, awards)."
 msgstr ""
 
+#: patterns/stats.php:21
+msgid "Projects completed"
+msgstr ""
+
+#: patterns/stats.php:29
+msgid "Years of experience"
+msgstr ""
+
+#: patterns/stats.php:37
+msgid "Happy clients"
+msgstr ""
+
+#: patterns/stats.php:45
+msgid "Awards won"
+msgstr ""
+
 #: patterns/testimonials.php
 msgctxt "Pattern title"
 msgid "Testimonials"
@@ -197,4 +735,44 @@ msgstr ""
 #: patterns/testimonials.php
 msgctxt "Pattern description"
 msgid "Two-column client quotes with avatar, name and role."
+msgstr ""
+
+#: patterns/testimonials.php:15
+msgid "Testimonials"
+msgstr ""
+
+#: patterns/testimonials.php:19
+msgid "What clients say"
+msgstr ""
+
+#: patterns/testimonials.php:29
+msgid "Alex took a vague brief and turned it into a site that actually converts. Communication was clear from kickoff to launch, and the handoff docs made our team self-sufficient."
+msgstr ""
+
+#: patterns/testimonials.php:35
+msgid "Portrait of Helen Novak"
+msgstr ""
+
+#: patterns/testimonials.php:39
+msgid "Helen Novak"
+msgstr ""
+
+#: patterns/testimonials.php:40
+msgid "Founder, Novak Roasters"
+msgstr ""
+
+#: patterns/testimonials.php:52
+msgid "Reliable, detail-oriented, and genuinely invested in getting the small things right. Our dashboard redesign shipped on time and our support tickets dropped noticeably."
+msgstr ""
+
+#: patterns/testimonials.php:58
+msgid "Portrait of Jordan Marsh"
+msgstr ""
+
+#: patterns/testimonials.php:62
+msgid "Jordan Marsh"
+msgstr ""
+
+#: patterns/testimonials.php:63
+msgid "Product Lead, Northlane"
 msgstr ""

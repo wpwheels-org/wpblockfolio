@@ -12,11 +12,11 @@
 <div id="blog" class="wp-block-group alignwide" style="margin-top:2rem">
 
 	<!-- wp:paragraph {"className":"wpblockfolio-eyebrow","align":"center"} -->
-	<p class="has-text-align-center wpblockfolio-eyebrow">Blog</p>
+	<p class="has-text-align-center wpblockfolio-eyebrow"><?php esc_html_e( 'Blog', 'wpblockfolio' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0.5rem","bottom":"2.5rem"}}}} -->
-	<h2 class="wp-block-heading" style="margin-top:0.5rem;margin-bottom:2.5rem">Recent posts</h2>
+	<h2 class="wp-block-heading" style="margin-top:0.5rem;margin-bottom:2.5rem"><?php esc_html_e( 'Recent posts', 'wpblockfolio' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false}} -->
@@ -47,7 +47,7 @@
 
 		<!-- wp:query-no-results -->
 			<!-- wp:paragraph {"align":"center"} -->
-			<p class="has-text-align-center">No posts published yet — your latest articles will appear here automatically.</p>
+			<p class="has-text-align-center"><?php esc_html_e( 'No posts published yet — your latest articles will appear here automatically.', 'wpblockfolio' ); ?></p>
 			<!-- /wp:paragraph -->
 		<!-- /wp:query-no-results -->
 

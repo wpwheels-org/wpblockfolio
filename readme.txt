@@ -3,10 +3,10 @@ Contributors: wpwheels
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Tags: portfolio, grid-layout, one-page, one-column, two-columns, block-patterns, block-styles, custom-logo, editor-style, featured-images, full-site-editing, full-width-template, style-variations, template-editing, wide-blocks
+Tags: portfolio, grid-layout, one-column, two-columns, block-patterns, block-styles, custom-logo, editor-style, featured-images, full-site-editing, full-width-template, style-variations, template-editing, wide-blocks
 
 A clean, one-page portfolio & resume block theme for freelancers, designers and developers, built with full site editing (FSE).
 
@@ -44,6 +44,7 @@ To use your own form plugin instead, replace the call to `wpblockfolio_get_conta
 
 == Copyright ==
 
+WPBlockfolio WordPress Theme, Copyright 2026 WPWheels
 WPBlockfolio is distributed under the terms of the GNU GPL v3 or later.
 
 Screenshot image:
@@ -75,6 +76,12 @@ placeholder.png,
 License: CC0 license - https://creativecommons.org/about/cc0
 
 == Changelog ==
+
+= 1.0.3 - October 09 2026 =
+* Remove the "one-page" tag from the style.css and readme.txt headers.
+* Add the theme copyright notice alongside the license in readme.txt and style.css.
+* Make all user-facing strings in patterns translation-ready with the appropriate i18n functions.
+* Regenerate the translation template (languages/wpblockfolio.pot).
 
 = 1.0.2 - October 05 2026 =
 * Remove 'theme-options' tag (not applicable to Customizer-less block theme).

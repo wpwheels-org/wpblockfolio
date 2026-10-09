@@ -9,12 +9,12 @@
  */
 
 $wpblockfolio_tools = [
-	[ 'wordpress.svg', 'WordPress' ],
-	[ 'figma.svg', 'Figma' ],
-	[ 'jquery.svg', 'jQuery' ],
-	[ 'github.svg', 'GitHub' ],
-	[ 'envato.svg', 'Envato' ],
-	[ 'react.svg', 'React' ],
+	[ 'wordpress.svg', __( 'WordPress', 'wpblockfolio' ) ],
+	[ 'figma.svg', __( 'Figma', 'wpblockfolio' ) ],
+	[ 'jquery.svg', __( 'jQuery', 'wpblockfolio' ) ],
+	[ 'github.svg', __( 'GitHub', 'wpblockfolio' ) ],
+	[ 'envato.svg', __( 'Envato', 'wpblockfolio' ) ],
+	[ 'react.svg', __( 'React', 'wpblockfolio' ) ],
 ];
 
 // Render the strip twice back-to-back so the CSS animation can loop seamlessly.
@@ -30,12 +30,17 @@ if ( ! function_exists( 'wpblockfolio_marquee_track' ) ) {
 	 * @param array<int, array{0: string, 1: string}> $tools Ordered list of
 	 *                     `[ filename, label ]` pairs, where filename is a
 	 *                     file in `assets/build/images/`.
+	 * @param bool                                    $is_clone Whether this pass is the
+	 *                     visual duplicate used for looping; if so it is
+	 *                     hidden from assistive technology so each tool is
+	 *                     announced once.
 	 * @return string Concatenated `<div class="wpblockfolio-marquee-item">` markup.
 	 */
-	function wpblockfolio_marquee_track( $tools ) {
-		$out = '';
+	function wpblockfolio_marquee_track( $tools, $is_clone = false ) {
+		$out    = '';
+		$hidden = $is_clone ? ' aria-hidden="true"' : '';
 		foreach ( $tools as $tool ) {
-			$out .= '<div class="wpblockfolio-marquee-item"><img src="' . esc_url( get_template_directory_uri() . '/assets/build/images/' . $tool[0] ) . '" alt="' . esc_attr( $tool[1] ) . '" width="28" height="28"/><span>' . esc_html( $tool[1] ) . '</span></div>';
+			$out .= '<div class="wpblockfolio-marquee-item"' . $hidden . '><img src="' . esc_url( get_template_directory_uri() . '/assets/build/images/' . $tool[0] ) . '" alt="" width="28" height="28"/><span>' . esc_html( $tool[1] ) . '</span></div>';
 		}
 		return $out;
 	}
@@ -45,18 +50,18 @@ if ( ! function_exists( 'wpblockfolio_marquee_track' ) ) {
 <div class="wp-block-group wpblockfolio-card wpblockfolio-pad-x wpblockfolio-pad-y" style="margin-top:2rem">
 
 	<!-- wp:paragraph {"className":"wpblockfolio-eyebrow","align":"center"} -->
-	<p class="has-text-align-center wpblockfolio-eyebrow">Toolkit</p>
+	<p class="has-text-align-center wpblockfolio-eyebrow"><?php esc_html_e( 'Toolkit', 'wpblockfolio' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"level":3,"fontSize":"large","style":{"spacing":{"margin":{"top":"0.5rem","bottom":"2rem"}}}} -->
-	<h3 class="wp-block-heading has-large-font-size" style="margin-top:0.5rem;margin-bottom:2rem">Tools &amp; platforms I work with</h3>
+	<h3 class="wp-block-heading has-large-font-size" style="margin-top:0.5rem;margin-bottom:2rem"><?php esc_html_e( 'Tools & platforms I work with', 'wpblockfolio' ); ?></h3>
 	<!-- /wp:heading -->
 
 	<!-- wp:html -->
-	<div class="wpblockfolio-marquee" role="group" aria-label="Tools and platforms I work with">
+	<div class="wpblockfolio-marquee" role="group" aria-label="<?php esc_attr_e( 'Tools and platforms I work with', 'wpblockfolio' ); ?>">
 		<div class="wpblockfolio-marquee-track">
 			<?php echo wpblockfolio_marquee_track( $wpblockfolio_tools ); ?>
-			<?php echo wpblockfolio_marquee_track( $wpblockfolio_tools ); ?>
+			<?php echo wpblockfolio_marquee_track( $wpblockfolio_tools, true ); ?>
 		</div>
 	</div>
 	<!-- /wp:html -->
