@@ -35,7 +35,7 @@
 				<!-- wp:group {"className":"wpblockfolio-tight-stack","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
 				<div class="wp-block-group wpblockfolio-tight-stack">
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"},"spacing":{"margin":{"bottom":"0"}}}} --><p style="margin-bottom:0;font-size:0.9rem"><strong><?php esc_html_e( 'Phone', 'wpblockfolio' ); ?></strong></p><!-- /wp:paragraph -->
-					<!-- wp:paragraph {"textColor":"body-text","style":{"typography":{"fontSize":"0.9rem"}}} --><p class="has-body-text-color has-text-color" style="font-size:0.9rem">+49 151 12345678</p><!-- /wp:paragraph -->
+					<!-- wp:paragraph {"textColor":"body-text","style":{"typography":{"fontSize":"0.9rem"}}} --><p class="has-body-text-color has-text-color" style="font-size:0.9rem"><?php esc_html_e( '+49 151 12345678', 'wpblockfolio' ); ?></p><!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
 			</div>
@@ -47,7 +47,7 @@
 				<!-- wp:group {"className":"wpblockfolio-tight-stack","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
 				<div class="wp-block-group wpblockfolio-tight-stack">
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"},"spacing":{"margin":{"bottom":"0"}}}} --><p style="margin-bottom:0;font-size:0.9rem"><strong><?php esc_html_e( 'Email', 'wpblockfolio' ); ?></strong></p><!-- /wp:paragraph -->
-					<!-- wp:paragraph {"textColor":"body-text","style":{"typography":{"fontSize":"0.9rem"}}} --><p class="has-body-text-color has-text-color" style="font-size:0.9rem">hello@example.com</p><!-- /wp:paragraph -->
+					<!-- wp:paragraph {"textColor":"body-text","style":{"typography":{"fontSize":"0.9rem"}}} --><p class="has-body-text-color has-text-color" style="font-size:0.9rem"><?php esc_html_e( 'hello@example.com', 'wpblockfolio' ); ?></p><!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
 			</div>

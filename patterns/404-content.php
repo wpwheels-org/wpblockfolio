@@ -17,7 +17,7 @@ $wpblockfolio_home = home_url( '/' );
 	<!-- /wp:paragraph -->
 
 	<!-- wp:paragraph {"align":"center","className":"wpblockfolio-404-code"} -->
-	<p class="has-text-align-center wpblockfolio-404-code">404</p>
+	<p class="has-text-align-center wpblockfolio-404-code"><?php echo esc_html_x( '404', 'HTTP error code', 'wpblockfolio' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:heading {"textAlign":"center","level":1,"className":"wpblockfolio-404-title","style":{"spacing":{"margin":{"top":"0.25rem","bottom":"1rem"}}}} -->

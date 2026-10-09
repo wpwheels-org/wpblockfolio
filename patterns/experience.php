@@ -29,13 +29,13 @@
 		</div>
 
 		<div class="wpblockfolio-timeline-item">
-			<div class="wpblockfolio-timeline-date">2020 — 2023</div>
+			<div class="wpblockfolio-timeline-date"><?php esc_html_e( '2020 — 2023', 'wpblockfolio' ); ?></div>
 			<h3 style="margin:0.35rem 0;font-family:var(--wp--preset--font-family--heading);font-size:1.15rem;"><?php esc_html_e( 'Front-End Developer — Brightform Labs', 'wpblockfolio' ); ?></h3>
 			<p style="color:var(--wp--preset--color--body-text);margin:0;"><?php esc_html_e( 'Built and maintained WordPress themes and React front ends for a portfolio of 20+ client sites.', 'wpblockfolio' ); ?></p>
 		</div>
 
 		<div class="wpblockfolio-timeline-item">
-			<div class="wpblockfolio-timeline-date">2016 — 2020</div>
+			<div class="wpblockfolio-timeline-date"><?php esc_html_e( '2016 — 2020', 'wpblockfolio' ); ?></div>
 			<h3 style="margin:0.35rem 0;font-family:var(--wp--preset--font-family--heading);font-size:1.15rem;"><?php esc_html_e( 'B.Sc. Computer Application — University', 'wpblockfolio' ); ?></h3>
 			<p style="color:var(--wp--preset--color--body-text);margin:0;"><?php esc_html_e( 'Graduated with focus on web technologies, human-computer interaction and software engineering.', 'wpblockfolio' ); ?></p>
 		</div>

@@ -1,4 +1,9 @@
 == Changelog ==
 
+= 1.0.1 - October 09 2026 =
+* Fixed: Removed the "one-page" tag from the style.css and readme.txt headers.
+* Fixed: Added the theme copyright notice alongside the license in readme.txt and style.css.
+* Fixed: Made all remaining user-facing strings in patterns translation-ready (contact details, dates, prices, skill percentages, stat counters, 404 code, tool names).
+
 = 1.0.0 - September 07 2026 =
 * Initial release.

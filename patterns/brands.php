@@ -9,12 +9,12 @@
  */
 
 $wpblockfolio_tools = [
-	[ 'wordpress.svg', 'WordPress' ],
-	[ 'figma.svg', 'Figma' ],
-	[ 'jquery.svg', 'jQuery' ],
-	[ 'github.svg', 'GitHub' ],
-	[ 'envato.svg', 'Envato' ],
-	[ 'react.svg', 'React' ],
+	[ 'wordpress.svg', __( 'WordPress', 'wpblockfolio' ) ],
+	[ 'figma.svg', __( 'Figma', 'wpblockfolio' ) ],
+	[ 'jquery.svg', __( 'jQuery', 'wpblockfolio' ) ],
+	[ 'github.svg', __( 'GitHub', 'wpblockfolio' ) ],
+	[ 'envato.svg', __( 'Envato', 'wpblockfolio' ) ],
+	[ 'react.svg', __( 'React', 'wpblockfolio' ) ],
 ];
 
 // Render the strip twice back-to-back so the CSS animation can loop seamlessly.

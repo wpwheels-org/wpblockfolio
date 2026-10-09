@@ -52,7 +52,7 @@
 				<!-- wp:column -->
 				<div class="wp-block-column">
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"}}} --><p style="font-size:0.9rem"><strong><?php esc_html_e( 'Birthday:', 'wpblockfolio' ); ?></strong> <?php esc_html_e( '14 August 1998', 'wpblockfolio' ); ?></p><!-- /wp:paragraph -->
-					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"}}} --><p style="font-size:0.9rem"><strong><?php esc_html_e( 'Email:', 'wpblockfolio' ); ?></strong> hello@example.com</p><!-- /wp:paragraph -->
+					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.9rem"}}} --><p style="font-size:0.9rem"><strong><?php esc_html_e( 'Email:', 'wpblockfolio' ); ?></strong> <?php esc_html_e( 'hello@example.com', 'wpblockfolio' ); ?></p><!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:column -->
 			</div>

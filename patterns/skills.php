@@ -31,14 +31,14 @@
 
 			<!-- wp:group {"className":"wpblockfolio-skill"} -->
 			<div class="wp-block-group wpblockfolio-skill">
-				<!-- wp:paragraph {"className":"wpblockfolio-skill-label"} --><p class="wpblockfolio-skill-label"><span><?php esc_html_e( 'WordPress', 'wpblockfolio' ); ?></span><span>92%</span></p><!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"wpblockfolio-skill-label"} --><p class="wpblockfolio-skill-label"><span><?php esc_html_e( 'WordPress', 'wpblockfolio' ); ?></span><span><?php /* translators: %d: skill proficiency percentage. */ printf( esc_html__( '%d%%', 'wpblockfolio' ), 92 ); ?></span></p><!-- /wp:paragraph -->
 				<!-- wp:html --><div class="wpblockfolio-skill-track"><div class="wpblockfolio-skill-fill" style="width:92%"></div></div><!-- /wp:html -->
 			</div>
 			<!-- /wp:group -->
 
 			<!-- wp:group {"className":"wpblockfolio-skill"} -->
 			<div class="wp-block-group wpblockfolio-skill">
-				<!-- wp:paragraph {"className":"wpblockfolio-skill-label"} --><p class="wpblockfolio-skill-label"><span><?php esc_html_e( 'JavaScript', 'wpblockfolio' ); ?></span><span>85%</span></p><!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"wpblockfolio-skill-label"} --><p class="wpblockfolio-skill-label"><span><?php esc_html_e( 'JavaScript', 'wpblockfolio' ); ?></span><span><?php /* translators: %d: skill proficiency percentage. */ printf( esc_html__( '%d%%', 'wpblockfolio' ), 85 ); ?></span></p><!-- /wp:paragraph -->
 				<!-- wp:html --><div class="wpblockfolio-skill-track"><div class="wpblockfolio-skill-fill" style="width:85%"></div></div><!-- /wp:html -->
 			</div>
 			<!-- /wp:group -->
@@ -51,14 +51,14 @@
 
 			<!-- wp:group {"className":"wpblockfolio-skill"} -->
 			<div class="wp-block-group wpblockfolio-skill">
-				<!-- wp:paragraph {"className":"wpblockfolio-skill-label"} --><p class="wpblockfolio-skill-label"><span><?php esc_html_e( 'HTML & CSS', 'wpblockfolio' ); ?></span><span>95%</span></p><!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"wpblockfolio-skill-label"} --><p class="wpblockfolio-skill-label"><span><?php esc_html_e( 'HTML & CSS', 'wpblockfolio' ); ?></span><span><?php /* translators: %d: skill proficiency percentage. */ printf( esc_html__( '%d%%', 'wpblockfolio' ), 95 ); ?></span></p><!-- /wp:paragraph -->
 				<!-- wp:html --><div class="wpblockfolio-skill-track"><div class="wpblockfolio-skill-fill" style="width:95%"></div></div><!-- /wp:html -->
 			</div>
 			<!-- /wp:group -->
 
 			<!-- wp:group {"className":"wpblockfolio-skill"} -->
 			<div class="wp-block-group wpblockfolio-skill">
-				<!-- wp:paragraph {"className":"wpblockfolio-skill-label"} --><p class="wpblockfolio-skill-label"><span><?php esc_html_e( 'Figma', 'wpblockfolio' ); ?></span><span>88%</span></p><!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"wpblockfolio-skill-label"} --><p class="wpblockfolio-skill-label"><span><?php esc_html_e( 'Figma', 'wpblockfolio' ); ?></span><span><?php /* translators: %d: skill proficiency percentage. */ printf( esc_html__( '%d%%', 'wpblockfolio' ), 88 ); ?></span></p><!-- /wp:paragraph -->
 				<!-- wp:html --><div class="wpblockfolio-skill-track"><div class="wpblockfolio-skill-fill" style="width:88%"></div></div><!-- /wp:html -->
 			</div>
 			<!-- /wp:group -->

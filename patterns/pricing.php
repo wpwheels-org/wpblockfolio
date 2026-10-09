@@ -25,7 +25,7 @@
 		<!-- wp:column {"verticalAlignment":"center","className":"wpblockfolio-pricing-card wpblockfolio-card","style":{"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","left":"2rem","right":"2rem"}}}} -->
 		<div class="wp-block-column is-vertically-aligned-center wpblockfolio-pricing-card wpblockfolio-card" style="padding-top:2.5rem;padding-right:2rem;padding-bottom:2.5rem;padding-left:2rem">
 			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700","fontSize":"0.8rem","letterSpacing":"0.05em"}},"textColor":"accent"} --><p class="has-text-align-center has-accent-color has-text-color" style="font-size:0.8rem;font-weight:700;letter-spacing:0.05em"><?php esc_html_e( 'STARTER', 'wpblockfolio' ); ?></p><!-- /wp:paragraph -->
-			<!-- wp:heading {"level":3,"textAlign":"center","fontSize":"xx-large"} --><h3 class="wp-block-heading has-text-align-center has-xx-large-font-size">$249</h3><!-- /wp:heading -->
+			<!-- wp:heading {"level":3,"textAlign":"center","fontSize":"xx-large"} --><h3 class="wp-block-heading has-text-align-center has-xx-large-font-size"><?php esc_html_e( '$249', 'wpblockfolio' ); ?></h3><!-- /wp:heading -->
 			<!-- wp:paragraph {"align":"center","textColor":"body-text","style":{"spacing":{"margin":{"bottom":"1.5rem"}}}} --><p class="has-text-align-center has-body-text-color has-text-color" style="margin-bottom:1.5rem"><?php esc_html_e( 'One-page site build', 'wpblockfolio' ); ?></p><!-- /wp:paragraph -->
 			<!-- wp:list {"style":{"typography":{"fontSize":"0.9rem"}},"className":"wpblockfolio-price-list"} -->
 			<ul class="wpblockfolio-price-list" style="font-size:0.9rem">
@@ -45,7 +45,7 @@
 		<!-- wp:column {"verticalAlignment":"center","className":"wpblockfolio-pricing-card is-featured","style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem","left":"2rem","right":"2rem"}}}} -->
 		<div class="wp-block-column is-vertically-aligned-center wpblockfolio-pricing-card is-featured" style="padding-top:3rem;padding-right:2rem;padding-bottom:3rem;padding-left:2rem">
 			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700","fontSize":"0.8rem","letterSpacing":"0.05em"}}} --><p class="has-text-align-center" style="font-size:0.8rem;font-weight:700;letter-spacing:0.05em"><?php esc_html_e( 'PROFESSIONAL', 'wpblockfolio' ); ?></p><!-- /wp:paragraph -->
-			<!-- wp:heading {"level":3,"textAlign":"center","fontSize":"xx-large"} --><h3 class="wp-block-heading has-text-align-center has-xx-large-font-size">$549</h3><!-- /wp:heading -->
+			<!-- wp:heading {"level":3,"textAlign":"center","fontSize":"xx-large"} --><h3 class="wp-block-heading has-text-align-center has-xx-large-font-size"><?php esc_html_e( '$549', 'wpblockfolio' ); ?></h3><!-- /wp:heading -->
 			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"1.5rem"}}}} --><p class="has-text-align-center" style="margin-bottom:1.5rem"><?php esc_html_e( 'Full multi-page site', 'wpblockfolio' ); ?></p><!-- /wp:paragraph -->
 			<!-- wp:list {"style":{"typography":{"fontSize":"0.9rem"}},"className":"wpblockfolio-price-list"} -->
 			<ul class="wpblockfolio-price-list" style="font-size:0.9rem">
@@ -65,7 +65,7 @@
 		<!-- wp:column {"verticalAlignment":"center","className":"wpblockfolio-pricing-card wpblockfolio-card","style":{"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","left":"2rem","right":"2rem"}}}} -->
 		<div class="wp-block-column is-vertically-aligned-center wpblockfolio-pricing-card wpblockfolio-card" style="padding-top:2.5rem;padding-right:2rem;padding-bottom:2.5rem;padding-left:2rem">
 			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700","fontSize":"0.8rem","letterSpacing":"0.05em"}},"textColor":"accent"} --><p class="has-text-align-center has-accent-color has-text-color" style="font-size:0.8rem;font-weight:700;letter-spacing:0.05em"><?php esc_html_e( 'PREMIUM', 'wpblockfolio' ); ?></p><!-- /wp:paragraph -->
-			<!-- wp:heading {"level":3,"textAlign":"center","fontSize":"xx-large"} --><h3 class="wp-block-heading has-text-align-center has-xx-large-font-size">$999</h3><!-- /wp:heading -->
+			<!-- wp:heading {"level":3,"textAlign":"center","fontSize":"xx-large"} --><h3 class="wp-block-heading has-text-align-center has-xx-large-font-size"><?php esc_html_e( '$999', 'wpblockfolio' ); ?></h3><!-- /wp:heading -->
 			<!-- wp:paragraph {"align":"center","textColor":"body-text","style":{"spacing":{"margin":{"bottom":"1.5rem"}}}} --><p class="has-text-align-center has-body-text-color has-text-color" style="margin-bottom:1.5rem"><?php esc_html_e( 'Custom web application', 'wpblockfolio' ); ?></p><!-- /wp:paragraph -->
 			<!-- wp:list {"style":{"typography":{"fontSize":"0.9rem"}},"className":"wpblockfolio-price-list"} -->
 			<ul class="wpblockfolio-price-list" style="font-size:0.9rem">

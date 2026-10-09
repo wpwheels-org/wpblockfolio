@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'WPBLOCKFOLIO_VERSION', '1.0.0' );
+define( 'WPBLOCKFOLIO_VERSION', '1.0.1' );
 
 /**
  * Register theme supports, image sizes, translations, and editor styles.
